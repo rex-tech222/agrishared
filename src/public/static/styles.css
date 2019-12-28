@@ -1,0 +1,820 @@
+html{
+   height: 100%;
+   width: 100%;
+    background: #F4F4F4;
+}
+
+body{
+   margin: 0;
+   padding: 0;
+
+   overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px
+}
+
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    background: #579C5B;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #e6e6e6
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #f5f5f5
+}
+
+/***********  Colors  ************/
+.green{
+    color: #579C5B;
+}
+.green-bg{
+    background: #579C5B;
+    color: #fff;
+}
+
+.blue{
+    color: #127AD9;
+}
+
+.blue-bg{
+    background: #127AD9;
+    color: #fff;
+}
+
+.orange{
+    color: #FC5922;
+}
+.orange-bg{
+    background: #FC5922;
+    color: #fff;
+}
+
+.pink{
+    color: #8763D6;
+}
+
+.pink-bg{
+    background: #8763D6;
+    color: #fff;
+}
+
+.gray-bg{
+    background: #E4E4E4;
+    color: #fff;
+}
+
+.btn:focus, .btn.focus {
+   outline: 0;
+   box-shadow:  none;
+}
+
+.layout{
+  position: relative;
+}
+
+
+.main-header{
+
+}
+
+.main-header .navbar{
+    background-color: #579C5B;
+    border-color: #080808;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5px;
+    height: 31px;
+    z-index: 9999999999999999999;
+}
+
+.main-header .navbar .navbar-brand {
+    display: inline-block;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.main-header .navbar .navbar-brand img {
+    height: 26px;
+    margin-bottom: 5px;
+}
+
+.main-header .navbar .nav-item a{
+     color: #fff;
+}
+
+
+.main-header .navbar .nav-item.user-account{
+    border-left: 1px solid #ffffff80;
+    height: 22px;
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+.main-header .navbar .nav-item.user-account .nav-link{
+    padding: 2px 15px;
+}
+
+.main-header .navbar .nav-item.user-account i{
+      margin-right: 5px;
+}
+
+.main-header .navbar .nav-item.user-account .dropdown-menu a{
+      color: #000;
+}
+
+.main-header .navbar .nav-item.user-account .dropdown-menu{
+    background-color: #579c5b;
+    background-clip: padding-box;
+    border-radius: 0;
+    margin: 5px 0 0;
+}
+
+.main-header .navbar .nav-item.user-account .dropdown-toggle::after {
+       display: none;
+}
+
+.main-header .navbar-form {
+    margin: 0;
+    margin-top: -4px;
+    padding: 0;
+}
+
+.main-header .navbar-form .search-box {
+    border: 0px;
+    height: 26px;
+    outline: none;
+    width: 260px;
+    padding-right: 3px;
+    padding-left: 32px;
+    margin: 4px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    border-radius: 22px;
+}
+
+
+.main-header .navbar-form button {
+    border: 0;
+    background: none;
+    padding: 2px 8px;
+    margin-top: 2px;
+    position: relative;
+    right: -34px;
+    margin-bottom: 0;
+    color: #0000008a;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.main-header .navbar-form   button {
+    color: #579c5b;
+}
+
+
+.main-header .search-box:focus + button {
+    z-index: 3;
+}
+
+
+.wrapper{
+    padding-top: 31px;
+}
+
+.main-content{
+
+}
+
+.main-content .content{
+    padding-top: 20px;
+}
+
+.top-header{
+    background: #fff;
+    width: 450px;
+    height: 36px;
+    padding: 7px 13px;
+    margin: 0 auto;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0px 1px rgba(0,0,0,.1);
+    text-align: center;
+}
+
+.top-header i{
+    margin-right: 7px;
+}
+
+
+/*************  Post Container **************/
+.post-container{
+    width: 100%;
+    position: relative;
+    margin-bottom: 120px;
+}
+.post-container .img {
+    width: 100%;
+    object-fit: cover;
+    /*object-position: right top;*/
+    object-position: center;
+    border-radius: 10px;
+}
+
+.post-container .card {
+    position: absolute;
+    right: 8px;
+    left: 8px;
+    top: 327px;
+    min-height: 137px;
+    background:#fff;
+    box-shadow:0 0px 4px rgba(0,0,0,.1);
+    border-radius:10px;
+    transition:0.5s;
+}
+
+.post-container .card .card-header {
+     padding: 4px 0px 0px 10px;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: none;
+}
+.post-container .card .card-header img{
+   width: 30px;
+   height: 30px;
+    border-radius: 50%;
+}
+
+.post-container .card .card-body{
+    padding: 5px;
+}
+
+.post-container .card .card-body textarea  {
+    box-shadow: none;
+    height: 50px;
+    margin-bottom: 4px;
+    border: none;
+}
+
+.post-container .card .card-body button  {
+    margin-left: 11px;
+    margin-top: 2px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.24);
+    background: #fff;
+    padding: 1px 15px;
+    border-radius: 20px;
+}
+.post-container  .camera  {
+    color: #fff;
+    position: absolute;
+    right: 33px;
+    top: 33px;
+}
+
+/******************  Post   *****************/
+.posts{
+
+}
+.posts .title{
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 24px;
+    color: #6b6767;
+}
+
+.posts .post-item{
+    position: relative;
+    min-height: auto;
+    background: #fff;
+    box-shadow: 0 0px 3px rgba(0,0,0,.1);
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-bottom: 25px
+}
+
+.posts .post-item .card-header{
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.posts .post-item .card-header .user-name{
+     display: inline-flex;
+}
+
+.posts .post-item .card-header .user-name .name{
+    margin-right: 8px;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.posts .post-item .card-header .user-name .time{
+    color: #6c757d !important;
+    margin-top: 2px;
+}
+
+.posts .post-item .card-header .dropdown-toggle{
+    color: #ba8a7d;
+    font-size: 22px;
+    margin-top: -10px;
+
+}
+
+.posts .post-item .card-header .dropdown-toggle::after {
+    display: none;
+}
+
+.posts .post-item .card-body   {
+    padding: 0;
+}
+
+.posts .post-item .card-body .body  {
+    padding: 10px;
+}
+
+.posts .post-item .card-body .tag-btn  {
+    background: #579C5B;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0 10px;
+}
+
+.posts .post-item .card-body .post-imgs{
+    padding: 10px;
+}
+
+.posts .post-item .card-body .post-imgs  img{
+    height: 100px;
+    width: 100%;
+}
+
+.posts .post-item .card-body .post-imgs  .col-lg-6{
+    padding-right: 0px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.posts .post-item .card-body .post-imgs  .col-lg-12{
+    padding-right: 0px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.posts .post-item .card-body .card-footer  {
+    padding: 5px 10px;
+    background-color: transparent;
+    border-top: none;
+}
+
+
+.posts .post-item .card-body .card-footer .actions{
+    font-size: 15px;
+}
+
+.posts .post-item .card-body .card-footer ul{
+    margin: 0;
+}
+.posts .post-item .card-body .card-footer li {
+    list-style: none;
+    margin: 0px 0px 0px -8px !important;
+    padding: 0px 0px 0px 0px !important;
+    display: inline-block;
+}
+.posts .post-item .card-body .card-footer li a img{
+    width: 25px;
+    height: 25px;
+    margin: 0px !important;
+    border: 2px solid #fff;
+}
+
+/******************  Widgets   *****************/
+
+.widget {
+    position: relative;
+    min-height: auto;
+    background: #fff;
+    box-shadow: 0 0px 4px rgba(0,0,0,.1);
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-bottom: 30px;
+}
+
+
+.widget.profile .card-body {
+    text-align:center;
+    padding:20px;
+    box-sizing:border-box;
+    width:100%;
+}
+
+.widget.profile .card-body .img {
+    width: 99px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.widget.profile .card-body .img img {
+    width:100%;
+    height:100%;
+}
+
+.widget.profile .card-body .user-name {
+    font-size: 22px;
+    margin-top: 10px ;
+}
+
+.widget.profile .card-body .user-position{
+    font-size: 17px;
+    margin-top: -6px;
+    margin-bottom: 12px;
+    display: block;
+}
+.widget.profile .card-body .user-desc{
+
+}
+
+.widget.profile .card-body .edit-btn{
+    padding: 2px 14px;
+    background: #579c5b;
+    color: #fff;
+    border-radius: 20px;
+}
+
+ .widget.profile .card-body p {
+    color:#262626;
+}
+
+ .widget.profile .card-body .files {
+     margin-bottom: 25px;
+     padding: 0px 50px;
+}
+ .widget.profile .card-body .files h3{
+     font-size: 20px;
+}
+
+ .widget.profile .card-body .files .col-lg-4{
+     padding-right: 5px;
+     padding-left: 5px;
+}
+
+ .widget.profile .card-body .files .file {
+     margin-bottom: 10px;
+     padding: 20px 0px;
+     border-radius: 10px;
+}
+
+
+
+
+.widget.farm-media .card-header{
+    padding: 10px 15px 0px 15px;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.widget.farm-media .card-header h3{
+    font-size: 17px;
+}
+
+.widget.farm-media .card-body {
+    padding:20px;
+    box-sizing:border-box;
+    width:100%;
+}
+.widget.farm-media .card-body .media{
+    padding: 10px;
+}
+
+.widget.farm-media .card-body .media  img{
+    height: 100px;
+    width: 100%;
+}
+
+.widget.farm-media .card-body .media  .col-lg-6{
+    padding-right: 0px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+.widget.farm-media .card-body .media  .col-lg-12{
+    padding-right: 0px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+.widget.farmers .card-header{
+    padding: 10px 15px 0px 15px;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.widget.farmers .card-header h3{
+    font-size: 17px;
+}
+
+.widget.farmers .card-body {
+    padding:20px;
+    box-sizing:border-box;
+    width:100%;
+}
+.widget.farmers .card-body .media{
+    padding: 10px;
+}
+
+.widget.farmers .card-body .media  img{
+    height: 100px;
+    width: 100%;
+}
+
+.widget.farmers .card-body .media  .col-lg-6{
+    padding-right: 0px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+.widget.farmers .card-body .media  .col-lg-12{
+    padding-right: 0px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+.widget.farmers .card-body .search-form {
+    margin: 0;
+    margin-top: -4px;
+    padding: 0;
+}
+
+.widget.farmers .card-body .search-form .search-box {
+    border: 1px solid #00000052;
+    height: 30px;
+    outline: none;
+    width: 174px;
+    padding-right: 3px;
+    padding-left: 32px;
+    /* margin: 4px; */
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    border-radius: 22px;
+}
+
+
+.widget.farmers .card-body .search-form button {
+    border: 0;
+    background: none;
+    padding: 2px 8px;
+    margin-top: 2px;
+    position: relative;
+    right: -34px;
+    margin-bottom: 0;
+    color: #0000008a;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.widget.farmers .card-body .search-form   button {
+    color: #579c5b;
+}
+
+
+.widget.farmers .card-body .search-box:focus + button {
+    z-index: 3;
+}
+
+
+.widget.mywallet .card-header{
+    padding: 10px 15px 0px 15px;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.widget.mywallet .card-header h3{
+    font-size: 17px;
+}
+
+.widget.mywallet .card-body {
+    padding:20px;
+    box-sizing:border-box;
+    width:100%;
+}
+
+.widget.mywallet .card-footer  {
+    padding: 10px 10px;
+    background-color: transparent;
+    border-top: none;
+}
+
+.widget.mywallet .card-footer .btn{
+    padding: 1px 14px;
+    font-size: 13px;
+    background: #579c5b;
+    color: #fff;
+    border-radius: 20px;
+}
+
+
+
+.widget.agrobusinesses .card-header{
+    padding: 10px 15px 0px 15px;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.widget.agrobusinesses .card-header h3{
+    font-size: 17px;
+}
+
+.widget.agrobusinesses .card-body {
+    padding:20px;
+    box-sizing:border-box;
+    width:100%;
+}
+
+.widget.agrobusinesses .card-footer  {
+    padding: 10px 10px;
+    background-color: transparent;
+    border-top: none;
+}
+
+.widget.agrobusinesses .card-footer .btn{
+    padding: 1px 14px;
+    font-size: 13px;
+    background: #579c5b;
+    color: #fff;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+.widget.agronmers .card-header{
+    padding: 10px 15px 0px 15px;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.widget.agronmers .card-header h3{
+    font-size: 17px;
+}
+
+.widget.agronmers .card-body {
+    padding:20px;
+    box-sizing:border-box;
+    width:100%;
+}
+.widget.agronmers .card-body .media{
+    padding: 10px;
+}
+
+.widget.agronmers .card-body .media  img{
+    height: 100px;
+    width: 100%;
+}
+
+.widget.agronmers .card-body .media  .col-lg-6{
+    padding-right: 0px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.widget.agronmers .card-body .search-form {
+    margin: 0;
+    margin-top: -4px;
+    padding: 0;
+}
+
+.widget.agronmers .card-body .search-form .search-box {
+    border: 1px solid #00000052;
+    height: 30px;
+    outline: none;
+    width: 227px;
+    padding-right: 3px;
+    padding-left: 32px;
+    margin: 4px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    border-radius: 22px;
+}
+
+
+.widget.agronmers .card-body .search-form button {
+    border: 0;
+    background: none;
+    padding: 2px 8px;
+    margin-top: 2px;
+    position: relative;
+    right: -34px;
+    margin-bottom: 0;
+    color: #0000008a;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.widget.agronmers .card-body .search-form   button {
+    color: #579c5b;
+}
+
+
+.widget.agronmers .card-body .search-box:focus + button {
+    z-index: 3;
+}
+
+.widget.agronmers .card-footer  {
+    padding: 10px 10px;
+    background-color: transparent;
+    border-top: none;
+}
+
+.widget.agronmers .card-footer .btn{
+    padding: 1px 14px;
+    font-size: 13px;
+    background: #579c5b;
+    color: #fff;
+    border-radius: 20px;
+}
+
+
+
+.widget.awards .card-header{
+    padding: 10px 15px 0px 15px;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.widget.awards .card-header h3{
+    font-size: 17px;
+}
+
+.widget.awards .card-body {
+    padding:20px;
+    box-sizing:border-box;
+    width:100%;
+}
+
+.widget.awards .card-footer  {
+    padding: 10px 10px;
+    background-color: transparent;
+    border-top: none;
+}
+
+.widget.awards .card-footer .btn{
+    padding: 1px 14px;
+    font-size: 13px;
+    background: #579c5b;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.widget.awards .card-body .files {
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 0 20px;
+}
+.widget.awards .card-body .files h3{
+    font-size: 20px;
+}
+
+.widget.awards .card-body .files .col-lg-6{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.widget.awards .card-body .files .file {
+    margin-bottom: 10px;
+    padding: 20px 0px;
+    border-radius: 10px;
+}
+.widget.awards .card-body .files .file i{
+     font-size: 30px;
+}

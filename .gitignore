@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+/WORK
+
+# IDE - VSCode
+.idea/*
+/src/build
+/src/.next
+.vscode/*

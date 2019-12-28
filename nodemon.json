@@ -1,0 +1,6 @@
+{
+  "verbose": true,
+
+  "watch": [ "src/utilities/**/*",  "src/server.js"],
+  "ext": "js json"
+}
