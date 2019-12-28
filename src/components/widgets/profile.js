@@ -18,22 +18,22 @@ function Profile() {
                  <div className="files">
                      <h3>Title</h3>
                      <div className="row">
-                         <div className="col-lg-4">
+                         <div className="col-lg-4 col-md-4 col-sm-4 col-xl-4 col-4">
                              <div className="file orange-bg"><i className="fa fa-file-pdf-o"></i></div>
                          </div>
-                         <div className="col-lg-4">
+                         <div className="col-lg-4 col-md-4 col-sm-4 col-xl-4 col-4">
                              <div className="file blue-bg"><i className="fa fa-file-word-o"></i></div>
                          </div>
-                         <div className="col-lg-4">
+                         <div className="col-lg-4 col-md-4 col-sm-4 col-xl-4 col-4">
                              <div className="file green-bg"><i className="fa fa-file-excel-o"></i></div>
                          </div>
-                         <div className="col-lg-4">
+                         <div className="col-lg-4 col-md-4 col-sm-4 col-xl-4 col-4">
                              <div className="file blue-bg"><i className="fa fa-file-word-o"></i></div>
                          </div>
-                         <div className="col-lg-4">
+                         <div className="col-lg-4 col-md-4 col-sm-4 col-xl-4 col-4">
                              <div className="file green-bg"><i className="fa fa-file-excel-o"></i></div>
                          </div>
-                         <div className="col-lg-4">
+                         <div className="col-lg-4 col-md-4 col-sm-4 col-xl-4 col-4">
                              <div className="file gray-bg"><i className="fa fa-plus"></i></div>
                          </div>
                      </div>

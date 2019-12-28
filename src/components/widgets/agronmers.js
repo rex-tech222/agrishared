@@ -19,16 +19,16 @@ function Agronmers() {
             </div>
             <div className="card-body">
                 <div className="row media">
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
                         <img src="/img/1.jpg" alt=""/>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
                         <img src="/img/3.jpg" alt=""/>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
                         <img src="/img/4.jpg" alt=""/>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
                         <img src="/img/5.jpg" alt=""/>
                     </div>
                 </div>

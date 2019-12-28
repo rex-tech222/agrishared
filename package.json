@@ -2,9 +2,10 @@
   "name": "agrishared",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next ./src",
+    "dev": "next ./src -p $PORT",
     "build": "next build ./src",
-    "start": "next start ./src -p $PORT "
+    "start": "next start ./src -p $PORT ",
+    "deploy": "git push heroku master"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",

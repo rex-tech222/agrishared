@@ -20,16 +20,16 @@ function Awards() {
             <div className="card-body">
                 <div className="files">
                     <div className="row">
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
                             <div className="file blue-bg"><i className="fa fa-hourglass-end"></i></div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
                             <div className="file green-bg"><i className="fa fa-hourglass-end"></i></div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
                             <div className="file blue-bg"><i className="fa fa-hourglass-end"></i></div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
                             <div className="file green-bg"><i className="fa fa-hourglass-end"></i></div>
                         </div>
                     </div>
