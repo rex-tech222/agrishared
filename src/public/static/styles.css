@@ -308,7 +308,7 @@ body{
 
 /******************  Post   *****************/
 .posts{
-
+    padding-top: 22px;
 }
 .posts .title{
     margin-bottom: 20px;
@@ -368,6 +368,10 @@ body{
 
 .posts .post-item .card-body .body  {
     padding: 10px;
+}
+
+.posts .post-item .card-body .card-text  {
+    text-align: justify;
 }
 
 .posts .post-item .card-body .tag-btn  {
@@ -1354,7 +1358,7 @@ body{
         position: absolute;
         right: 8px;
         left: 8px;
-        top: 144px;
+        top: 111px;
         min-height: 137px;
         background: #fff;
         box-shadow: 0 0px 4px rgba(0,0,0,.1);

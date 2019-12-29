@@ -89,9 +89,7 @@ function PostItemImg() {
                             </div>
                             <div className="">
                                 <ul>
-                                    <li><a href="#"><img
-                                        src="/users/3.jpeg"
-                                        className="img-fluid rounded-circle" alt="User"/></a></li>
+
                                     <li><a href="#"><img
                                         src="/users/1.jpg"
                                         className="img-fluid rounded-circle" alt="User"/></a></li>
