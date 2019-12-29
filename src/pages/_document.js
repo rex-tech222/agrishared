@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
           <script src="/static/bootstrap-4.1.1/js/popper.min.js"></script>
           <script src="/static/bootstrap-4.1.1/js/bootstrap.min.js"></script>
         </Head>
-        <body>
+        <body className="">
           <Main />
           <NextScript />
         </body>

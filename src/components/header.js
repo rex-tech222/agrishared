@@ -1,12 +1,22 @@
 import Link from "next/link";
+import $ from 'jquery'
 
 function Header() {
 
+    const showMobileSearch = (e) =>{
+        e.preventDefault()
+        $('body').toggleClass('show-mobile-search')
+    }
+
+    const hideMobileSearch = () =>{
+        $('body').removeClass('show-mobile-search')
+    }
 
     return (
        <div className="main-header">
            <nav className="navbar navbar-expand-md      flex-row">
 
+               <a onClick={showMobileSearch} href="#" className="nav-link   mobile-search-btn"><i className="fa fa-search"></i></a>
 
                <form className="navbar-form navbar-left form-horizontal" role="search">
                    <div className="input-group">
@@ -20,15 +30,16 @@ function Header() {
                    <img src="/120x29.png" className="img-fluid" alt="Responsive image"/>
                </a>
 
-               <ul className="navbar-nav flex-row mr-lg-0">
+               <ul className="navbar-nav flex-row mr-0">
+
                    <li className="nav-item">
-                       <a href="#" className="nav-link pr-2"><i className="fa fa-slideshare"></i></a>
+                       <a href="#" className="nav-link  "><i className="fa fa-slideshare"></i></a>
                    </li>
                    <li className="nav-item">
-                       <a href="#" className="nav-link pr-2"><i className="fa fa-bell"></i></a>
+                       <a href="#" className="nav-link  "><i className="fa fa-bell"></i></a>
                    </li>
                    <li className="nav-item">
-                       <a href="#" className="nav-link pr-2"><i className="fa fa-envelope"></i></a>
+                       <a href="#" className="nav-link  "><i className="fa fa-envelope"></i></a>
                    </li>
                    <li className="nav-item dropdown user-account">
                        <a href="#" className="nav-link dropdown-toggle navbar-img mr-3 mr-lg-0" data-toggle="dropdown"
@@ -52,6 +63,16 @@ function Header() {
                    <span className="navbar-toggler-icon"></span>
                </button>
            </nav>
+           <div className="mobile-search-form">
+               <div onClick={hideMobileSearch} className="overlay"></div>
+               <form className="form" role="search">
+                   <div className="input-group">
+                       <button type="submit" className="btn"><span className="fa fa-search"></span>
+                       </button>
+                       <input type="text" className="search-box" placeholder="Search"/>
+                   </div>
+               </form>
+           </div>
        </div>
     )
 }

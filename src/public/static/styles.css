@@ -1,5 +1,7 @@
 :root{
     --overlay-alpha-80:  rgba(244, 244, 244, 0.8);
+    --color-green:  #579C5B;
+    --bg-green:  #579C5B;
 }
 
 html{
@@ -127,6 +129,10 @@ body{
      color: #fff;
 }
 
+.main-header  .navbar-nav .nav-link {
+    padding-right: 8px;
+    padding-left: 8px;
+}
 
 .main-header .navbar .nav-item.user-account{
     border-left: 1px solid #ffffff80;
@@ -138,6 +144,7 @@ body{
 .main-header .navbar .nav-item.user-account .nav-link{
     padding: 2px 15px;
 }
+
 
 .main-header .navbar .nav-item.user-account i{
       margin-right: 5px;
@@ -156,6 +163,9 @@ body{
 
 .main-header .navbar .nav-item.user-account .dropdown-toggle::after {
        display: none;
+}
+.main-header .mobile-search-form {
+    display: none;
 }
 
 .main-header .navbar-form {
@@ -200,7 +210,9 @@ body{
 .main-header .search-box:focus + button {
     z-index: 3;
 }
-
+.mobile-search-btn{
+    display: none;
+}
 
 .wrapper{
     padding-top: 31px;
@@ -566,13 +578,13 @@ body{
     margin-bottom: 5px;
 }
 
-.widget.farmers .card-body .search-form {
-    margin: 0;
-    margin-top: -4px;
+.widget.farmers  .search-form {
+    margin-bottom: 19px;
+    margin-top: -15px;
     padding: 0;
 }
 
-.widget.farmers .card-body .search-form .search-box {
+.widget.farmers   .search-form .search-box {
     border: 1px solid #00000052;
     height: 30px;
     outline: none;
@@ -586,7 +598,7 @@ body{
 }
 
 
-.widget.farmers .card-body .search-form button {
+.widget.farmers   .search-form button {
     border: 0;
     background: none;
     padding: 2px 8px;
@@ -600,12 +612,12 @@ body{
     border-radius: 3px;
 }
 
-.widget.farmers .card-body .search-form   button {
+.widget.farmers   .search-form   button {
     color: #579c5b;
 }
 
 
-.widget.farmers .card-body .search-box:focus + button {
+.widget.farmers  .search-box:focus + button {
     z-index: 3;
 }
 
@@ -961,7 +973,7 @@ body{
 */
 @media (min-width: 1281px) {
     body{
-        /*background: blue;*/
+         /*background: blue;*/
     }
 }
 
@@ -981,7 +993,7 @@ body{
 */
 @media (min-width: 768px) and (max-width: 1024px) {
     body{
-        /*background: purple;*/
+         /*background: purple;*/
     }
 }
 
@@ -1062,13 +1074,30 @@ body{
         border: 0px;
         height: 26px;
         outline: none;
-        width: 180px;
+        width: 160px;
         padding-right: 3px;
         padding-left: 32px;
         margin: 4px;
         -webkit-border-radius: 22px;
         -moz-border-radius: 22px;
         border-radius: 22px;
+    }
+
+    .main-header .navbar .nav-item.user-account .nav-link {
+        padding: 2px 15px;
+        margin-right: -7px !important;
+    }
+
+    .main-header  .navbar-nav .nav-link {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .main-header .navbar-form {
+        margin: 0;
+        margin-top: -4px;
+        padding: 0;
+        margin-left: -31px;
     }
 }
 
@@ -1077,7 +1106,7 @@ body{
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 200px) and (max-width: 480px) {
     body{
         /*background: red;*/
     }
@@ -1097,14 +1126,24 @@ body{
         white-space: nowrap;
     }
 
+    .main-header  .navbar-nav .nav-link {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
     .main-header .navbar .navbar-brand img {
         height: 26px;
-        width: 80px;
-        margin-bottom: 5px;
+        width: 66px;
+        margin-bottom: 4px;
     }
 
     .main-header .navbar-form  {
         display: none;
+    }
+
+    .main-header .navbar .nav-item.user-account .nav-link {
+        padding: 2px 15px;
+        margin-right: -7px !important;
     }
 
     .top-header{
@@ -1165,11 +1204,91 @@ body{
         display: none;
     }
 
-    .main-header .dropdown-menu {
+    .show-mobile-search{
+        overflow: hidden;
+    }
 
-        min-width: 100px;
+
+     .mobile-search-btn{
+         color: #fff;
+         display: block;
+     }
+
+     .mobile-search-btn:hover{
+         color: #fff;
+     }
+
+
+
+    .main-header .mobile-search-form {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        position: fixed;
+        top: 31px;
+        left: 0;
+        right: 0;
+        z-index: 999999999;
+        display: none;
+    }
+
+    .show-mobile-search .main-header .mobile-search-form{
+        display: block;
+    }
+
+    .main-header .mobile-search-form .overlay{
+        position: fixed;
+        top: 65px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: rgba(244, 244, 244, 0.8) !important;
+    }
+
+    .main-header .mobile-search-form .form{
 
     }
+
+    .main-header .mobile-search-form .search-box {
+        border: 0px;
+        height: 26px;
+        outline: none;
+        width: 250px;
+        padding-right: 3px;
+        padding-left: 0px;
+        margin: 4px;
+    }
+
+    .main-header .mobile-search-form button {
+        border: 0;
+        background: none;
+        padding: 2px 8px;
+        margin-top: 2px;
+        position: relative;
+        right: -3px;
+        margin-bottom: 0;
+        color: #0000008a;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+    .main-header .mobile-search-form   button {
+        color: #579c5b;
+    }
+
+
+    .main-header .mobile-search-form .search-box:focus + button {
+        z-index: 3;
+    }
+
+     .main-header .navbar-nav {
+        margin-right: -25px;
+     }
+
+     .main-header .dropdown-menu {
+        min-width: 100px;
+      }
 
     .widget.profile .card-body .files .col-4{
         padding-right: 0px;
@@ -1207,6 +1326,25 @@ body{
     .posts .post-item .card-link + .card-link {
         margin-left: 10px;
     }
+
+    .posts .post-item .card-header .user-name {
+        display: block;
+    }
+
+    .posts .post-item .card-header .user-name .name {
+        margin-right: 8px;
+        margin-bottom: .5rem;
+        font-weight: 500;
+        line-height: 1.2;
+        font-size: 18px;
+    }
+
+    .posts .post-item .card-header .user-name .time {
+        color: #6c757d !important;
+        margin-top: -4px;
+        font-size: 15px;
+    }
+
     .post-container .card {
         position: absolute;
         right: 8px;
@@ -1227,4 +1365,23 @@ body{
         padding: 1px 15px;
         border-radius: 20px;
     }
+
+    .widget.farmers   .search-form{
+
+    }
+
+    .widget.farmers   .search-form .search-box {
+        border: 1px solid #00000052;
+        height: 30px;
+        outline: none;
+        width: 80%;
+        padding-right: 3px;
+        padding-left: 32px;
+        /* margin: 4px; */
+        -webkit-border-radius: 22px;
+        -moz-border-radius: 22px;
+        border-radius: 22px;
+    }
+
+
 }

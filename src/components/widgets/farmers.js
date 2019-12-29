@@ -38,16 +38,14 @@ function Farmers() {
                         <img src="/img/4.jpg" alt=""/>
                     </div>
                 </div>
-
-                <form className="search-form  " role="search">
-                    <div className="input-group">
-                        <button type="submit" className="btn"><span className="fa fa-search"></span>
-                        </button>
-                        <input type="text" className="search-box" placeholder="Search"/>
-                    </div>
-                </form>
-
             </div>
+            <form className="search-form  " role="search">
+                <div className="input-group">
+                    <button type="submit" className="btn"><span className="fa fa-search"></span>
+                    </button>
+                    <input type="text" className="search-box" placeholder="Search"/>
+                </div>
+            </form>
         </div>
     )
 }
