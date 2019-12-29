@@ -1143,7 +1143,11 @@ body{
 
     .main-header .navbar .nav-item.user-account .nav-link {
         padding: 2px 15px;
-        margin-right: -7px !important;
+        margin-right: -16px !important;
+    }
+    .navbar-nav .dropdown-menu {
+        position: absolute !important;
+        float: none;
     }
 
     .top-header{
@@ -1212,6 +1216,7 @@ body{
      .mobile-search-btn{
          color: #fff;
          display: block;
+         margin-left: -10px;
      }
 
      .mobile-search-btn:hover{
