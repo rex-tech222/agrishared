@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import Layout from "../components/Layout";
+import MainLayout from "../components/layouts/MainLayout";
 import '../public/static/styles.css'
 import $ from 'jquery';
 import Link from "next/link";
@@ -22,22 +22,7 @@ function Home(props) {
     });
 
     useEffect(() => {
-        let text = ['home owner', 'vacating tenant'];
-        let counter = 0;
-        let Iam = $('#iam')
 
-        setInterval(changIAm, 3000)
-
-        function changIAm() {
-            Iam.fadeOut(() => {
-                Iam.html(text[counter]);
-                counter++
-                if (counter >= text.length) {
-                    counter = 0
-                }
-                Iam.fadeIn()
-            })
-        }
     });
 
     const onCloseLoginModal = (e) => {
@@ -68,7 +53,7 @@ function Home(props) {
 
 
     return (
-        <Layout>
+        <MainLayout>
 
             <Modal
                 isOpen={state.show}
@@ -187,7 +172,7 @@ function Home(props) {
                 </div>
             </div>
             <br/><br/><br/><br/>
-        </Layout>
+        </MainLayout>
     )
 
 }

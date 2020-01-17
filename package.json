@@ -2,21 +2,25 @@
   "name": "agrishared",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next ./src -p $PORT",
+    "dev": "nodemon ./src/server.js",
     "build": "next build ./src",
-    "start": "next start ./src -p $PORT ",
+    "start": "NODE_ENV=production node ./src/server.js -p $PORT",
     "deploy": "git push heroku master"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
+    "antd": "^3.26.7",
     "cors": "^2.8.5",
+    "express": "^4.17.1",
     "jquery": "^3.4.1",
     "next": "latest",
     "next-compose-plugins": "^2.2.0",
+    "next-offline": "^4.0.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-modal": "^3.11.1"
+    "react-modal": "^3.11.1",
+    "react-slick": "^0.25.2"
   },
   "license": "ISC"
 }

@@ -20,6 +20,7 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="/static/bootstrap-4.1.1/css/bootstrap.min-v4.3.1.css" type="text/css"/>
           <link rel="stylesheet" href="/static/fontawesome/css/font-awesome.min.css" type="text/css" />
           <link rel="stylesheet" href="/static/animate.min.css" type="text/css" />
+          <link rel="stylesheet" href="/static/slick.min.css" type="text/css" />
          {/* <link rel="stylesheet" href="/static/styles.css" type="text/css" />*/}
 
 
