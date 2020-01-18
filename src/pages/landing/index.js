@@ -172,14 +172,14 @@ function Home(props) {
              <div className="connect">
                  <h3 className="heading">JOIN TO CONNECT, <br/> SHARE & EARN</h3>
                  <div className="container d-flex justify-content-center ">
-                    <div className="col-md-9 col-sm-11">
+                    <div className="col-md-9 col-sm-12">
                         <div className="service">
                             <div className="row">
-                                <div className="col-md-4 col-lg-4 service-title">
+                                <div className="col-md-4 col-lg-4 col-sm-4 service-title">
                                     <i className="fa fa-bell"></i>
                                     <h4>PROVIDE <br/> SERVICES</h4>
                                 </div>
-                                <div className="col-md-8 col-lg-8 service-desc">
+                                <div className="col-md-8 col-lg-8 col-sm-8 service-desc">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                                         when an unknown printer took a galley of type and scrambled it to make a type
@@ -191,11 +191,11 @@ function Home(props) {
                         </div>
                         <div className="service">
                             <div className="row">
-                                <div className="col-md-4 col-lg-4 service-title">
+                                <div className="col-md-4 col-lg-4 col-sm-4 service-title">
                                     <i className="fa fa-briefcase"></i>
-                                    <h4>PROVIDE <br/> SERVICES</h4>
+                                    <h4>  EDUCATION </h4>
                                 </div>
-                                <div className="col-md-8 col-lg-8 service-desc">
+                                <div className="col-md-8 col-lg-8 col-sm-8 service-desc">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                                         when an unknown printer took a galley of type and scrambled it to make a type
