@@ -2042,7 +2042,7 @@ button:focus {
 */
 @media (min-width: 1281px) {
     body {
-        background: blue;
+        /*background: blue;*/
     }
 }
 
@@ -2052,7 +2052,7 @@ button:focus {
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
     body {
-       background: yellow;
+       /*background: yellow;*/
     }
 }
 
@@ -2062,7 +2062,7 @@ button:focus {
 */
 @media (min-width: 768px) and (max-width: 1024px) {
     body {
-        background: purple;
+        /*background: purple;*/
     }
 }
 
@@ -2073,7 +2073,7 @@ button:focus {
 */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     body {
-        background: peru;
+        /*background: peru;*/
     }
 
     .post-container .card {
@@ -2348,7 +2348,7 @@ button:focus {
 */
 @media (min-width: 481px) and (max-width: 767px) {
     body {
-         background: gray;
+         /*background: gray;*/
     }
 
     .main-header .navbar .navbar-brand {
@@ -2654,7 +2654,7 @@ button:focus {
 */
 @media (min-width: 200px) and (max-width: 480px) {
     body {
-        background: red;
+        /*background: red;*/
     }
 
     .create-post-modal {
