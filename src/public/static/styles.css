@@ -2,7 +2,13 @@
     --overlay-alpha-80: rgba(244, 244, 244, 0.8);
     --color-green: #579C5B;
     --bg-green: #579C5B;
+    --btn-bg-green: #589B5B;
+    --color-yellow: #F2B016;
+    --sans-serif: sans-serif;
+    --segoe-UI: segoe UI;
 }
+
+
 
 html {
     height: 100%;
@@ -15,6 +21,17 @@ body {
     padding: 0;
 
     overflow-x: hidden;
+}
+
+ .bg-overlay {
+    width: 100%;
+    object-fit: fill;
+    display: inherit !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 button:focus {
@@ -31,7 +48,7 @@ button:focus {
     -moz-border-radius: 0px;
     -ms-border-radius: 0px;
     border-radius: 0px;
-    background: #579C5B;
+    background: var(--bg-green);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -49,14 +66,70 @@ button:focus {
 }
 
 /***********  Colors  ************/
+
+.yellow-color{
+    color: var(--color-yellow) !important;
+}
+
+.yellow-bg{
+    background: var(--color-yellow)  !important;
+    color: #fff !important;
+}
+
 .green {
-    color: #579C5B;
+    color: var(--bg-green) !important;
+}
+
+.green-color {
+    color: var(--bg-green) !important;
+}
+
+.green-color-hover:hover{
+    background: var(--bg-green) !important;
+    color: #fff !important;
 }
 
 .green-bg {
-    background: #579C5B;
+    background: var(--bg-green) !important;
+    color: #fff !important;
+}
+
+.green-bg-opacity-0_9 {
+    background-color: rgba(87, 156, 91, 0.82) !important;
+}
+
+.green-brd {
+    border-color: var(--bg-green) !important;
+}
+
+.green-btn-outline {
+    color: var(--bg-green);
+    border-color: var(--bg-green);
+    background-color: transparent;
+}
+
+
+.green-btn{
+    border-color: var(--bg-green);
+    background-color: var(--bg-green);
     color: #fff;
 }
+
+
+.green-btn:hover,
+.green-btn.active {
+    border-color: var(--bg-green);
+    background-color: var(--bg-green);
+    color: #fff;
+}
+
+.green-btn-outline:hover {
+    color: #fff;
+    border-color: var(--bg-green);
+    background-color: var(--bg-green);
+}
+
+
 
 .blue {
     color: #127AD9;
@@ -89,6 +162,17 @@ button:focus {
     background: #E4E4E4;
     color: #fff;
 }
+
+
+.gray-bg-light {
+    background-color: #ddd !important;
+}
+
+.gray-brd-light {
+    border-color: #ddd !important;
+}
+
+
 
 .btn:focus, .btn.focus {
     outline: 0;
@@ -1000,7 +1084,12 @@ button:focus {
 
 .landing-page .navbar {
     padding: 0px 20px;
-    background: #1E4834;
+    background: transparent;
+}
+
+.navbar-transparent .landing-page .navbar {
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 .landing-page .navbar-nav .nav-link {
@@ -1015,32 +1104,79 @@ button:focus {
 
 .landing-page .navbar-nav .dropdown-item {
     text-align: center;
+    display: block;
+    width: 100%;
+    padding: 5px 21px;
+    clear: both;
+    font-weight: 400;
+    color: #4D565C;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    font-family: var(--sans-serif)
 }
 
+ 
 
 .landing-page .navbar .navbar-brand {
-    width: 100px;
-    height: 32px;
+    width: 124px;
+    height: 33px;
 }
 
-.landing-page .navbar .sign-up {
-    background: #EEA90E;
+.landing-page .navbar   .mobile-logo{
+  display: none;
+}
+
+.landing-page .navbar .auth-btn {
+  margin-left: 20%;
+}
+
+.landing-page .navbar .auth-btn .btn {
+  margin-left: 5px
+}
+
+.landing-page .navbar .auth-btn .lang-btn {
+    background: transparent;
     color: #fff;
-    padding: 1px 25px;
-    font-size: 1rem;
+    padding: 1px 10px;
+    font-size: 17px;
     line-height: 1.5;
     border-radius: 30px;
 }
 
+.landing-page .navbar .auth-btn .lang-btn {
+
+}
+
+
+.landing-page .navbar .auth-btn .dropdown-toggle::after {
+    display: none;
+    content: none;
+}
+
+.landing-page .navbar .auth-btn .login-btn {
+    background: transparent;
+    color: #fff;
+    padding: 1px 10px;
+    font-size: 17px;
+    line-height: 1.5;
+    border-radius: 30px;
+}
+
+.landing-page .navbar .auth-btn .signup-btn {
+    background: #EEA90E;
+    color: #fff;
+    padding: 1px 10px;
+    font-size: 15px;
+    line-height: 1.4;
+    border-radius: 30px;
+}
+
 .landing-page .navbar.navbar-bg {
-    background: #1E4834;
     box-shadow: 2px 3px 3px #1e4834;
 }
 
-.no-scroll .landing-page .navbar {
-    background: #1E4834;
-    box-shadow: 2px 3px 3px #1e4834;
-}
+
 
 .landing-page .navbar-toggler {
     padding: 4px 8px;
@@ -1056,9 +1192,14 @@ button:focus {
     padding-bottom: 20px;
 }
 
+.landing-page .navbar-collapse .dropdown-toggle::after {
+    display: none;
+    content: none;
+}
+
 .product-dropdown {
     background: #fff;
-    height: 500px;
+    height: 100vh;
     width: 100%;
     position: fixed;
     right: 0;
@@ -1121,6 +1262,50 @@ button:focus {
 .product-overlay.hide {
     display: none;
 }
+
+
+.product-tab-img {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.product-tab-img .show {
+    display: block;
+}
+
+.product-tab-img.hide {
+    display: none;
+}
+
+
+
+.product-tab-img-overlay {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.product-tab-img-overlay.show {
+    display: block;
+}
+
+.product-tab-img-overlay.hide {
+    display: none;
+}
+
+
+
 
 .product-dropdown .product {
     display: inline;
@@ -1244,6 +1429,11 @@ button:focus {
 
 }
 
+.product-tab-content::-webkit-scrollbar {
+    width: 0px;
+    height: 0px
+}
+
 .product-tab-content-wrapper{
     display: flex;
     display: -o-flex;
@@ -1317,15 +1507,24 @@ button:focus {
 
 /*  Quick Find  */
 .landing-page .quick-find {
-    background: #1E4834;
     width: 100%;
     padding-top: 100px;
-    padding-bottom: 30px;
+    padding-bottom: 70px;
     color: #fff;
 }
 
+.landing-page .quick-find .quick-find-bg {
+    object-fit: fill;
+    display: inherit !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .landing-page .quick-find .heading {
-    color: #EDB000;
+    color: var(--color-yellow);
     margin-bottom: 33px;
     font-weight: 500;
     line-height: 1.2;
@@ -1370,6 +1569,10 @@ button:focus {
     /*justify-content: space-around;*/
 }
 
+.landing-page .quick-find .find .find-form{
+   max-width: 400px
+}
+
 .landing-page .quick-find .find .icon {
     width: 15%;
     height: 100%;
@@ -1394,40 +1597,19 @@ button:focus {
 .landing-page .quick-find .find .user-client-slider .slick-arrow {
     display: none !important;
 }
-
-.landing-page .quick-find .find .user-client-slider .arrow {
-    background-color: #fff;
-    color: #000;
-    border-radius: 50%;
-    padding: 0px 7px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-}
-
-.landing-page .quick-find .find .user-client-slider .arrow i {
-    font-weight: 900;
-}
-
-.landing-page .quick-find .find .user-client-slider .arrow-left {
-    left: -10px;
-}
-
-.landing-page .quick-find .find .user-client-slider .arrow-right {
-    right: -10px;
-}
+ 
 
 .landing-page .quick-find .find .user-client-slider .user-profile {
-    width: 90px;
-    height: 130px;
+    width: 47px;
+    height: 52px;
     display: inline !important;
     position: relative;
     margin: 0 10px;
 }
 
 .landing-page .quick-find .find .user-client-slider .user-profile img {
-    width: 90px;
-    height: 130px;
+    width: 47px;
+    height: 52px;
     object-fit: fill;
     display: inherit !important;
 }
@@ -1442,16 +1624,16 @@ button:focus {
 
 
 .landing-page .quick-find .find .user-client-slider .client-profile {
-    width: 90px;
-    height: 130px;
+    width: 47px;
+    height: 52px;
     display: inline;
     position: relative;
     margin: 0 10px;
 }
 
 .landing-page .quick-find .find .user-client-slider .client-profile img {
-    width: 90px;
-    height: 87px;
+    width: 56px;
+    height: 52px;
     position: relative;
     top: 0;
     display: inherit !important;
@@ -1472,6 +1654,14 @@ button:focus {
     background: #fff;
     padding: 40px 0 78px 0;
     position: relative;
+}
+
+
+.landing-page .connect .connect-left-img{
+    position: absolute;
+    left: -105px;
+    bottom: -32px;
+    width: 291px;
 }
 
 .landing-page .connect .explore-btn {
@@ -1536,7 +1726,8 @@ button:focus {
 .landing-page .faqs {
     background: #215A63;
     width: 100%;
-    padding: 40px;
+    padding: 80px 40px;
+    position: relative
 }
 
 
@@ -1556,6 +1747,20 @@ button:focus {
 
 .landing-page .faqs .heading-block p {
     color: #fff;
+}
+
+.landing-page .faqs .more-btn {
+    background: var(--color-yellow);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    border-radius: 8px 8px 0 0;
+    padding: 4px 31px;
+}
+
+.landing-page .faqs .more-btn i {
+    margin-left: 20px;
 }
 
 .landing-page .faqs .card {
@@ -1600,25 +1805,48 @@ button:focus {
 .landing-page .stay-in-touch {
     width: 100%;
     background: #fff;
-    padding: 50px 30px;
+    padding: 120px 30px;
+    position: relative;
+}
+
+.landing-page .stay-in-touch .stay-in-touch-bg{
+    position: absolute;
+    /* left: 145px; */
+    bottom: -10px;
+    width: 554px;
+
+}
+
+.landing-page .stay-in-touch .stay-in-touch-bg-overlay{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: #fafafa8a;
 }
 
 .landing-page .stay-in-touch .heading-block {
     text-align: center;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .landing-page .stay-in-touch .heading-block .heading {
-    color: #A0B19F;
+    color: var(--color-yellow);
     margin-bottom: 0px;
     font-weight: 500;
     line-height: 1.2;
     font-size: 30px;
     text-align: center;
+    position: relative;
 }
 
 .landing-page .stay-in-touch .heading-block p {
     color: #000;
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .landing-page .stay-in-touch .ant-input-group-addon {
@@ -1667,14 +1895,14 @@ button:focus {
 }
 
 .landing-page .footer {
-    background: #599B5B;
+    background: #212121;
     width: 100%;
     padding: 60px 30px;
-    color: #fff;
+    color: #bababc;
 }
 
 .landing-page .footer .logo {
-    width: 200px;
+    width: 264px;
     height: 50px;
     margin-bottom: 30px;
 }
@@ -1708,7 +1936,7 @@ button:focus {
 
 .landing-page .footer .quick-links-title {
     color: #fff;
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 30px;
 }
 
@@ -1724,8 +1952,37 @@ button:focus {
 }
 
 .landing-page .footer .quick-links li a {
-    color: #fff;
+    color: #bababc;
 }
+
+.landing-page .copyright {
+    background: #000;
+    width: 100%;
+    padding: 9px 0px;
+    color: #bababc;
+}
+
+.landing-page .copyright .copyright-text{
+
+}
+
+.landing-page .copyright .copyright-links{
+}
+
+.landing-page .copyright .copyright-links ul{
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.landing-page .copyright .copyright-links ul li{
+   display: inline-block;
+    margin-right: 40px;
+}
+
+.landing-page .copyright .copyright-links ul li a{
+    color: #bababc;
+}
+
 
 /* Landing Pages
 */
@@ -1736,7 +1993,8 @@ button:focus {
 /*   agri spx  */
 .landing-page .product-page .agrispx-call-for-action {
     /*background-image: url("/img/fm.jpg");*/
-    height: 400px;
+    min-height: 600px;
+    max-height: 409px;
     position: relative;
     color: #fff;
 }
@@ -1749,25 +2007,40 @@ button:focus {
 
 .landing-page .product-page .agrispx-call-for-action h1 {
     color: #fff;
-    font-size: 29px;
-    font-weight: 500;
-    margin-bottom: 70px;
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 121px;
+    font-family: var(--sans-serif)
 }
 
 .landing-page .product-page .agrispx-call-for-action h3 {
     color: #EEA90E;
     margin-bottom: 29px;
+    font-family: var(--segoe-UI);
+    font-size: 50px
 }
 
 .landing-page .product-page .agrispx-call-for-action p {
-
+   font-size: 30px;
+   font-family: var(--segoe-UI);
 }
 
 .landing-page .product-page .agrispx-call-for-action img {
     width: 100%;
-    height: 400px;
     object-fit: fill;
     display: inherit !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 600px;
+    max-height: 409px;
+}
+
+.landing-page .product-page .agrispx-call-for-action .bg-overlay {
+    min-height: 600px;
+    max-height: 409px;
 }
 
 .landing-page .product-page .agrispx-call-for-action .sign-up {
@@ -1775,48 +2048,54 @@ button:focus {
     padding: 5px 27px;
     color: #fff;
     border-radius: 30px;
-    font-size: 12px;
+    font-size: 19px;
     float: right;
+    font-family: var(--segoe-UI);
+    margin-top: -42px;
 }
 
 
 .landing-page .product-page .agrispx-sign {
     background: #fff;
-    padding: 70px 50px;
+    padding: 60px 50px;
 }
 
 .landing-page .product-page .agrispx-sign h1 {
-    color: #000000c7;
+    color: #4D565C;
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-family: var(--segoe-UI)
 }
 
 .landing-page .product-page .agrispx-sign p {
-    color: #000000de;
+    color: #707070;
     font-size: 18px;
     margin-bottom: 75px;
 }
 
 .landing-page .product-page .agrispx-sign .sign-up {
-    background: #599B5B;
-    padding: 5px 27px;
+    background: var(--btn-bg-green);
+    padding: 6px 27px;
     color: #fff;
     border-radius: 30px;
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 
 .landing-page .product-page .agrispx-benefits {
     background: #fff;
-    padding: 70px 50px;
+    padding: 60px 50px;
     position: relative;
 }
 
 .landing-page .product-page .agrispx-benefits h3 {
-    color: #565758;
-    margin-bottom: 30px;
+    color: #4D565C;
+    margin-bottom: 50px;
     text-transform: uppercase;
     font-size: 22px;
+    font-family: var(--sans-serif);
+    font-weight: 700;
 }
 
 .landing-page .product-page .agrispx-benefits .benefit {
@@ -1831,18 +2110,25 @@ button:focus {
 }
 
 .landing-page .product-page .agrispx-benefits .benefit span {
-    color: #28A745;
+    color: #589B5B;
     font-size: 15px;
     font-weight: 500;
+    font-family: var(--segoe-UI)
 }
 
 .landing-page .product-page .agrispx-benefits img {
     position: absolute;
-    width: 563px;
-    height: 267px;
-    bottom: 0;
+    width: 700px;
+    height: 396px;
+    bottom: 0px;
     right: 0;
 }
+
+
+.landing-page .product-page .agrispx-pricing {
+  padding: 70px 0;
+}
+
 
 
 .landing-page .product-page .agrispx-demo {
@@ -1883,14 +2169,30 @@ button:focus {
 
 
 .landing-page .product-page .agrispx-how-it-works {
-    background: #28a745;
     color: #fff;
     padding: 70px 50px;
+    position: relative
+}
+
+
+.landing-page .product-page .agrispx-how-it-works img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .landing-page .product-page .agrispx-how-it-works .info {
     text-align: center;
     padding: 14px 131px;
+    position: relative
+}
+
+.landing-page .product-page .agrispx-how-it-works .h1 {
+     
 }
 
 .landing-page .product-page .agrispx-how-it-works .nav-tabs {
@@ -1900,7 +2202,6 @@ button:focus {
     margin: 40px auto;
     margin-bottom: 0;
     box-sizing: border-box;
-
 }
 
 
@@ -1986,6 +2287,10 @@ button:focus {
     font-size: 24px;
 }
 
+.landing-page .product-page .agrispx-how-it-works .tab-pane .content {
+    text-align: justify;
+}
+
 
 @media ( max-width: 585px ) {
 
@@ -2032,6 +2337,87 @@ button:focus {
     font-size: 15px;
 }
 
+/* Company Page */
+.company-page {
+    position: relative;
+}
+
+.company-page .about-us {
+   height: auto;
+   position: relative;
+}
+
+.company-page .about-us h1{
+   color: #fff
+}
+
+
+.company-page .our-services {
+    height: auto;
+    position: relative;
+}
+
+
+.company-page .how-it-works {
+    padding-bottom: 70px;
+    height: auto;
+    position: relative;
+}
+
+@media (min-width: 768px){
+    .company-page .how-it-works  .u-nav-v4-1 .nav-link.active {
+        border-color: #579C5B #579C5B #f7f7f7!important; ;
+    }
+}
+
+
+.company-page .team {
+    height: auto;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+
+
+.company-page .career {
+    height: auto;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+
+.company-page .location {
+    height: auto;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+
+.company-page .contact {
+    height: auto;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+
+
+.company-page .sponsors-and-partners {
+    height: auto;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+
+.company-page .our-blog {
+    height: auto;
+    position: relative;
+}
+
+.company-page .our-blog .container{
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
 
 /***********************************************************
 *                 Responsiveness
@@ -2042,7 +2428,21 @@ button:focus {
 */
 @media (min-width: 1281px) {
     body {
-        /*background: blue;*/
+        /* background: blue;  */
+    }
+
+
+    /**************************************
+    *                  Landing Page
+    ****************************************/
+      /* Menu */
+      .landing-page .navbar .auth-btn {
+        position: absolute;
+        right: 16px;
+    }
+
+   .landing-page .navbar .collapse .navbar-nav {
+         margin-left: 35% !important;
     }
 }
 
@@ -2052,8 +2452,23 @@ button:focus {
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
     body {
-       /*background: yellow;*/
+       /* background: yellow;  */
     }
+
+
+   /**************************************
+    *                  Landing Page
+    ****************************************/
+      /* Menu */
+      .landing-page .navbar .auth-btn {
+        position: absolute;
+        right: 16px;
+    }
+
+   .landing-page .navbar .collapse .navbar-nav {
+         margin-left: 30% !important;
+    }
+
 }
 
 /*
@@ -2062,7 +2477,7 @@ button:focus {
 */
 @media (min-width: 768px) and (max-width: 1024px) {
     body {
-        /*background: purple;*/
+        /* background: purple;  */
     }
 }
 
@@ -2073,7 +2488,7 @@ button:focus {
 */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     body {
-        /*background: peru;*/
+        /* background: peru;  */
     }
 
     .post-container .card {
@@ -2092,6 +2507,21 @@ button:focus {
     /**************************************
     *                  Landing Page
     ****************************************/
+
+    /* Menu */
+    .landing-page .navbar .auth-btn {
+        position: absolute;
+        right: 16px;
+    }
+
+   .landing-page .navbar .collapse .navbar-nav {
+         margin-left: 20% !important;
+    }
+
+    /* ************************ */
+
+
+
 
     .product-dropdown-wrapper{
         display: contents;
@@ -2348,7 +2778,7 @@ button:focus {
 */
 @media (min-width: 481px) and (max-width: 767px) {
     body {
-         /*background: gray;*/
+       /* background: gray;  */
     }
 
     .main-header .navbar .navbar-brand {
@@ -2654,7 +3084,7 @@ button:focus {
 */
 @media (min-width: 200px) and (max-width: 480px) {
     body {
-        /*background: red;*/
+       /* background: red;  */
     }
 
     .create-post-modal {
@@ -2945,6 +3375,47 @@ button:focus {
     *                  Landing Page
     ****************************************/
 
+    /* Menu */
+    .landing-page .navbar .navbar-brand {
+        width: 40px;
+        height: 48px;
+    }
+
+    .landing-page .navbar .mobile-logo{
+        display: block;
+    }
+
+    .landing-page .navbar .desktop-logo{
+        display: none;
+    }
+
+    .landing-page .navbar .auth-btn {
+        margin-left: 0%;
+    }
+
+    .landing-page .navbar-toggler {
+        padding: 0px 0px 0px 4px;
+        font-size: 20px;
+        /* line-height: 1; */
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        color: #fff;
+    }
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        content: "";
+        background: no-repeat center center;
+        background-size: 100% 100%;
+        padding: 5px 0px 0px 2px;
+        margin-right: -7px;
+    }
+
+
+    /* ****************************************** */
     .product-dropdown-wrapper{
         display: contents;
         justify-content: center;
@@ -3050,6 +3521,7 @@ button:focus {
         cursor: pointer;
     }
 
+
     /* Landing  Product Page */
     .landing-page .product-page .agrispx-call-for-action .container {
         position: absolute;
@@ -3145,11 +3617,10 @@ button:focus {
         right: 0;
     }
 
+
     .landing-page .footer {
-        background: #599B5B;
         width: 100%;
         padding: 30px 0px;
-        color: #fff;
     }
 
     /* home page*/

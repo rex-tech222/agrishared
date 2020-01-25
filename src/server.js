@@ -57,6 +57,9 @@ if (!dev && cluster.isMaster) {
             nextApp.serveStatic(req, res, path.resolve("./.next/service-worker.js"));
         });
 
+ 
+        
+
       // Default catch-all renders Next app
       server.get('*', (req, res) => {
         // res.set({

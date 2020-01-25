@@ -15,15 +15,15 @@ function MainHeader() {
     useEffect(() => {
         var $window = $(window);
         $window.on('scroll', function () {
-            if($window.scrollTop() >= 200) {
+            if ($window.scrollTop() >= 50) {
                 $('.landing-page-header .navbar').addClass('navbar-bg')
             } else {
                 $('.landing-page-header .navbar').removeClass('navbar-bg')
             }
         });
 
-        return () =>{
-            $('body').removeClass('no-scroll')
+        return () => {
+            //  $('body').removeClass('no-scroll')
         }
     });
 
@@ -37,11 +37,16 @@ function MainHeader() {
     }
 
     const onViewProducts = () => {
-        if(state.showProduct){
+
+        if (state.showProduct === true) {
             $('body').removeClass('no-scroll')
-        } else {
+        }
+
+        if (state.showProduct === false) {
             $('body').addClass('no-scroll')
         }
+
+
         setState(state => ({
             ...state,
             showProduct: !state.showProduct,
@@ -59,7 +64,7 @@ function MainHeader() {
     }
 
     const onCloseTabContent = () => {
-        if(state.showProduct){
+        if (state.showProduct) {
             $('body').removeClass('no-scroll')
         } else {
             $('body').addClass('no-scroll')
@@ -70,17 +75,37 @@ function MainHeader() {
             showTabContent: false,
             activeTabContent: '',
         }))
+        $('body').removeClass('navbar-transparent')
     }
 
     const onOpenTabContent = (tab) => {
+
         setState(state => ({
             ...state,
             showProduct: false,
             showTabContent: true,
             activeTabContent: tab,
         }))
-        $('body').removeClass('no-scroll')
+
+        $('body').addClass('no-scroll')
+        $('body').addClass('navbar-transparent')
     }
+
+
+    const onGotoPage = () => {
+
+        setState(state => ({
+            ...state,
+            showProduct: false,
+            //  showTabContent: false,
+            activeTabContent: '',
+        }))
+
+        $('body').removeClass('no-scroll');
+        $('body').removeClass('navbar-transparent');
+        $('.landing-page-header .navbar').removeClass('navbar-bg');
+    }
+
 
     const customStyles = {
         content: {
@@ -96,257 +121,445 @@ function MainHeader() {
     return (
         <header className="landing-page-header">
 
-            <Modal
-                isOpen={state.show}
-                /* onAfterOpen={afterOpenModal}*/
-                onRequestClose={onCloseLoginModal}
-                style={customStyles}
-                contentLabel="Example Modal"
-                ariaHideApp={false}
-            >
-                {/*<h2 ref={_subtitle => (subtitle = _subtitle)}>Hello</h2>*/}
-
-                <div className="products-modal">
-                    <div className="header">
-                        <div className="d-flex justify-content-center  ">
-                            <div className=" ">
-                                <h1>Products</h1>
-                            </div>
-                            <div onClick={onCloseLoginModal} className="close-btn">
-                                <i className="fa fa-close"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="body">
-
-                    </div>
-
-                </div>
-            </Modal>
-
-
 
             <nav className="navbar fixed-top navbar-expand-md custom-navbar ">
-                  <Link href="/landing">
-                      <a >
-                          <img className="navbar-brand" src="/img/logo/googlelogo_color_324x112dp.png" id="logo_custom" alt="logo"/>
-                      </a>
-                  </Link>
-                    <button className="navbar-toggler navbar-toggler-right custom-toggler" type="button"
-                            data-toggle="collapse" data-target="#collapsibleNavbar">
+                <Link href="/landing">
+                    <a>
+                        <img className="navbar-brand desktop-logo" src="/img/logo/logo1.png" id="logo_custom" alt="logo"/>
+                        <img className="navbar-brand mobile-logo" src="/img/logo/logo_mobile.png" id="logo_custom" alt="logo"/>
+                    </a>
+                </Link>
+
+
+                <div className="auth-btn">
+                    <button className="nav-item btn lang-btn dropdown">
+                        <span className=" dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i className="fa fa-language"></i>
+                        </span>
+                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <Link href="#">
+                                    <a   className="dropdown-item">Lang 1</a>
+                                </Link>
+                                <div className="dropdown-divider"></div>
+                                <Link href="#">
+                                    <a   className="dropdown-item" href="#">Lang 2</a>
+                                </Link>
+                                <div className="dropdown-divider"></div>
+                                <Link href="#">
+                                    <a  className="dropdown-item">Lang 3</a>
+                                </Link>
+                            </div>
+                    </button>
+                    <button className="nav-item btn login-btn "><i class="icon-user"></i> Log In</button>
+                    <button className="nav-item btn signup-btn ">Sign Up</button>
+                </div>
+
+                <button className="navbar-toggler navbar-toggler-right custom-toggler" type="button"
+                        data-toggle="collapse" data-target="#collapsibleNavbar">
                         <span className="navbar-toggler-icon ">
                             <i className="fa fa-bars"></i>
                         </span>
-                    </button>
-                    <div className="collapse navbar-collapse " id="collapsibleNavbar">
-                        <ul className="navbar-nav ml-auto ">
-                            <li className="nav-item">
-                                <Link href="/landing">
-                                <a className="nav-link" > Home  </a>
+                </button>
+
+
+                <div className="collapse navbar-collapse " id="collapsibleNavbar">
+                    <ul className="navbar-nav ml-auto">
+                        <li className="nav-item">
+                            <Link href="/landing">
+                                <a onClick={onGotoPage} className="nav-link"> Home </a>
+                            </Link>
+                        </li>
+
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Company
+                            </a>
+                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <Link href="/landing/company#about-us">
+                                    <a onClick={onGotoPage} className="dropdown-item">About Us</a>
                                 </Link>
-                            </li>
-
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                     Our Company
-                                </a>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" href="#">Action</a>
-                                    <a className="dropdown-item" href="#">Another action</a>
-                                    <a className="dropdown-item" href="#">Another action</a>
-                                    <a className="dropdown-item" href="#">Another action</a>
-                                    <a className="dropdown-item" href="#">Another action</a>
-                                </div>
-                            </li>
-                            <li className="nav-item">
-                                <a onClick={onViewProducts} className="nav-link" href="#"> Products </a>
-                            </li>
-                        </ul>
-
-                        <button className="nav-item btn sign-up ml-auto">Sign Up</button>
-                    </div>
+                                <div className="dropdown-divider"></div>
+                                <Link href="/landing/company#our-services">
+                                    <a onClick={onGotoPage} className="dropdown-item" href="#">Our Services</a>
+                                </Link>
+                                <div className="dropdown-divider"></div>
+                                <Link href="/landing/company#how-it-works">
+                                    <a onClick={onGotoPage} className="dropdown-item">How it works</a>
+                                </Link>
+                                <div className="dropdown-divider"></div>
+                                <Link href="/landing/company#team">
+                                    <a onClick={onGotoPage} className="dropdown-item">Team</a>
+                                </Link>
+                                <div className="dropdown-divider"></div>
+                                <Link href="/landing/company#sponsors-and-partners">
+                                    <a onClick={onGotoPage} className="dropdown-item">Sponsors & partners</a>
+                                </Link>
+                                <div className="dropdown-divider"></div>
+                                <Link href="/landing/company#our-blog">
+                                    <a onClick={onGotoPage} className="dropdown-item">Our Blog</a>
+                                </Link>
+                                <div className="dropdown-divider"></div>
+                                <Link href="/landing/company#contact">
+                                    <a onClick={onGotoPage} className="dropdown-item">Contact</a>
+                                </Link>
+                            </div>
+                        </li>
+                        <li className="nav-item">
+                            <a onClick={onGotoPage} onClick={onViewProducts} className="nav-link"
+                               href="#"> Products </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-             
-            <div className={`product-dropdown ${state.showProduct? 'show' : 'hide'}`}>
-                <span onClick={onCloseProducts} className="product-dropdown-close-btn"><i className="fa fa-close"></i></span>
 
-                    <div className="product-dropdown-wrapper">
-                        <div className="product-tabs-container">
-                            <div className="nav-justified ">
-                                <ul className="product-tabs nav nav-tabs">
-                                    <li  onClick={onOpenTabContent.bind(this, 'overview')}
-                                         className={`nav-item nav-link ${state.activeTabContent === 'overview'? 'active' : ''}`}>
-                                        Overview
-                                    </li>
-                                    <li onClick={onOpenTabContent.bind(this, 'how-it-works')}
-                                        className={`nav-item nav-link ${state.activeTabContent === 'how-it-works'? 'active' : ''}`}>
-                                        How it works
-                                    </li>
-                                    <li onClick={onOpenTabContent.bind(this, 'benefits')}
-                                        className={`nav-item nav-link ${state.activeTabContent === 'benefits'? 'active' : ''}`}>
-                                        Benefits
-                                    </li>
-                                    <li onClick={onOpenTabContent.bind(this, 'pricing')}
-                                        className={`nav-item nav-link ${state.activeTabContent === 'pricing'? 'active' : ''}`}>
-                                        Pricing
-                                    </li>
-                                    <li onClick={onOpenTabContent.bind(this, 'disclaimer')}
-                                        className={`nav-item nav-link ${state.activeTabContent === 'disclaimer'? 'active' : ''}`}>
-                                        Disclaimer
-                                    </li>
-                                </ul>
-                            </div>
+            <div className={`product-dropdown ${state.showProduct ? 'show' : 'hide'}`}>
+                <span onClick={onCloseProducts} className="product-dropdown-close-btn"><i
+                    className="fa fa-close"></i></span>
+
+                <div className="product-dropdown-wrapper">
+                    <div className="product-tabs-container">
+                        <div className="nav-justified ">
+                            <ul className="product-tabs nav nav-tabs">
+                                <li onClick={onOpenTabContent.bind(this, 'overview')}
+                                    className={`nav-item nav-link ${state.activeTabContent === 'overview' ? 'active' : ''}`}>
+                                    Overview
+                                </li>
+                                <li onClick={onOpenTabContent.bind(this, 'how-it-works')}
+                                    className={`nav-item nav-link ${state.activeTabContent === 'how-it-works' ? 'active' : ''}`}>
+                                    How it works
+                                </li>
+                                <li onClick={onOpenTabContent.bind(this, 'benefits')}
+                                    className={`nav-item nav-link ${state.activeTabContent === 'benefits' ? 'active' : ''}`}>
+                                    Benefits
+                                </li>
+                                <li onClick={onOpenTabContent.bind(this, 'pricing')}
+                                    className={`nav-item nav-link ${state.activeTabContent === 'pricing' ? 'active' : ''}`}>
+                                    Pricing
+                                </li>
+                                <li onClick={onOpenTabContent.bind(this, 'disclaimer')}
+                                    className={`nav-item nav-link ${state.activeTabContent === 'disclaimer' ? 'active' : ''}`}>
+                                    Disclaimer
+                                </li>
+                            </ul>
                         </div>
                     </div>
+                </div>
 
-                   <div className="container products">
-                       <div className="row">
+                <div className="container products">
 
-                           <Link href="/landing/agri-spx">
-                           <a className="col-md-4 col-sm-6 product">
-                               <img  className="img" src="/img/3.jpg" alt=""/>
-                               <h3 className="name">AGRI <br/> SPX</h3>
-                           </a>
-                           </Link>
+                    <section className="container g-pt-40 g-pb-40">
 
-                           <Link href="/landing/agri-spx">
-                           <a className="col-md-4 col-sm-6 product">
-                               <img  className="img" src="/img/3.jpg" alt=""/>
-                               <h3 className="name">AGRI <br/> B2B</h3>
-                           </a>
-                           </Link>
+                        <div className="row">
 
-                           <Link href="/landing/agri-spx">
-                           <a className="col-md-4 col-sm-6 product">
-                               <img  className="img" src="/img/3.jpg" alt=""/>
-                               <h3 className="name">AGRI <br/> B2C</h3>
-                           </a>
-                           </Link>
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">AGRI SPX</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
+                                            and typesetting industry.
+                                            Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/agri-spx">
+                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                                More</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
 
-                           <Link href="/landing/agri-spx">
-                           <a className="col-md-4 col-sm-6 product">
-                               <img  className="img" src="/img/3.jpg" alt=""/>
-                               <h3 className="name">RESOURCE <br/> SHARING</h3>
-                           </a>
-                           </Link>
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">AGRI B2B</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
+                                            and typesetting industry.
+                                            Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/agri-spx">
+                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                                More
+                                            </a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
 
-                           <Link href="/landing/agri-spx">
-                           <a className="col-md-4 col-sm-6 product">
-                               <img  className="img" src="/img/3.jpg" alt=""/>
-                               <h3 className="name">LEARNING <br/> TOOL</h3>
-                           </a>
-                           </Link>
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">AGRI B2C</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
+                                            and typesetting industry.
+                                            Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/agri-spx">
+                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                                More</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
 
-                           <Link href="/landing/agri-spx">
-                           <a className="col-md-4 col-sm-6 product">
-                               <img  className="img" src="/img/3.jpg" alt=""/>
-                               <h3 className="name">AGRIBUSINESS <br/> INVESTMENT</h3>
-                           </a>
-                           </Link>
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">RESOURCE SHARING</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
+                                            and typesetting industry.
+                                            Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/agri-spx">
+                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                                More</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
 
-                           <Link href="/landing/agri-spx">
-                           <a className="col-md-4 col-sm-6 product">
-                               <img  className="img" src="/img/3.jpg" alt=""/>
-                               <h3 className="name">FBO <br/> MONITORING</h3>
-                           </a>
-                           </Link>
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">LEARNING TOOL</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
+                                            and typesetting industry.
+                                            Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/agri-spx">
+                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                                More</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
 
-                           <Link href="/landing/agri-spx">
-                           <a className="col-md-4  col-sm-6 product">
-                               <img  className="img" src="/img/3.jpg" alt=""/>
-                               <h3 className="name">KNOWLEDGE <br/> LIBRARY</h3>
-                           </a>
-                           </Link>
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">AGRIBUSINESS INVESTMENT</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
+                                            and typesetting industry.
+                                            Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/agri-spx">
+                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                                More</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
 
-                           <Link href="/landing/agri-spx">
-                           <a className="col-md-4 col-sm-6 product">
-                               <img  className="img" src="/img/3.jpg" alt=""/>
-                               <h3 className="name">COLLABORATION  </h3>
-                           </a>
-                           </Link>
-                       </div>
-                   </div>
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">FBO MONITORING</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
+                                            and typesetting industry.
+                                            Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/agri-spx">
+                                            <a  onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                                More</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">KNOWLEDGE LIBRARY</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
+                                            and typesetting industry.
+                                            Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/agri-spx">
+                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                                More</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">COLLABORATION</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
+                                            and typesetting industry.
+                                            Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/agri-spx">
+                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                                More</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">R & D</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
+                                            and typesetting industry.
+                                            Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/agri-spx">
+                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                                More</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+
+
+                </div>
             </div>
-            <div onClick={onCloseProducts} className={`product-overlay ${state.showProduct? 'show' : 'hide'}`}></div>
+            <div onClick={onCloseProducts} className={`product-overlay ${state.showProduct ? 'show' : 'hide'}`}></div>
 
 
-
-
-
-            <div className={`product-tab-content ${state.showTabContent? 'show' : 'hide'}`} >
-                <span onClick={onCloseTabContent} className="product-tab-content-close-btn"><i className="fa fa-close"></i></span>
+            <div className={`product-tab-content ${state.showTabContent ? 'show' : 'hide'}`}>
+                <span onClick={onCloseTabContent} className="product-tab-content-close-btn"><i
+                    className="fa fa-close"></i></span>
                 <div className="product-tab-content-wrapper  ">
-                   <div className="">
+                    <div className="">
                         <div className="product-tabs-container">
                             <div className="nav-justified ">
                                 <ul className="product-tabs nav nav-tabs">
-                                    <li  onClick={onOpenTabContent.bind(this, 'overview')}
-                                         className={`nav-item nav-link ${state.activeTabContent === 'overview'? 'active' : ''}`}>
+                                    <li onClick={onOpenTabContent.bind(this, 'overview')}
+                                        className={`nav-item nav-link ${state.activeTabContent === 'overview' ? 'active' : ''}`}>
                                         Overview
                                     </li>
                                     <li onClick={onOpenTabContent.bind(this, 'how-it-works')}
-                                        className={`nav-item nav-link ${state.activeTabContent === 'how-it-works'? 'active' : ''}`}>
+                                        className={`nav-item nav-link ${state.activeTabContent === 'how-it-works' ? 'active' : ''}`}>
                                         How it works
                                     </li>
                                     <li onClick={onOpenTabContent.bind(this, 'benefits')}
-                                        className={`nav-item nav-link ${state.activeTabContent === 'benefits'? 'active' : ''}`}>
+                                        className={`nav-item nav-link ${state.activeTabContent === 'benefits' ? 'active' : ''}`}>
                                         Benefits
                                     </li>
                                     <li onClick={onOpenTabContent.bind(this, 'pricing')}
-                                        className={`nav-item nav-link ${state.activeTabContent === 'pricing'? 'active' : ''}`}>
+                                        className={`nav-item nav-link ${state.activeTabContent === 'pricing' ? 'active' : ''}`}>
                                         Pricing
                                     </li>
                                     <li onClick={onOpenTabContent.bind(this, 'disclaimer')}
-                                        className={`nav-item nav-link ${state.activeTabContent === 'disclaimer'? 'active' : ''}`}>
+                                        className={`nav-item nav-link ${state.activeTabContent === 'disclaimer' ? 'active' : ''}`}>
                                         Disclaimer
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                       <div className="content">
-                           {state.activeTabContent === 'overview'?
-                           <div>
-                               <h3>Overview</h3>
-                               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                   industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                   galley of type and scrambled it to make a type specimen book.</p>
-                           </div>: ''}
+                        <div className="content">
+                            {state.activeTabContent === 'overview' ?
+                                <div>
+                                    <h3>Overview</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the
+                                        industry's standard dummy text ever since the 1500s, when an unknown printer
+                                        took a
+                                        galley of type and scrambled it to make a type specimen book.</p>
+                                </div> : ''}
 
-                           {state.activeTabContent === 'how-it-works'?
-                           <div>
-                               <h3>How it works</h3>
-                               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                   industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                   galley of type and scrambled it to make a type specimen book.</p>
-                           </div>: ''}
+                            {state.activeTabContent === 'how-it-works' ?
+                                <div>
+                                    <h3>How it works</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the
+                                        industry's standard dummy text ever since the 1500s, when an unknown printer
+                                        took a
+                                        galley of type and scrambled it to make a type specimen book.</p>
+                                </div> : ''}
 
-                           {state.activeTabContent === 'benefits'?
-                            <div>
-                                <h3>Benefits</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                    galley of type and scrambled it to make a type specimen book.</p>
-                          </div>: ''}
+                            {state.activeTabContent === 'benefits' ?
+                                <div>
+                                    <h3>Benefits</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the
+                                        industry's standard dummy text ever since the 1500s, when an unknown printer
+                                        took a
+                                        galley of type and scrambled it to make a type specimen book.</p>
+                                </div> : ''}
 
-                           {state.activeTabContent === 'pricing'?
-                          <div>
-                              <h3>Pricing</h3>
-                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                  industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                  galley of type and scrambled it to make a type specimen book.</p>
-                         </div>: ''}
+                            {state.activeTabContent === 'pricing' ?
+                                <div>
+                                    <h3>Pricing</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the
+                                        industry's standard dummy text ever since the 1500s, when an unknown printer
+                                        took a
+                                        galley of type and scrambled it to make a type specimen book.</p>
+                                </div> : ''}
 
-                           {state.activeTabContent === 'disclaimer'?
-                           <div>
-                               <h3>Disclaimer</h3>
-                               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                   industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                   galley of type and scrambled it to make a type specimen book.</p>
-                          </div>: ''}
-                       </div>
-                       <button className="btn sign-up"> SIGN UP FOR FREE</button>
-                   </div>
+                            {state.activeTabContent === 'disclaimer' ?
+                                <div>
+                                    <h3>Disclaimer</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the
+                                        industry's standard dummy text ever since the 1500s, when an unknown printer
+                                        took a
+                                        galley of type and scrambled it to make a type specimen book.</p>
+                                </div> : ''}
+                        </div>
+                        <button className="btn sign-up"> SIGN UP FOR FREE</button>
+                    </div>
 
 
                     <br/>
@@ -379,20 +592,20 @@ function MainHeader() {
                                 </div>
                                 <div className="tab-pane fade" id="pop2" role="tabpanel" aria-labelledby="pop2-tab">
                                     <div className="pt-3"></div>
-                                   2. There's another way to do this for layouts that doesn't have to put the navbar
-                                        inside the container, and which doesn't require any CSS or Bootstrap overrides.
+                                    2. There's another way to do this for layouts that doesn't have to put the navbar
+                                    inside the container, and which doesn't require any CSS or Bootstrap overrides.
 
-                                        Simply place a div with the Bootstrap container class around the navbar. This
-                                        will center the links inside the navbar:
+                                    Simply place a div with the Bootstrap container class around the navbar. This
+                                    will center the links inside the navbar:
 
                                 </div>
                                 <div className="tab-pane fade" id="pop3" role="tabpanel" aria-labelledby="pop3-tab">
                                     <div className="pt-3"></div>
-                                     3. There's another way to do this for layouts that doesn't have to put the navbar
-                                        inside the container, and which doesn't require any CSS or Bootstrap overrides.
+                                    3. There's another way to do this for layouts that doesn't have to put the navbar
+                                    inside the container, and which doesn't require any CSS or Bootstrap overrides.
 
-                                        Simply place a div with the Bootstrap container class around the navbar. This
-                                        will center the links inside the navbar:
+                                    Simply place a div with the Bootstrap container class around the navbar. This
+                                    will center the links inside the navbar:
 
                                 </div>
 
@@ -401,13 +614,14 @@ function MainHeader() {
                     </div>
 
 
-
                 </div>
 
 
-
             </div>
-            <div   className={`product-overlay ${state.showTabContent? 'show' : 'hide'}`}></div>
+            <img className={`product-tab-img ${state.showTabContent ? 'show' : 'hide'}`}
+                 src="/img/Female-Farmer-1.png"/>
+            <img className={`product-tab-img-overlay ${state.showTabContent ? 'show' : 'hide'}`}
+                 src="/img/Rectangle 1555.png"/>
 
 
         </header>

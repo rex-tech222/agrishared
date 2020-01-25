@@ -87,6 +87,7 @@ function Home(props) {
     return (
         <LandingPageLayout>
              <div className="quick-find">
+            <img className="quick-find-bg" src="/img/find-bg.png" /> 
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 col-lg-6">
@@ -104,13 +105,13 @@ function Home(props) {
                             </div>
                         </div>
 
-                        <div className="col-md-6 col-lg-6 find">
+                        <div className="push-md-2 col-md-6 col-lg-6 find">
                            <div>
                                <h3 className="heading">Quick Find</h3>
 
                                <Form
                                    // onSubmit={this.handleSubmit}
-                                   className="login-form">
+                                   className="find-form">
                                    <Form.Item
                                        //style={{ width: 250 }}
                                    >
@@ -176,8 +177,8 @@ function Home(props) {
                         <div className="service">
                             <div className="row">
                                 <div className="col-md-4 col-lg-4 col-sm-4 service-title">
-                                    <i className="fa fa-bell"></i>
-                                    <h4>PROVIDE <br/> SERVICES</h4>
+                                     <img src="/img/icons8_Service_Bell_96px.png" />
+                                    <h4>INVEST IN AGRICULTURE</h4>
                                 </div>
                                 <div className="col-md-8 col-lg-8 col-sm-8 service-desc">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -192,8 +193,8 @@ function Home(props) {
                         <div className="service">
                             <div className="row">
                                 <div className="col-md-4 col-lg-4 col-sm-4 service-title">
-                                    <i className="fa fa-briefcase"></i>
-                                    <h4>  EDUCATION </h4>
+                                <img src="/img/icons8_Knowledge_Sharing_96px.png" />
+                                    <h4>  BUY COMMODITIES </h4>
                                 </div>
                                 <div className="col-md-8 col-lg-8 col-sm-8 service-desc">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -207,6 +208,7 @@ function Home(props) {
                         </div>
                     </div>
                  </div>
+                 <img className={`connect-left-img `}  src="/img/7-bg-shapes.png" />
                  <button className="btn explore-btn">EXPLORE   <i className="fa fa-long-arrow-right"></i></button>
              </div>
 
@@ -413,10 +415,13 @@ function Home(props) {
                          </div>
                      </div>
 
+                     <button className="btn more-btn">VIEW MORE   <i className="fa fa-long-arrow-right"></i></button>
              </div>
 
 
              <div className="stay-in-touch">
+             <img className="stay-in-touch-bg" src="/img/4.png" />
+                 <div className="stay-in-touch-bg-overlay" ></div>
                  <div className="heading-block">
                      <h3 className="heading">STAY IN TOUCH</h3>
                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br/>
@@ -430,6 +435,7 @@ function Home(props) {
                          />
                      </div>
                  </div>
+                
              </div>
 
 

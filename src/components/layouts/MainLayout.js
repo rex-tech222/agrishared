@@ -1,5 +1,6 @@
 import Link from "next/link";
 import MainHeader from "./../sections/headers/MainHeader";
+import '../../public/static/styles.css'
 function Layout(props) {
 
 

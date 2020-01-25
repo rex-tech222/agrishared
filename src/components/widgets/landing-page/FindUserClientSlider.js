@@ -21,13 +21,15 @@ function FindUserClientSlider(props) {
     };
     const settings = {
         dots: false,
-        autoplay: false,
-        infinite: true,
-        speed: 1000,
-        autoplaySpeed: 4000,
-        fade: false,
-        slidesToShow: 4,
-        slidesToScroll: 2,
+        autoplay: true,
+            infinite: true,
+            speed: 8000,
+            autoplaySpeed: 100,
+            slidesToShow: 6,
+            slidesToScroll: 4,
+            initialSlide: 0,
+            cssEase: "linear",
+            pauseOnHover: true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -49,8 +51,8 @@ function FindUserClientSlider(props) {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToShow: 4,
+                    slidesToScroll: 4
                 }
             }
         ]
@@ -58,62 +60,57 @@ function FindUserClientSlider(props) {
 
     return (
         <div className="user-client-slider">
-                                   <span onClick={previous} className="arrow arrow-left">
-                                        <i className="fa fa-angle-left"></i>
-                                   </span>
+                                   
             <Slider ref={c => ( slider = c)} {...settings}>
                 <div>
                     <div className="user-profile">
                         <img src="/img/1.jpg" alt=""/>
-                        <span className="name">Abraham Nwoke</span>
                     </div>
                 </div>
                 <div>
                     <div className="client-profile">
                         <img src="/img/logo.png" alt=""/>
-                        <span className="name">Abraham Company</span>
+                       
                     </div>
                 </div>
                 <div>
                     <div className="user-profile">
                         <img src="/img/4.jpg" alt=""/>
-                        <span className="name">Abraham Nwoke</span>
+                        
                     </div>
                 </div>
                 <div>
                     <div className="client-profile">
                         <img src="/img/logo.png" alt=""/>
-                        <span className="name">Abraham Company</span>
+                       
                     </div>
                 </div>
                 <div>
                     <div className="user-profile">
                         <img src="/img/1.jpg" alt=""/>
-                        <span className="name">Abraham Nwoke</span>
+                        
                     </div>
                 </div>
                 <div>
                     <div className="client-profile">
                         <img src="/img/logo.png" alt=""/>
-                        <span className="name">Abraham Company</span>
+                        
                     </div>
                 </div>
                 <div>
                     <div className="user-profile">
                         <img src="/img/4.jpg" alt=""/>
-                        <span className="name">Abraham Nwoke</span>
+                        
                     </div>
                 </div>
                 <div>
                     <div className="client-profile">
                         <img src="/img/logo.png" alt=""/>
-                        <span className="name">Abraham Company</span>
+                        
                     </div>
                 </div>
             </Slider>
-            <span onClick={next} className="arrow arrow-right">
-                                       <i className="fa fa-angle-right"></i>
-                                   </span>
+            
         </div>
     )
 

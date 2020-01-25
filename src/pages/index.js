@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import MainLayout from "../components/layouts/MainLayout";
-import '../public/static/styles.css'
+
 import $ from 'jquery';
 import Link from "next/link";
 import Modal from 'react-modal';
@@ -69,7 +69,7 @@ function Home(props) {
                     <div className="header">
                         <div className="d-flex justify-content-center  ">
                             <div className=" ">
-                                <h1>Create Post</h1>
+                                <h1>Create Post</h1>                   
                             </div>
                             <div onClick={onCloseLoginModal} className="close-btn">
                                 <i className="fa fa-close"></i>
