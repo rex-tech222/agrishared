@@ -4,7 +4,7 @@ import React, {useEffect, useState} from "react";
 import Modal from 'react-modal';
 import MainLayout from "../../layouts/MainLayout";
 
-function MainHeader() {
+function MainHeader(props) {
     const [state, setState] = useState({
         show: false,
         showProduct: false,
@@ -16,9 +16,9 @@ function MainHeader() {
         var $window = $(window);
         $window.on('scroll', function () {
             if ($window.scrollTop() >= 50) {
-                $('.landing-page-header .navbar').addClass('navbar-bg')
+               // $('.landing-page-header .navbar').addClass('navbar-bg')
             } else {
-                $('.landing-page-header .navbar').removeClass('navbar-bg')
+             //   $('.landing-page-header .navbar').removeClass('navbar-bg')
             }
         });
 
@@ -97,7 +97,7 @@ function MainHeader() {
         setState(state => ({
             ...state,
             showProduct: false,
-            //  showTabContent: false,
+            showTabContent: false,
             activeTabContent: '',
         }))
 
@@ -118,6 +118,8 @@ function MainHeader() {
         }
     };
 
+
+
     return (
         <header className="landing-page-header">
 
@@ -125,8 +127,10 @@ function MainHeader() {
             <nav className="navbar fixed-top navbar-expand-md custom-navbar ">
                 <Link href="/landing">
                     <a>
-                        <img className="navbar-brand desktop-logo" src="/img/logo/logo1.png" id="logo_custom" alt="logo"/>
-                        <img className="navbar-brand mobile-logo" src="/img/logo/logo_mobile.png" id="logo_custom" alt="logo"/>
+                        <img className="navbar-brand desktop-logo" src="/img/logo/logo1.png" id="logo_custom"
+                             alt="logo"/>
+                        <img className="navbar-brand mobile-logo" src="/img/logo/logo_mobile.png" id="logo_custom"
+                             alt="logo"/>
                     </a>
                 </Link>
 
@@ -134,25 +138,29 @@ function MainHeader() {
                 <div className="auth-btn">
                     <button className="nav-item btn lang-btn dropdown">
                         <span className=" dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i className="fa fa-language"></i>
+                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            EN
                         </span>
-                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <Link href="#">
-                                    <a   className="dropdown-item">Lang 1</a>
-                                </Link>
-                                <div className="dropdown-divider"></div>
-                                <Link href="#">
-                                    <a   className="dropdown-item" href="#">Lang 2</a>
-                                </Link>
-                                <div className="dropdown-divider"></div>
-                                <Link href="#">
-                                    <a  className="dropdown-item">Lang 3</a>
-                                </Link>
-                            </div>
+                        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <Link href="#">
+                                <a className="dropdown-item">Lang 1</a>
+                            </Link>
+                            <div className="dropdown-divider"></div>
+                            <Link href="#">
+                                <a className="dropdown-item" href="#">Lang 2</a>
+                            </Link>
+                            <div className="dropdown-divider"></div>
+                            <Link href="#">
+                                <a className="dropdown-item">Lang 3</a>
+                            </Link>
+                        </div>
                     </button>
-                    <button className="nav-item btn login-btn "><i class="icon-user"></i> Log In</button>
-                    <button className="nav-item btn signup-btn ">Sign Up</button>
+                    <Link href="/login">
+                        <button className="nav-item btn login-btn "><i class="icon-user"></i> Log In</button>
+                    </Link>
+                    <Link href="/signup">
+                        <button className="nav-item btn signup-btn ">Sign Up</button>
+                    </Link>
                 </div>
 
                 <button className="navbar-toggler navbar-toggler-right custom-toggler" type="button"
@@ -163,55 +171,212 @@ function MainHeader() {
                 </button>
 
 
-                <div className="collapse navbar-collapse " id="collapsibleNavbar">
-                    <ul className="navbar-nav ml-auto">
-                        <li className="nav-item">
-                            <Link href="/landing">
-                                <a onClick={onGotoPage} className="nav-link"> Home </a>
-                            </Link>
-                        </li>
+                {
+                    props.activePage === ''? {
 
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Company
-                            </a>
-                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <Link href="/landing/company#about-us">
-                                    <a onClick={onGotoPage} className="dropdown-item">About Us</a>
-                                </Link>
-                                <div className="dropdown-divider"></div>
-                                <Link href="/landing/company#our-services">
-                                    <a onClick={onGotoPage} className="dropdown-item" href="#">Our Services</a>
-                                </Link>
-                                <div className="dropdown-divider"></div>
-                                <Link href="/landing/company#how-it-works">
-                                    <a onClick={onGotoPage} className="dropdown-item">How it works</a>
-                                </Link>
-                                <div className="dropdown-divider"></div>
-                                <Link href="/landing/company#team">
-                                    <a onClick={onGotoPage} className="dropdown-item">Team</a>
-                                </Link>
-                                <div className="dropdown-divider"></div>
-                                <Link href="/landing/company#sponsors-and-partners">
-                                    <a onClick={onGotoPage} className="dropdown-item">Sponsors & partners</a>
-                                </Link>
-                                <div className="dropdown-divider"></div>
-                                <Link href="/landing/company#our-blog">
-                                    <a onClick={onGotoPage} className="dropdown-item">Our Blog</a>
-                                </Link>
-                                <div className="dropdown-divider"></div>
-                                <Link href="/landing/company#contact">
-                                    <a onClick={onGotoPage} className="dropdown-item">Contact</a>
-                                </Link>
-                            </div>
-                        </li>
-                        <li className="nav-item">
-                            <a onClick={onGotoPage} onClick={onViewProducts} className="nav-link"
-                               href="#"> Products </a>
-                        </li>
-                    </ul>
-                </div>
+                    }
+                    : ''
+                }
+
+
+                {
+                    props.activePage === 'knowledge-library'?
+                        <div className="collapse collapse-search navbar-collapse " id="collapsibleNavbar">
+                            <ul className="navbar-nav ml-auto">
+                                <li className="nav-item">
+                                    <Link href="/landing">
+                                        <a onClick={onGotoPage} className="nav-link"> Home </a>
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <a onClick={onGotoPage} onClick={onViewProducts} className="nav-link"
+                                       href="#"> Products </a>
+                                </li>
+                                <li onClick={onGotoPage} className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Issues
+                                    </a>
+                                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <Link href="/landing/company#about-us">
+                                            <a onClick={onGotoPage} className="dropdown-item">About Us</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#our-services">
+                                            <a onClick={onGotoPage} className="dropdown-item" href="#">Our Services</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#how-it-works">
+                                            <a onClick={onGotoPage} className="dropdown-item">How it works</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#team">
+                                            <a onClick={onGotoPage} className="dropdown-item">Team</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#sponsors-and-partners">
+                                            <a onClick={onGotoPage} className="dropdown-item">Sponsors & partners</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#our-blog">
+                                            <a onClick={onGotoPage} className="dropdown-item">Our Blog</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#contact">
+                                            <a onClick={onGotoPage} className="dropdown-item">Contact</a>
+                                        </Link>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                            <form className="navbar-form nav-search">
+                                <div className="form-group" >
+                                    <div className="input-group">
+                                        <input className="form-control" placeholder="Search for anything" type="text"/>
+                                            <span className="input-group-addon">
+                                                <i className="fa fa-search"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+
+                    : ''
+                }
+
+
+                {
+                    props.activePage === 'learning-tool'?
+                        <div className="collapse collapse-search navbar-collapse " id="collapsibleNavbar">
+                            <ul className="navbar-nav ml-auto">
+                                <li className="nav-item">
+                                    <Link href="/landing">
+                                        <a onClick={onGotoPage} className="nav-link"> Home </a>
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <a onClick={onGotoPage} onClick={onViewProducts} className="nav-link"
+                                       href="#"> Products </a>
+                                </li>
+                                <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Issues
+                                    </a>
+                                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <Link href="/landing/company#about-us">
+                                            <a onClick={onGotoPage} className="dropdown-item">About Us</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#our-services">
+                                            <a onClick={onGotoPage} className="dropdown-item" href="#">Our Services</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#how-it-works">
+                                            <a onClick={onGotoPage} className="dropdown-item">How it works</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#team">
+                                            <a onClick={onGotoPage} className="dropdown-item">Team</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#sponsors-and-partners">
+                                            <a onClick={onGotoPage} className="dropdown-item">Sponsors & partners</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#our-blog">
+                                            <a onClick={onGotoPage} className="dropdown-item">Our Blog</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#contact">
+                                            <a onClick={onGotoPage} className="dropdown-item">Contact</a>
+                                        </Link>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                            <form className="navbar-form nav-search">
+                                <div className="form-group" >
+                                    <div className="input-group">
+                                        <input className="form-control" placeholder="Search for anything" type="text"/>
+                                            <span className="input-group-addon">
+                                                <i className="fa fa-search"></i>
+                                            </span>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+
+                    : ''
+                }
+
+
+
+
+                {
+                    !props.activePage ?
+                        <div className="collapse navbar-collapse " id="collapsibleNavbar">
+                            <ul className="navbar-nav ml-auto">
+                                <li className="nav-item">
+                                    <Link href="/landing">
+                                        <a onClick={onGotoPage} className="nav-link"> Home </a>
+                                    </Link>
+                                </li>
+
+                                <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Company
+                                    </a>
+                                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <Link href="/landing/company#about-us">
+                                            <a onClick={onGotoPage} className="dropdown-item">About Us</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#our-services">
+                                            <a onClick={onGotoPage} className="dropdown-item" href="#">Our Services</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#how-it-works">
+                                            <a onClick={onGotoPage} className="dropdown-item">How it works</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#team">
+                                            <a onClick={onGotoPage} className="dropdown-item">Team</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#sponsors-and-partners">
+                                            <a onClick={onGotoPage} className="dropdown-item">Sponsors & partners</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#our-blog">
+                                            <a onClick={onGotoPage} className="dropdown-item">Our Blog</a>
+                                        </Link>
+                                        <div className="dropdown-divider"></div>
+                                        <Link href="/landing/company#contact">
+                                            <a onClick={onGotoPage} className="dropdown-item">Contact</a>
+                                        </Link>
+                                    </div>
+                                </li>
+
+                                <li className="nav-item">
+                                    <a onClick={onGotoPage} onClick={onViewProducts} className="nav-link"
+                                       href="#"> Products </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        : ''
+                }
+
+
+
+
             </nav>
 
             <div className={`product-dropdown ${state.showProduct ? 'show' : 'hide'}`}>
@@ -263,12 +428,9 @@ function MainHeader() {
                                     <div className="media-body">
                                         <h3 className="h5 g-color-black mb-20">AGRI SPX</h3>
                                         <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
-                                            printing
-                                            and typesetting industry.
-                                            Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
-                                                More</a>
+                                            printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/products/agri-spx">
+                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn More</a>
                                         </Link>
                                     </div>
                                 </div>
@@ -284,13 +446,9 @@ function MainHeader() {
                                     <div className="media-body">
                                         <h3 className="h5 g-color-black mb-20">AGRI B2B</h3>
                                         <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
-                                            printing
-                                            and typesetting industry.
-                                            Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
-                                                More
-                                            </a>
+                                            printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/products/agri-b2b">
+                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn More</a>
                                         </Link>
                                     </div>
                                 </div>
@@ -309,9 +467,8 @@ function MainHeader() {
                                             printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
-                                                More</a>
+                                        <Link href="/landing/products/agri-b2c">
+                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn More</a>
                                         </Link>
                                     </div>
                                 </div>
@@ -330,9 +487,8 @@ function MainHeader() {
                                             printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
-                                                More</a>
+                                        <Link href="/landing/products/resource-sharing">
+                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn More</a>
                                         </Link>
                                     </div>
                                 </div>
@@ -351,8 +507,9 @@ function MainHeader() {
                                             printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                        <Link href="/landing/products/learning-tool">
+                                            <a onClick={onGotoPage}
+                                               className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
                                                 More</a>
                                         </Link>
                                     </div>
@@ -368,12 +525,12 @@ function MainHeader() {
                                     </div>
                                     <div className="media-body">
                                         <h3 className="h5 g-color-black mb-20">AGRIBUSINESS INVESTMENT</h3>
-                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
-                                            printing
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                        <Link href="/landing/products/agribusiness-investment">
+                                            <a onClick={onGotoPage}
+                                               className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
                                                 More</a>
                                         </Link>
                                     </div>
@@ -393,8 +550,9 @@ function MainHeader() {
                                             printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a  onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                        <Link href="/landing/products/fbo-monitoring">
+                                            <a onClick={onGotoPage}
+                                               className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
                                                 More</a>
                                         </Link>
                                     </div>
@@ -414,8 +572,9 @@ function MainHeader() {
                                             printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                        <Link href="/landing/products/knowledge-library">
+                                            <a onClick={onGotoPage}
+                                               className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
                                                 More</a>
                                         </Link>
                                     </div>
@@ -435,8 +594,9 @@ function MainHeader() {
                                             printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                        <Link href="/landing/products/collaboration">
+                                            <a onClick={onGotoPage}
+                                               className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
                                                 More</a>
                                         </Link>
                                     </div>
@@ -451,13 +611,14 @@ function MainHeader() {
                                      </span>
                                     </div>
                                     <div className="media-body">
-                                        <h3 className="h5 g-color-black mb-20">R & D</h3>
+                                        <h3 className="h5 g-color-black mb-20">RESEARCH & DEVELOPMENT</h3>
                                         <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
                                             printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a onClick={onGotoPage} className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                        <Link href="/landing/products/research-and-development">
+                                            <a onClick={onGotoPage}
+                                               className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
                                                 More</a>
                                         </Link>
                                     </div>
@@ -468,7 +629,6 @@ function MainHeader() {
                         </div>
 
                     </section>
-
 
 
                 </div>

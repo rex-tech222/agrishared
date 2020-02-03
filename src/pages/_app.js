@@ -1,6 +1,16 @@
 import App from 'next/app'
 import React from 'react'
+import NProgress from 'nprogress'
+import Router from 'next/router'
 
+NProgress.configure({ showSpinner: false });
+Router.events.on('routeChangeStart', url => {
+    console.log(`Loading: ${url}`)
+
+    NProgress.start()
+})
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 
 class MyApp extends App {

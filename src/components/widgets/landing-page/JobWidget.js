@@ -24,7 +24,7 @@ function BlogPost(props) {
 
             <ul className="list-inline d-flex justify-content-between g-mb-15">
                 <li className="list-inline-item g-mr-20">
-                    <img className="g-height-25 g-width-25 rounded-circle g-mr-5"
+                    <img className="g-height-25 g-width-25 d-inline rounded-circle g-mr-5"
                          src="/img/1.jpg"
                          alt="Image Description" /> <a
                     className="u-link-v5 g-color-main g-color-primary--hover"

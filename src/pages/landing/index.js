@@ -414,8 +414,9 @@ function Home(props) {
 
                          </div>
                      </div>
-
+                 <Link href="/landing/faqs">
                      <button className="btn more-btn">VIEW MORE   <i className="fa fa-long-arrow-right"></i></button>
+                 </Link>
              </div>
 
 

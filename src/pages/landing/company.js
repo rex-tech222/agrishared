@@ -2,8 +2,10 @@ import React, {useEffect, useState, useRef} from 'react'
 import LandingPageLayout from "../../components/layouts/LandingPageLayout";
 import FindUserClientSlider from "../../components/widgets/landing-page/FindUserClientSlider";
 import CompanyAboutUsTestimonies from "../../components/widgets/landing-page/CompanyAboutUsTestimonies";
-import BlogPost from "../../components/widgets/landing-page/BlogPost";
 import JobWidget from "../../components/widgets/landing-page/JobWidget";
+import Testimonies from "../../components/widgets/landing-page/Testimonies";
+import BlogPosts from "../../components/widgets/landing-page/BlogPosts";
+import RecentJobs from "../../components/widgets/landing-page/RecentJobs";
 
 import $ from 'jquery';
 import Link from "next/link";
@@ -212,49 +214,11 @@ function Company(props) {
                                             industry. Lorem Ipsum has been the industry's standard dummy text ever since
                                             the.</p>
                                     </div>
-
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-6 g-mb-50">
+                            <Testimonies/>
 
-                                    <blockquote
-                                        class="lead u-blockquote-v1 rounded g-pl-60 g-pr-30 g-py-30 g-mb-40">Lorem Ipsum
-                                        is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                        been the industry's standard dummy text ever since the..
-                                    </blockquote>
-                                    <div class="media">
-                                        <img
-                                            class="d-flex align-self-center rounded-circle g-width-60 g-brd-around g-brd-3 g-brd-white mr-3"
-                                            src="/img/1.jpg" alt="Image Description"/>
-                                        <div class="media-body align-self-center">
-                                            <h4 class="h6 g-font-weight-700 g-mb-0">Alexandra Pottorf</h4>
-                                            <em class="g-color-gray-dark-v4 g-font-style-normal">Web Developer</em>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="col-md-6 g-mb-50">
-
-                                    <blockquote
-                                        class="lead u-blockquote-v1 rounded g-pl-60 g-pr-30 g-py-30 g-mb-40">Lorem Ipsum
-                                        is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                        been the industry's standard dummy text ever since the..
-                                    </blockquote>
-                                    <div class="media">
-                                        <img
-                                            class="d-flex align-self-center rounded-circle g-width-60 g-brd-around g-brd-3 g-brd-white mr-3"
-                                            src="/img/1.jpg" alt="Image Description"/>
-                                        <div class="media-body align-self-center">
-                                            <h4 class="h6 g-font-weight-700 g-mb-0">Abraham Nwoke</h4>
-                                            <em class="g-color-gray-dark-v4 g-font-style-normal">Farm Designer</em>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
                         </div>
                     </section>
 
@@ -823,7 +787,7 @@ function Company(props) {
                 <div className="team" id="team">
 
                     <section
-                        class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall"
+                        class="d-none  dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall"
                         data-options='{direction: "fromtop", animation_duration: 25, direction: "reverse"}'>
                         <div
                             className="divimage dzsparallaxer--target w-100 g-bg-cover g-bg-pos-center g-bg-black-opacity-0_2--after"
@@ -962,14 +926,7 @@ function Company(props) {
                                             <em className="d-block u-info-v6-1__item g-font-style-normal g-font-size-11 text-uppercase green-color">Web
                                                 Developer</em>
                                         </div>
-                                        <ul className="list-unstyled">
-                                            <li className="g-font-size-12 g-color-gray-dark-v5">
-                                                <strong>Email:</strong> abrahamnwoke@gmail.com
-                                            </li>
-                                            <li className="g-font-size-12 g-color-gray-dark-v5">
-                                                <strong>Mobile:</strong> +233244491485
-                                            </li>
-                                        </ul>
+
                                     </div>
 
                                 </div>
@@ -1021,14 +978,7 @@ function Company(props) {
                                             <em className="d-block u-info-v6-1__item g-font-style-normal g-font-size-11 text-uppercase green-color">Web
                                                 Developer</em>
                                         </div>
-                                        <ul className="list-unstyled">
-                                            <li className="g-font-size-12 g-color-gray-dark-v5">
-                                                <strong>Email:</strong> abrahamnwoke@gmail.com
-                                            </li>
-                                            <li className="g-font-size-12 g-color-gray-dark-v5">
-                                                <strong>Mobile:</strong> +233244491485
-                                            </li>
-                                        </ul>
+
                                     </div>
                                 </div>
                             </div>
@@ -1077,14 +1027,7 @@ function Company(props) {
                                             <em className="d-block u-info-v6-1__item g-font-style-normal g-font-size-11 text-uppercase green-color">Web
                                                 Developer</em>
                                         </div>
-                                        <ul className="list-unstyled">
-                                            <li className="g-font-size-12 g-color-gray-dark-v5">
-                                                <strong>Email:</strong> abrahamnwoke@gmail.com
-                                            </li>
-                                            <li className="g-font-size-12 g-color-gray-dark-v5">
-                                                <strong>Mobile:</strong> +233244491485
-                                            </li>
-                                        </ul>
+
                                     </div>
                                 </div>
                             </div>
@@ -1132,14 +1075,7 @@ function Company(props) {
                                             <em className="d-block u-info-v6-1__item g-font-style-normal g-font-size-11 text-uppercase green-color">Web
                                                 Developer</em>
                                         </div>
-                                        <ul className="list-unstyled">
-                                            <li className="g-font-size-12 g-color-gray-dark-v5">
-                                                <strong>Email:</strong> abrahamnwoke@gmail.com
-                                            </li>
-                                            <li className="g-font-size-12 g-color-gray-dark-v5">
-                                                <strong>Mobile:</strong> +233244491485
-                                            </li>
-                                        </ul>
+
                                     </div>
 
                                 </div>
@@ -1173,7 +1109,7 @@ function Company(props) {
                             <div class="shortcode-html">
                                 <div class="g-overflow-hidden">
                                     <div class="row text-center mx-0 g-ml-minus-1 g-mb-minus-1">
-                                        <div class="col-md-3 px-0">
+                                        <div class="col-md-3 col-sm-6 col-6 px-0">
                                             <div class="g-brd-left g-brd-bottom g-brd-gray-light-v4 g-py-40">
                                                 <img
                                                     class="img-fluid g-width-120 g-opacity-0_8 g-opacity-1--hover g-transition-0_2"
@@ -1181,7 +1117,7 @@ function Company(props) {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-3 px-0">
+                                        <div class="col-md-3 col-sm-6 col-6 px-0">
                                             <div class="g-brd-left g-brd-bottom g-brd-gray-light-v4 g-py-40">
                                                 <img
                                                     class="img-fluid g-width-120 g-opacity-0_8 g-opacity-1--hover g-transition-0_2"
@@ -1189,7 +1125,7 @@ function Company(props) {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-3 px-0">
+                                        <div class="col-md-3 col-sm-6 col-6 px-0">
                                             <div class="g-brd-left g-brd-bottom g-brd-gray-light-v4 g-py-40">
                                                 <img
                                                     class="img-fluid g-width-120 g-opacity-0_8 g-opacity-1--hover g-transition-0_2"
@@ -1197,7 +1133,7 @@ function Company(props) {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-3 px-0">
+                                        <div class="col-md-3 col-sm-6 col-6 px-0">
                                             <div class="g-brd-left g-brd-bottom g-brd-gray-light-v4 g-py-40">
                                                 <img
                                                     class="img-fluid g-width-120 g-opacity-0_8 g-opacity-1--hover g-transition-0_2"
@@ -1205,7 +1141,7 @@ function Company(props) {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-3 px-0">
+                                        <div class="col-md-3 col-sm-6 col-6 px-0">
                                             <div class="g-brd-left g-brd-bottom g-brd-gray-light-v4 g-py-40">
                                                 <img
                                                     class="img-fluid g-width-120 g-opacity-0_8 g-opacity-1--hover g-transition-0_2"
@@ -1213,7 +1149,7 @@ function Company(props) {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-3 px-0">
+                                        <div class="col-md-3 col-sm-6 col-6 px-0">
                                             <div class="g-brd-left g-brd-bottom g-brd-gray-light-v4 g-py-40">
                                                 <img
                                                     class="img-fluid g-width-120 g-opacity-0_8 g-opacity-1--hover g-transition-0_2"
@@ -1221,7 +1157,7 @@ function Company(props) {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-3 px-0">
+                                        <div class="col-md-3 col-sm-6 col-6 px-0">
                                             <div class="g-brd-left g-brd-bottom g-brd-gray-light-v4 g-py-40">
                                                 <img
                                                     class="img-fluid g-width-120 g-opacity-0_8 g-opacity-1--hover g-transition-0_2"
@@ -1229,7 +1165,7 @@ function Company(props) {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-3 px-0">
+                                        <div class="col-md-3 col-sm-6 col-6 px-0">
                                             <div class="g-brd-left g-brd-bottom g-brd-gray-light-v4 g-py-40">
                                                 <img
                                                     class="img-fluid g-width-120 g-opacity-0_8 g-opacity-1--hover g-transition-0_2"
@@ -1237,7 +1173,7 @@ function Company(props) {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-3 px-0">
+                                        <div class="col-md-3 col-sm-6 col-6 px-0">
                                             <div class="g-brd-left g-brd-bottom g-brd-gray-light-v4 g-py-40">
                                                 <img
                                                     class="img-fluid g-width-120 g-opacity-0_8 g-opacity-1--hover g-transition-0_2"
@@ -1245,7 +1181,7 @@ function Company(props) {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-3 px-0">
+                                        <div class="col-md-3 col-sm-6 col-6 px-0">
                                             <div class="g-brd-left g-brd-bottom g-brd-gray-light-v4 g-py-40">
                                                 <img
                                                     class="img-fluid g-width-120 g-opacity-0_8 g-opacity-1--hover g-transition-0_2"
@@ -1253,7 +1189,7 @@ function Company(props) {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-3 px-0">
+                                        <div class="col-md-3 col-sm-6 col-6 px-0">
                                             <div class="g-brd-left g-brd-bottom g-brd-gray-light-v4 g-py-40">
                                                 <img
                                                     class="img-fluid g-width-120 g-opacity-0_8 g-opacity-1--hover g-transition-0_2"
@@ -1272,20 +1208,16 @@ function Company(props) {
 
 
                 <div className="our-blog" id="our-blog">
-                    <section
-                        class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall"
-                        data-options='{direction: "fromtop", animation_duration: 25, direction: "reverse"}'>
-                        <div
-                            className="divimage dzsparallaxer--target w-100 g-bg-cover g-bg-pos-center g-bg-black-opacity-0_2--after"
-                            style={{height: '140%', backgroundImage: 'url(/img/5e09feeac38b0.png)'}}>
-                        </div>
-                        <div className="container g-color-white text-center g-py-150">
-                            <h3 className="h1 text-uppercase mb-0">Our Blog</h3>
-                            <span className="d-block g-font-weight-300 g-font-size-25 mb-3">Agrishared is an agricultural and sharing app</span>
-                        </div>
-                    </section>
-                    <div className="container">
 
+
+                    <div className="row justify-content-center text-center g-mb-50 g-mt-40">
+                        <div className="col-lg-9">
+                            <h2 className="h3 g-color-black g-font-weight-600 text-uppercase mb-2">Our Blog</h2>
+                            <div className="d-inline-block g-width-35 g-height-2 g-bg-primary mb-2"></div>
+                        </div>
+                    </div>
+
+                    <div className="container">
                         <div className="shortcode-html">
                             <div class="row g-mb-10">
                                 <div class="col-md-5">
@@ -1359,31 +1291,7 @@ function Company(props) {
                             </div>
                         </div>
 
-
-                        <div className="shortcode-html g-mt-50">
-                            <div className="row">
-
-                                <div className="col-lg-4 g-mb-30">
-                                    <BlogPost/>
-                                </div>
-                                <div className="col-lg-4 g-mb-30">
-                                    <BlogPost/>
-                                </div>
-                                <div className="col-lg-4 g-mb-30">
-                                    <BlogPost/>
-                                </div>
-                                <div className="col-lg-4 g-mb-30">
-                                    <BlogPost/>
-                                </div>
-                                <div className="col-lg-4 g-mb-30">
-                                    <BlogPost/>
-                                </div>
-                                <div className="col-lg-4 g-mb-30">
-                                    <BlogPost/>
-                                </div>
-                            </div>
-                        </div>
-
+                        <BlogPosts/>
 
                     </div>
                     <div className="text-center mb-5">
@@ -1443,12 +1351,15 @@ function Company(props) {
                                         </div>
 
                                         <div className="col-lg-2">
-                                            <button className="btn btn-md btn-block green-btn u-shadow-v21 text-uppercase g-py-10" type="submit">Search
+                                            <button
+                                                className="btn btn-md btn-block green-btn u-shadow-v21 text-uppercase g-py-10"
+                                                type="submit">Search
                                             </button>
                                         </div>
                                     </div>
 
-                                    <small className="form-text g-font-size-default">Search any type of work and much more..</small>
+                                    <small className="form-text g-font-size-default">Search any type of work and much
+                                        more..</small>
                                 </form>
                             </div>
 
@@ -1463,28 +1374,7 @@ function Company(props) {
                                     tincidunt massa, a pulvinar leo ultricies ut.</p>
                             </header>
 
-                            <div className="row g-mb-30">
-                                <div className="col-lg-4 g-mb-30 ">
-                                   <JobWidget />
-                                </div>
-                                <div className="col-lg-4 g-mb-30 ">
-                                    <JobWidget />
-                                </div>
-                                <div className="col-lg-4 g-mb-30 ">
-                                    <JobWidget />
-                                </div>
-                                <div className="col-lg-4 g-mb-30 ">
-                                    <JobWidget />
-                                </div>
-                                <div className="col-lg-4 g-mb-30 ">
-                                    <JobWidget />
-                                </div>
-                                <div className="col-lg-4 g-mb-30 ">
-                                    <JobWidget />
-                                </div>
-                            </div>
-
-
+                            <RecentJobs/>
 
                             <div className="text-center">
                                 <a className="btn btn-xl green-btn-outline text-uppercase g-font-weight-600 g-font-size-12"
@@ -1508,6 +1398,7 @@ function Company(props) {
                             <h3 className="h1 text-uppercase mb-0">Location</h3>
                             <span className="d-block g-font-weight-300 g-font-size-25 mb-3">Agrishared is an agricultural and sharing app</span>
                         </div>
+
                     </section>
 
 
@@ -1515,21 +1406,22 @@ function Company(props) {
 
 
                 <div className="contact" id="contact">
-                    <section
-                        className="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall"
-                        data-options='{direction: "fromtop", animation_duration: 25, direction: "reverse"}'>
-                        <div
-                            className="divimage dzsparallaxer--target w-100 g-bg-cover g-bg-pos-center g-bg-black-opacity-0_2--after"
-                            style={{height: '140%', backgroundImage: 'url(/img/backgrounds/bgs.jpg)'}}>
+
+                    <div className="row justify-content-center text-center g-mb-50 g-mt-40">
+                        <div className="col-lg-9">
+                            <div className="text-uppercase  g-brd-primary g-mb-20">
+                                <h4 className="h6 g-font-weight-800 g-font-size-12 g-letter-spacing-2 g-color-primary g-mb-20">Contact</h4>
+                                <h2 className="h1 u-heading-v2__title g-line-height-1_3 g-font-weight-600 g-font-size-40 g-color-black -light-v2 g-mb-minus-10">Our contacts</h2>
+                                <span className="d-block g-font-weight-300 g-font-size-20 mt-3">Got a question? We'd love to hear from you!</span>
+                            </div>
+                            <div className="d-inline-block g-width-35 g-height-2 g-bg-primary mb-2"></div>
                         </div>
-                        <div className="container g-color-white text-center g-py-150">
-                            <h3 className="h1 text-uppercase mb-0">Contact Us</h3>
-                            <span className="d-block g-font-weight-300 g-font-size-25 mb-3">Got a question? We'd love to hear from you!</span>
-                        </div>
-                    </section>
+                    </div>
 
 
-                    <section className="clearfix g-brd-bottom g-brd-gray-light-v4">
+
+
+                    <section className="clearfix g-brd-bottom g-brd-gray-light-v3">
                         <div className="row no-gutters g-py-30">
                             <div className="col-md-6 col-lg-4 g-brd-right--md g-brd-gray-light-v4">
 
@@ -1574,14 +1466,49 @@ function Company(props) {
                         </div>
                     </section>
 
+                    <ul className="row no-gutters list-inline g-mb-0 g-brd-bottom g-brd-gray-light-v3">
+                        <li className="col list-inline-item g-mr-0">
+                            <a className="d-block g-theme-bg-blue-dark-v3 g-color-gray-dark-v5 g-bg-primary--hover g-color-white--hover g-font-size-default text-center g-pa-15"
+                               href="#!">
+                                <i className="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li className="col list-inline-item g-mr-0">
+                            <a className="d-block g-theme-bg-blue-dark-v2 g-color-gray-dark-v5 g-bg-primary--hover g-color-white--hover g-font-size-default text-center g-pa-15"
+                               href="#!">
+                                <i className="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li className="col list-inline-item g-mr-0">
+                            <a className="d-block g-theme-bg-blue-dark-v3 g-color-gray-dark-v5 g-bg-primary--hover g-color-white--hover g-font-size-default text-center g-pa-15"
+                               href="#!">
+                                <i className="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li className="col list-inline-item g-mr-0">
+                            <a className="d-block g-theme-bg-blue-dark-v2 g-color-gray-dark-v5 g-bg-primary--hover g-color-white--hover g-font-size-default text-center g-pa-15"
+                               href="#!">
+                                <i className="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li className="col list-inline-item">
+                            <a className="d-block g-theme-bg-blue-dark-v3 g-color-gray-dark-v5 g-bg-primary--hover g-color-white--hover g-font-size-default text-center g-pa-15"
+                               href="#!">
+                                <i className="fa fa-telegram"></i>
+                            </a>
+                        </li>
+                    </ul>
+
 
                     <section className="container g-py-100">
                         <div className="row justify-content-center g-mb-70">
                             <div className="col-lg-7">
                                 <div className="text-center">
-                                    <h2 className="h2 g-color-black g-font-weight-700 text-uppercase mb-4">Send Agrishared a messaged</h2>
+                                    <h2 className="h2 g-color-black g-font-weight-700 text-uppercase mb-4">Send
+                                        Agrishared a messaged</h2>
                                     <div className="d-inline-block g-width-70 g-height-2 g-bg-black mb-4"></div>
-                                    <p className="g-font-size-18 mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    <p className="g-font-size-18 mb-0">Lorem Ipsum is simply dummy text of the printing
+                                        and typesetting industry.
                                         Lorem Ipsum has been the industry's.</p>
                                 </div>
                             </div>

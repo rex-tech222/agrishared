@@ -20,6 +20,7 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="/static/plugins/dzsparallaxer/dzsparallaxer.css"/>
           <link rel="stylesheet" href="/static/plugins/dzsparallaxer/dzsscroller/scroller.css"/>
           <link rel="stylesheet" href="/static/plugins/dzsparallaxer/advancedscroller/plugin.css"/>
+          <link rel="stylesheet" href="/static/nprogress.css"/>
 
           {/* Icons */}
           <link rel="stylesheet" href="/static/plugins/icon-line/css/simple-line-icons.css"/>
@@ -32,7 +33,7 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="/static/globals.css" type="text/css"/>
          
           <link rel="stylesheet" href="/static/animate.min.css" type="text/css" />
-          <link rel="stylesheet" href="/static/slick.min.css" type="text/css" />
+         {/* <link rel="stylesheet" href="/static/slick.min.css" type="text/css" />*/}
           <link rel="stylesheet" href="/static/bg-files.css" type="text/css" />
          {/* <link rel="stylesheet" href="/static/styles.css" type="text/css" />*/}
 
