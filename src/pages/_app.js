@@ -3,6 +3,13 @@ import React from 'react'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 
+import '../public/static/plugins/slick.min.css'
+import '../public/static/plugins/antd.css'
+import '../public/static/dashboard.css'
+import '../public/static/styles.css'
+import '../public/static/landing-page.css'
+import '../public/static/b2c.css'
+
 NProgress.configure({ showSpinner: false });
 Router.events.on('routeChangeStart', url => {
     console.log(`Loading: ${url}`)
@@ -20,7 +27,7 @@ class MyApp extends App {
 
         const host = process.env.HOST;
 
-     
+
 
         return {
             // Call page-level getInitialProps

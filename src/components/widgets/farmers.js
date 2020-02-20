@@ -3,7 +3,7 @@ import React from "react";
 
 function Farmers() {
 
-    
+
     return (
         <div className="widget farmers card">
             <div className="card-header">
@@ -19,23 +19,32 @@ function Farmers() {
             </div>
             <div className="card-body">
                 <div className="row media">
-                    <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                        <img src="/img/1.jpg" alt=""/>
+                    <div className="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                        <img className="small-img" src="/img/1.png" alt=""/>
                     </div>
-                    <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                        <img src="/img/3.jpg" alt=""/>
+                    <div className="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                        <img className="small-img" src="/img/7.png" alt=""/>
                     </div>
-                    <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                        <img src="/img/4.jpg" alt=""/>
+                    <div className="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                        <img className="small-img" src="/img/sss3.png" alt=""/>
                     </div>
-                    <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                        <img src="/img/5.jpg" alt=""/>
+                    <div className="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                        <img className="small-img" src="/img/8.png" alt=""/>
                     </div>
-                    <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                        <img src="/img/5.jpg" alt=""/>
+                    <div className="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                        <img className="small-img" src="/img/3.png" alt=""/>
                     </div>
-                    <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                        <img src="/img/4.jpg" alt=""/>
+                    <div className="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                        <img className="small-img" src="/img/5.png" alt=""/>
+                    </div>
+                    <div className="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                        <img className="small-img" src="/img/23234.png" alt=""/>
+                    </div>
+                    <div className="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                        <img className="small-img" src="/img/23235.png" alt=""/>
+                    </div>
+                    <div className="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-4">
+                        <img className="small-img" src="/img/232.png" alt=""/>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import MainLayout from "../components/layouts/MainLayout";
-
+import {NextSeo} from 'next-seo';
 import $ from 'jquery';
 import Link from "next/link";
 import Modal from 'react-modal';
@@ -14,6 +14,7 @@ import MyWallet from "../components/widgets/myWallet"
 import Agronmers from "../components/widgets/agronmers"
 import Awards from "../components/widgets/awards"
 import AgroBussinesses from "../components/widgets/agroBussinesses"
+import TimelineNewPostWidget from "../components/widgets/socialWidgets/TimelineNewPostWidget"
 
 function Home(props) {
 
@@ -54,61 +55,73 @@ function Home(props) {
 
     return (
         <MainLayout>
+            <NextSeo
+                title="Home - Agrishared"
+                description="This example uses more of the available config options."
+                canonical="https://www.canonical.ie/"
+                openGraph={{
+                    url: 'https://www.url.ie/a',
+                    title: 'Open Graph Title',
+                    description: 'Open Graph Description',
+                    images: [
+                        {
+                            url: 'https://www.example.ie/og-image-01.jpg',
+                            width: 800,
+                            height: 600,
+                            alt: 'Og Image Alt',
+                        },
+                        {
+                            url: 'https://www.example.ie/og-image-02.jpg',
+                            width: 900,
+                            height: 800,
+                            alt: 'Og Image Alt Second',
+                        },
+                        {url: 'https://www.example.ie/og-image-03.jpg'},
+                        {url: 'https://www.example.ie/og-image-04.jpg'},
+                    ],
+                    site_name: 'SiteName',
+                }}
+                twitter={{
+                    handle: '@handle',
+                    site: '@site',
+                    cardType: 'summary_large_image',
+                }}
+            />
 
-            <Modal
-                isOpen={state.show}
-                /* onAfterOpen={afterOpenModal}*/
-                onRequestClose={onCloseLoginModal}
-                style={customStyles}
-                contentLabel="Example Modal"
-                ariaHideApp={false}
-            >
-                {/*<h2 ref={_subtitle => (subtitle = _subtitle)}>Hello</h2>*/}
-
-                <div className="create-post-modal">
-                    <div className="header">
-                        <div className="d-flex justify-content-center  ">
-                            <div className=" ">
-                                <h1>Create Post</h1>                   
-                            </div>
-                            <div onClick={onCloseLoginModal} className="close-btn">
-                                <i className="fa fa-close"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="body">
-                         <div className="privacy-btn d-flex justify-content-start">
-                              <h3>Sharing to</h3>
-                             <button className="btn"><i className="fa fa-globe"></i> Public</button>
-                         </div>
-                        <div className="user d-flex justify-content-start">
-                            <div className="mr-2">
-                                <img className="rounded-circle" width="45"
-                                     src="/user.png" alt=""/>
-                            </div>
-                            <div className="ml-2 user-name">
-                                <div className="name">Abraham Nwoke</div>
-                            </div>
-                        </div>
-                        <textarea  className="form-control post-text" id="message" rows="3"
-                                  placeholder="What have you been up to, Abraham?"></textarea>
-                    </div>
-                    <div className="footer">
-                        <button className="post-btn btn">Post</button>
-                    </div>
-                </div>
-            </Modal>
 
 
             <div className="main-content">
 
-
                 <div className="top-header">
                     <div className="row">
-                        <div className="col"><i className="fa fa-line-chart pink"></i> Menu1</div>
-                        <div className="col"><i className="fa fa-comment green"></i> Menu2</div>
-                        <div className="col"><i className="fa fa-firefox orange"></i> Menu3</div>
-                        <div className="col"><i className="fa fa-ellipsis-v"></i> More</div>
+                        <div className="col">
+                           <Link href="/timefeeds">
+                               <a>
+                                   <i className="fa fa-line-chart pink"></i>Time feeds
+                               </a>
+                           </Link>
+                        </div>
+                        <div className="col">
+                            <Link href="/about">
+                                <a>
+                                    <i className="fa fa-comment green"></i>About
+                                </a>
+                            </Link>
+                        </div>
+                        <div className="col">
+                            <Link href="/mange-farmers">
+                                <a>
+                                    <i className="fa fa-firefox orange"></i>Manage farmers
+                                </a>
+                            </Link>
+                        </div>
+                        <div className="col">
+                            <Link href="/more">
+                                <a>
+                                    <i className="fa fa-ellipsis-v"></i>More
+                                </a>
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -125,31 +138,13 @@ function Home(props) {
 
                         <div className="col-lg-7">
 
-                            <div className="post-container">
-                                <a onClick={(e) => {
-                                    e.preventDefault();
-                                    onWritePost()
-                                }} className="camera" href=""><i className="fa fa-camera"></i></a>
-                                <img className="img" src="/2.jpg" alt=""/>
-                                <div className="card">
-                                    <div className="card-header">
-                                        <img src="/user.png" alt=""/>
-                                    </div>
-                                    <div className="card-body">
-                                         <textarea onClick={onWritePost} className="form-control" id="message" rows="3"
-                                                   placeholder="What have you been up to?"></textarea>
-                                        <div className="btn-toolbar justify-content-end">
-                                            <button type="submit" className="btn  ">Tag A Farmer</button>
-                                            <button type="submit" className="btn  ">Add Attachment</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {/*  This the section where a user submits a new post on the home page*/}
+                            <TimelineNewPostWidget active="timeline" />
+
 
                             <div className="posts">
 
                                 <h1 className="title">Posts</h1>
-
 
                                 <PostItemImg/>
                                 <PostItemText/>

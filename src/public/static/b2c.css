@@ -1,0 +1,576 @@
+.b2c {
+
+}
+
+.b2c-wrapper {
+   padding: 0 50px;
+}
+
+.b2c .ad-banner {
+    background: #22B231;
+    /* height: 50px; */
+    padding: 10px 50px;
+}
+
+.b2c .ad-banner .banner h1 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 0;
+    font-weight: 800;
+    font-family: cursive;
+}
+
+.b2c .ad-banner .btn {
+    background: #fff;
+    color: #FF8C00;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+.b2c .ad-banner .btn i {
+    margin-right: 5px;
+}
+
+.b2c .contact-auth {
+    background: #000;
+    color: #fff;
+    padding: 8px 30px;
+}
+
+.b2c .contact {
+    list-style: none;
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+}
+
+.b2c .contact li{
+    margin-right: 40px;
+    font-size: 15px;
+}
+
+.b2c .contact li i{
+   margin-right: 5px;
+}
+
+.b2c .auth {
+    font-size: 15px;
+}
+
+.b2c .auth a{
+    color: #fff;
+}
+
+.b2c .auth i{
+    margin-right: 10px;
+}
+
+.b2c .header {
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+.b2c .header .navbar-form{
+
+}
+
+.b2c .header .navbar-form input{
+    border-radius: 17px 0 0 17px;
+    padding: 0px 15px;
+}
+
+.b2c .header .navbar-form .input-group-btn{
+    background: #FF8E0A;
+    color: #fff;
+    border-radius: 0 17px 17px 0;
+    padding: 0 3px;
+}
+
+.b2c .header .navbar-form .input-group-btn .btn{
+    padding: 2px 10px;
+}
+
+.b2c .header .navbar-form .input-group-btn i{
+    color: #fff;
+}
+
+.b2c .header .nav-icon {
+    color: #fff;
+    font-size: 34px;
+    margin-right: 43px;
+}
+
+.b2c .header .nav-icon li{
+    margin-right: 10px;
+    position: relative;
+}
+
+.b2c .header .nav-icon a{
+    color: #363636;
+}
+
+.b2c .header .nav-icon a span{
+    background: #FF8E0A;
+    color: #fff;
+    position: absolute;
+    top: 2px;
+    right: -6px;
+    display: inline-block;
+    text-align: center;
+    min-width: 10px;
+    min-height: 10px;
+    padding: 0.21429rem;
+    font-size: 14px;
+    box-sizing: content-box;
+    z-index: 3;
+}
+
+.b2c .header .navbar-form .nav-icon li{
+    font-size: 30px;
+}
+
+.b2c .header .navbar-form .nav-icon li{
+    font-size: 30px;
+}
+
+.b2c .header .category{
+    font-size: 30px;
+    margin-left: 19px;
+}
+
+.b2c .header .category .btn{
+   background: #22B231;
+    color: #fff;
+    border-radius: 0;
+}
+
+.b2c .header .category .btn i{
+    margin-right: 10px;
+}
+
+.b2c .header .category-menu li{
+
+}
+
+ .header .category-menu li a{
+ color: #646464;
+}
+
+
+/*  Feature  */
+.b2c .feature {
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.3);
+    padding: 20px 50px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+ }
+.b2c .feature h1{
+    font-size: 20px;
+ }
+.b2c .feature img{
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 0;
+    margin-top: -8px;
+ }
+
+.section-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.product-display-lg{
+
+    position: relative;
+}
+
+.product-display-lg img{
+    width: 100%;
+    height: 430px;
+}
+
+.product-display-lg2 img{
+    width: 100%;
+    height: 188px;
+    margin-bottom: 10px;
+}
+
+.product .stars{
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    color: #FFA500;
+    margin-bottom: 0px;
+    margin-top: 4px;
+    font-size: 13px;
+}
+.product .stars li{
+    margin-right: 6px;
+}
+
+.product h3{
+    font-size: 18px;
+}
+
+.product .btn{
+    background: #FFA500;
+    color: #fff;
+    padding: 0px 4px;
+    font-size: 13px;
+}
+
+.product span{
+    display: block;
+    font-size: 15px;
+}
+
+
+.productWidget{
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.09);
+}
+
+.productWidget .product-img{
+    height: 250px;
+}
+
+
+.productWidget .product-title{
+  font-size: 16px;
+}
+
+.productWidget .buy-now-btn{
+    font-size: 11px;
+    background: #22B231;
+    color: #fff;
+    padding: 0px 3px;
+    border-radius: 2px
+
+}
+.productWidget header{
+    margin-bottom: 13px;
+}
+.productWidget .product-tag{
+    padding-top: 0.71429rem !important;
+    padding-bottom: 0.71429rem !important;
+    padding-left: 0.14286rem !important;
+    padding-right: 0.14286rem !important;
+    height: 40px;
+    width: 40px;
+    color: #fff !important;
+    top: 1.07143rem !important;
+    left: 1.07143rem !important;
+    border-radius: 12px 0;
+    font-weight: 700 !important;
+    font-size: 0.78571rem !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+}
+.productWidget .stars{
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    color: #FFA500;
+    margin-bottom: 0px;
+    margin-top: 4px;
+    font-size: 13px;
+}
+.productWidget .stars li{
+    margin-right: 6px;
+}
+
+
+.b2c .product-loading{
+    background: #FF8C00;
+    color: #fff;
+    padding: 5px 40px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.b2c .product-loading i{
+    margin-right: 10px;
+}
+
+
+
+.b2c .b2c-home-sliders{
+    min-height: 500px;
+    max-height: 409px;
+    position: relative;
+    margin-top: 5px;
+}
+
+.b2c .b2c-home-sliders .next, .b2c .b2c-home-sliders .prev{
+    top: 50% !important;
+}
+
+.b2c .b2c-home-slider{
+    min-height: 450px;
+    max-height: 409px;
+    position: relative;
+    color: #fff;
+}
+
+
+
+.b2c .b2c-home-slider .bg-img {
+    width: 100%;
+    object-fit: fill;
+    display: inherit !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 450px;
+    max-height: 409px;
+}
+
+.b2c .b2c-home-slider .bg-overlay {
+    min-height: 450px;
+    max-height: 409px;
+}
+
+.b2c .b2c-home-slider .container {
+    position: absolute;
+    top: 54px;
+    padding: 110px 120px;
+}
+
+
+.b2c .b2c-home-slider h1 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: var(--sans-serif);
+}
+
+.b2c .b2c-home-slider h3 {
+    color: #EEA90E;
+    margin-top: 57px;
+    font-family: var(--segoe-UI);
+    font-size: 44px;
+}
+
+.b2c .b2c-home-slider p {
+    font-size: 19px;
+    font-family: var(--segoe-UI);
+}
+
+.b2c .b2c-home-slider .sign-up {
+    background: #22B231;
+    padding: 3px 39px;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 19px;
+    font-family: var(--segoe-UI);
+    margin-top: -5px;
+}
+
+.b2c .b2c-home-slider .des-box{
+
+}
+
+.b2c .b2c-home-slider .price-box {
+    background: #fff;
+    height: 89px;
+    width: 100px;
+    border-radius: 25px 0 25px 0;
+    position: relative;
+    overflow: hidden;
+    padding: 0px;
+    float: right;
+    margin-top: 46px;
+}
+
+.b2c .b2c-home-slider .price-box-btn {
+    background: #22B231;
+    padding: 3px 18px;
+    color: #fff;
+    border-radius: 0;
+    position: absolute;
+    left: 0;
+    right: 0px;
+    bottom: 0;
+    font-size: 12px;
+}
+
+.b2c .b2c-home-slider .price-box h4{
+    color: #000;
+    text-align: center;
+    margin-top: 22px;
+}
+
+
+.block-content {
+    background-color: #fff;
+    opacity: 1;
+    visibility: visible;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 270px;
+    border-left: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.block-content {
+    position: absolute;
+    z-index: 300;
+    top: 9px;
+    background-color: #FBFBFB;
+    left: 0;
+    width: 300px;
+    /* display: none; */
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.09);
+}
+
+.ui-categori {
+    padding-bottom: 3px;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.ui-categori > li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.ui-categori > li.parent {
+    position: relative;
+}
+.ui-categori > li {
+    display: block;
+}
+.ui-categori > li:first-child > a {
+    border-top: none;
+}
+.ui-categori > li > a {
+    line-height: 43px;
+    border-top: 1px dotted #ccc;
+    padding: 0;
+    padding-right: 20px;
+    color: #646464;
+}
+.ui-categori > li > a {
+    display: block;
+    padding: 0 40px 0 25px;
+    position: relative;
+    text-transform: capitalize;
+    /*line-height: 51px;*/
+}
+
+ .view-all-categori .btn-view-all:hover,
+ .view-all-categori a:hover {
+    background-color: #f96d10;
+    color: #fff;
+}
+
+.view-all-categori .btn-view-all,
+.view-all-categori a {
+    background-color: #fff;
+    color: #53524e;
+    border-top: 1px solid #eeeeee;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 40px;
+}
+
+  .view-all-categori .btn-view-all:hover,
+  .view-all-categori a:hover {
+    background-color: #22B231;
+    color: #fff !important;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+  .view-all-categori .btn-view-all,
+ .view-all-categori a {
+    display: block;
+    text-transform: capitalize;
+    padding: 0 65px;
+      line-height: 40px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+  .b2c .categories{
+      margin-top: 30px;
+
+  }
+
+  .b2c .categories .categories-heading{
+      color: #646464;
+      font-weight: 700;
+      margin-bottom: 50px !important;
+  }
+
+  .b2c .categories .sidebar{
+
+  }
+
+  .b2c .categories .sidebar .card{
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.09);
+      border-radius: 5px;
+  }
+
+  .b2c .categories .sort-section .sort-btn{
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.09);
+      background: #FFFFFF;
+      color: #000;
+      border-radius: 5px;
+  }
+
+  .b2c .categories .sort-section .layout-btn{
+      padding: 0;
+      list-style: none;
+      margin: 0;
+      display: inline-flex;
+  }
+
+  .b2c .categories .sort-section .layout-btn li{
+     cursor: pointer;
+      margin-right: 10px;
+  }
+
+
+  .b2c .cart{
+
+  }
+
+  .b2c .cart .check-box{
+     border: 1px solid #707070;
+     width: 100%;
+    height: 300px;
+      padding: 20px;
+  }
+  .b2c .cart .check-box .btn{
+      background: #FF8E0A;
+      margin-right: 25px;
+      border-radius: 0;
+      color: #fff;
+      padding: 3px 20px;
+  }
+
+  .b2c .cart .check-box .stats .stat{
+      background: #EBE5E5;
+      padding: 9px;
+      margin-bottom: 20px;
+  }
+
+  .b2c .cart .check-box ul{
+     list-style: none;
+      padding: 0;
+  }
+
+  .b2c .cart .check-box ul li{
+      margin-bottom: 20px;
+  }
+
+  .b2c .cart .check-box .form-control{
+      padding: 6px 4px;
+  }

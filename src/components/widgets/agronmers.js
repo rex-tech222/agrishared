@@ -3,7 +3,7 @@ import React from "react";
 
 function Agronmers() {
 
-    
+
     return (
         <div className="widget agronmers card">
             <div className="card-header">
@@ -20,16 +20,16 @@ function Agronmers() {
             <div className="card-body">
                 <div className="row media">
                     <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                        <img src="/img/1.jpg" alt=""/>
+                        <img src="/img/1.png" alt=""/>
                     </div>
                     <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                        <img src="/img/3.jpg" alt=""/>
+                        <img src="/img/7.png" alt=""/>
                     </div>
                     <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                        <img src="/img/4.jpg" alt=""/>
+                        <img src="/img/8.png" alt=""/>
                     </div>
                     <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                        <img src="/img/5.jpg" alt=""/>
+                        <img src="/img/3.png" alt=""/>
                     </div>
                 </div>
             </div>

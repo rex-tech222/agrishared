@@ -1,24 +1,28 @@
-
-const withSCSS = require("@zeit/next-sass");
-const withCSS = require("@zeit/next-css");
-const withPLUGINs = require("next-compose-plugins");
 const withOffline = require('next-offline');
+//const withSCSS = require("@zeit/next-sass");
+//const withCSS = require("@zeit/next-css");
+const withPLUGINs = require("next-compose-plugins");
 
-// fix: prevents error when .css files are required by node
-if (typeof require !== 'undefined') {
-  require.extensions['.css'] = (file) => {}
-}
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+    enabled: process.env.ANALYZE === 'true'
+})
 
-
-//module.exports = withCSS(withSCSS());
-
-
-
+const prod = process.env.NODE_ENV === 'production'
 
 const nextConfig = {
+    env: {
+        TEST: process.env.TEST,
+        HOST: prod ? 'http://localhost:1993' : 'http://localhost:1993'
+    },
+    distDir: 'build',
+};
+//module.exports = withCSS(withSCSS());
 
-}
+module.exports = withPLUGINs([
+  //  [withCSS],
+  //  [withSCSS],
+    withBundleAnalyzer,
+    withOffline,
+    nextConfig
+]);
 
-
-//module.exports = withPLUGINs([ [withCSS], [withSCSS], withOffline(nextConfig) ]);
-module.exports = withPLUGINs([ [withCSS], [withSCSS] ]);

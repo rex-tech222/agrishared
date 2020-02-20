@@ -778,8 +778,11 @@ function MainHeader(props) {
 
 
             </div>
-            <img className={`product-tab-img ${state.showTabContent ? 'show' : 'hide'}`}
-                 src="/img/Female-Farmer-1.png"/>
+            <img className={`product-tab-img ${state.showTabContent && state.activeTabContent === 'overview' ? 'show' : 'hide'}`} src="/img/Female-Farmer-1.png"/>
+            <img className={`product-tab-img ${state.showTabContent && state.activeTabContent === 'how-it-works' ? 'show' : 'hide'}`} src="/img/5e09feeac38b0.png"/>
+            <img className={`product-tab-img ${state.showTabContent && state.activeTabContent === 'benefits' ? 'show' : 'hide'}`} src="/img/l1.jpg"/>
+            <img className={`product-tab-img ${state.showTabContent && state.activeTabContent === 'pricing' ? 'show' : 'hide'}`} src="/img/wall.bmp"/>
+            <img className={`product-tab-img ${state.showTabContent && state.activeTabContent === 'disclaimer' ? 'show' : 'hide'}`} src="/img/soft.jpg"/>
             <img className={`product-tab-img-overlay ${state.showTabContent ? 'show' : 'hide'}`}
                  src="/img/Rectangle 1555.png"/>
 

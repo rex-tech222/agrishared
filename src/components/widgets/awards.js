@@ -3,7 +3,7 @@ import React from "react";
 
 function Awards() {
 
-    
+
     return (
         <div className="widget awards card">
             <div className="card-header">
@@ -21,16 +21,24 @@ function Awards() {
                 <div className="files">
                     <div className="row">
                         <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                            <div className="file blue-bg"><i className="fa fa-hourglass-end"></i></div>
+                            <div className="file blue-bg">
+                                <img src="/img/icons/icons8_Trophy_96px.png" alt=""/>
+                            </div>
                         </div>
                         <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                            <div className="file green-bg"><i className="fa fa-hourglass-end"></i></div>
+                            <div className="file green-bg">
+                                <img src="/img/icons/icons8_Trophy_96px.png" alt=""/>
+                            </div>
                         </div>
                         <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                            <div className="file blue-bg"><i className="fa fa-hourglass-end"></i></div>
+                            <div className="file blue-bg">
+                                <img src="/img/icons/icons8_Trophy_96px.png" alt=""/>
+                            </div>
                         </div>
                         <div className="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-6">
-                            <div className="file green-bg"><i className="fa fa-hourglass-end"></i></div>
+                            <div className="file green-bg">
+                                <img src="/img/icons/icons8_Trophy_96px.png" alt=""/>
+                            </div>
                         </div>
                     </div>
                 </div>

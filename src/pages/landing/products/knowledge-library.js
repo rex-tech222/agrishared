@@ -123,7 +123,7 @@ function Home(props) {
                 </div>
             </Modal>
 
-            <div className="product-page">
+            <div className="product-page knowledge-library">
 
                 <div className="agrispx-call-for-action">
                     <img className="bg-img" src="/img/5e09feeac38b0.png" alt=""/>
@@ -166,7 +166,7 @@ function Home(props) {
                               </div>
                           </div>
                           <hr className=""/>
-                          <div className="d-flex justify-content-between">
+                          <div className="d-flex justify-content-between action-section">
                               <div className="">
                                   <p>Farmers and Buyers engage on contact terms</p>
                               </div>

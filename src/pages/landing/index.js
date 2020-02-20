@@ -85,18 +85,23 @@ function Home(props) {
     };
 
     return (
-        <LandingPageLayout>
+        <LandingPageLayout >
              <div className="quick-find">
-            <img className="quick-find-bg" src="/img/find-bg.png" /> 
+            <img className="quick-find-bg" src="/img/find-bg.png" />
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 col-lg-6">
-                            <h3 className="heading">Connect. Share. <br/> Resources & Information</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type
-                                specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <h3 className="heading">Connect. Buy. Share. Resources & Information.</h3>
+                            <p className="desc">
+                                Agrishared is multi-stakeholders’ platform inspired by farmers. It enables farmers,
+                                agribusinesses, agritechs and other stakeholders
+                                in the agricultural value chain to connect, transact and share resources &
+                                information with over 200 million farmers in Africa.
+                            </p>
+
+                            <div className="text-left mb-3 ">
+                                <a className="u-link-v5 g-brd-around   green-bg g-font-size-12 rounded g-px-10 g-py-5" href="#!">Sign Up for free</a>
+                            </div>
 
                             <div className="progressing">
                                 <Progress strokeColor="#eea90e" type="circle" percent={20} format={percent => `${percent} Buyers`} />
@@ -105,65 +110,64 @@ function Home(props) {
                             </div>
                         </div>
 
-                        <div className="push-md-2 col-md-6 col-lg-6 find">
-                           <div>
-                               <h3 className="heading">Quick Find</h3>
-
-                               <Form
-                                   // onSubmit={this.handleSubmit}
-                                   className="find-form">
-                                   <Form.Item
-                                       //style={{ width: 250 }}
-                                   >
-                                       <InputGroup compact>
-                                           <Icon className="icon" style={{ width: '10%' }} type="user" />
-                                           <Select
-                                               showSearch
-                                               style={{ width: '90%' }}
-                                               placeholder="Finder Buyer/Farmer"
-                                               optionFilterProp="children"
-                                               onChange={onChange}
-                                               filterOption={(input, option) =>
-                                                   option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                                               }
+                        <div className="push-md-2 pull-right col-md-6 col-lg-6 find ">
+                               <div className="g-pl-100--lg">
+                                   <div className="">
+                                       <h3 className="heading">Quick Find</h3>
+                                       <Form
+                                           // onSubmit={this.handleSubmit}
+                                           className="find-form">
+                                           <Form.Item
+                                               //style={{ width: 250 }}
                                            >
-                                               <Option value="jack">Jack</Option>
-                                               <Option value="lucy">Lucy</Option>
-                                               <Option value="tom">Tom</Option>
-                                           </Select>
-                                       </InputGroup>
-                                   </Form.Item>
-                                   <Form.Item>
-                                       <InputGroup compact>
-                                           <Icon className="icon" style={{ width: '10%' }} type="environment" />
-                                           <Select
-                                               showSearch
-                                               style={{ width: '90%' }}
-                                               placeholder="Finder Buyer/Farmer"
-                                               optionFilterProp="children"
-                                               onChange={onChange}
-                                               filterOption={(input, option) =>
-                                                   option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                                               }
-                                           >
-                                               <Option value="jack">Jack</Option>
-                                               <Option value="lucy">Lucy</Option>
-                                               <Option value="tom">Tom</Option>
-                                           </Select>
-                                       </InputGroup>
-                                   </Form.Item>
-                                   <Form.Item>
-                                       <Button
-                                           style={{ width: '100%' }}
-                                           type="primary" htmlType="submit" className="find-button">
-                                          Find Now
-                                       </Button>
-                                   </Form.Item>
-                               </Form>
-
-                               <FindUserClientSlider />
-
-                           </div>
+                                               <InputGroup compact>
+                                                   <Icon className="icon" style={{ width: '10%' }} type="user" />
+                                                   <Select
+                                                       showSearch
+                                                       style={{ width: '90%' }}
+                                                       placeholder="Finder Buyer/Farmer"
+                                                       optionFilterProp="children"
+                                                       onChange={onChange}
+                                                       filterOption={(input, option) =>
+                                                           option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                                                       }
+                                                   >
+                                                       <Option value="jack">Jack</Option>
+                                                       <Option value="lucy">Lucy</Option>
+                                                       <Option value="tom">Tom</Option>
+                                                   </Select>
+                                               </InputGroup>
+                                           </Form.Item>
+                                           <Form.Item>
+                                               <InputGroup compact>
+                                                   <Icon className="icon" style={{ width: '10%' }} type="environment" />
+                                                   <Select
+                                                       showSearch
+                                                       style={{ width: '90%' }}
+                                                       placeholder="Finder Buyer/Farmer"
+                                                       optionFilterProp="children"
+                                                       onChange={onChange}
+                                                       filterOption={(input, option) =>
+                                                           option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                                                       }
+                                                   >
+                                                       <Option value="jack">Jack</Option>
+                                                       <Option value="lucy">Lucy</Option>
+                                                       <Option value="tom">Tom</Option>
+                                                   </Select>
+                                               </InputGroup>
+                                           </Form.Item>
+                                           <Form.Item>
+                                               <Button
+                                                   style={{ width: '100%' }}
+                                                   type="primary" htmlType="submit" className="find-button">
+                                                   Find Now
+                                               </Button>
+                                           </Form.Item>
+                                       </Form>
+                                   </div>
+                               </div>
+                            <FindUserClientSlider />
                         </div>
                     </div>
                 </div>
@@ -171,7 +175,7 @@ function Home(props) {
 
 
              <div className="connect">
-                 <h3 className="heading">JOIN TO CONNECT, <br/> SHARE & EARN</h3>
+                 <h3 className="heading">Don’t miss out, connect, share and earn.</h3>
                  <div className="container d-flex justify-content-center ">
                     <div className="col-md-9 col-sm-12">
                         <div className="service">
@@ -181,12 +185,10 @@ function Home(props) {
                                     <h4>INVEST IN AGRICULTURE</h4>
                                 </div>
                                 <div className="col-md-8 col-lg-8 col-sm-8 service-desc">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                        when an unknown printer took a galley of type and scrambled it to make a type
-                                        specimen book. It has survived not only five centuries,
-                                        but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                                    <button className="btn">Button</button>
+                                    <p>
+                                        Farm like a <b>BOSS</b>. Keep your hands off the dirt and let’s get it done for you.
+                                    </p>
+                                    <button className="btn">Invest now</button>
                                 </div>
                             </div>
                         </div>
@@ -197,12 +199,9 @@ function Home(props) {
                                     <h4>  BUY COMMODITIES </h4>
                                 </div>
                                 <div className="col-md-8 col-lg-8 col-sm-8 service-desc">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                        when an unknown printer took a galley of type and scrambled it to make a type
-                                        specimen book. It has survived not only five centuries,
-                                        but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                                    <button className="btn">Button</button>
+                                    <p>Get consistent supply that meets your standard. Engage over 200 million well
+                                        trained and organized professional farmers across Africa</p>
+                                    <button className="btn">Buy now</button>
                                 </div>
                             </div>
                         </div>
@@ -217,8 +216,7 @@ function Home(props) {
 
                  <div className="heading-block">
                      <h3 className="heading">FAQS</h3>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br/>
-                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                     <p>Hello, how can we help you?</p>
                  </div>
 
                      <div className="container d-flex justify-content-center ">
@@ -235,17 +233,13 @@ function Home(props) {
                                                     href="#menu1"
                                                     aria-expanded="true"
                                                     aria-controls="menu1">
-                                                      <span> Menu 1</span>
+                                                      <span>What is the meaning of Agrishared? </span>
                                                      <span className="collapsed"> <i className="fa fa-angle-down"></i></span>
                                                      <span className="expanded"> <i className="fa fa-angle-up"></i></span>
                                                  </a>
                                              <div id="menu1" className="collapse">
                                                  <div className="card-body">
-                                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                     when an unknown printer took a galley of type and scrambled it
-                                                     to make a type specimen book. It has survived not only five centuries,
-                                                     but also the leap into
+                                                     Agrishared means sharing and collaborative platform for agriculture
                                                  </div>
                                              </div>
                                          </div>
@@ -257,17 +251,13 @@ function Home(props) {
                                                 href="#menu2"
                                                 aria-expanded="true"
                                                 aria-controls="menu2">
-                                                 <span> Menu 2</span>
+                                                 <span>What is the main aim of Agrishared? </span>
                                                  <span className="collapsed"> <i className="fa fa-angle-down"></i></span>
                                                  <span className="expanded"> <i className="fa fa-angle-up"></i></span>
                                              </a>
                                              <div id="menu2" className="collapse">
                                                  <div className="card-body">
-                                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                     when an unknown printer took a galley of type and scrambled it
-                                                     to make a type specimen book. It has survived not only five centuries,
-                                                     but also the leap into
+                                                     Our aim is to empower African farmers to feed the world and encourage youth into agriculture.
                                                  </div>
                                              </div>
                                          </div>
@@ -279,17 +269,13 @@ function Home(props) {
                                                 href="#menu3"
                                                 aria-expanded="true"
                                                 aria-controls="menu3">
-                                                 <span> Menu 3</span>
+                                                 <span>How do I join Agrishared platform?</span>
                                                  <span className="collapsed"> <i className="fa fa-angle-down"></i></span>
                                                  <span className="expanded"> <i className="fa fa-angle-up"></i></span>
                                              </a>
                                              <div id="menu3" className="collapse">
                                                  <div className="card-body">
-                                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                     when an unknown printer took a galley of type and scrambled it
-                                                     to make a type specimen book. It has survived not only five centuries,
-                                                     but also the leap into
+                                                     Log on to <a href="www.agrishared.com">www.agrishared.com</a> and click on signup. Fill the form, verify your email/phone number and then login to join.
                                                  </div>
                                              </div>
                                          </div>
@@ -301,17 +287,14 @@ function Home(props) {
                                                 href="#menu4"
                                                 aria-expanded="true"
                                                 aria-controls="menu4">
-                                                 <span> Menu 4</span>
+                                                 <span> How do I publish a post on Agrishared?  </span>
                                                  <span className="collapsed"> <i className="fa fa-angle-down"></i></span>
                                                  <span className="expanded"> <i className="fa fa-angle-up"></i></span>
                                              </a>
                                              <div id="menu4" className="collapse">
                                                  <div className="card-body">
-                                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                     when an unknown printer took a galley of type and scrambled it
-                                                     to make a type specimen book. It has survived not only five centuries,
-                                                     but also the leap into
+                                                     Login to the Agrishared platform, then click on publish or create a post.
+                                                     A popup will appear, enter your post, attach image, document, video, etc. if you like and then click submit.
                                                  </div>
                                              </div>
                                          </div>
@@ -323,17 +306,13 @@ function Home(props) {
                                                 href="#menu5"
                                                 aria-expanded="true"
                                                 aria-controls="menu5">
-                                                 <span> Menu 5</span>
+                                                 <span> How to I post to sell/buy or share information on Agrishared?  </span>
                                                  <span className="collapsed"> <i className="fa fa-angle-down"></i></span>
                                                  <span className="expanded"> <i className="fa fa-angle-up"></i></span>
                                              </a>
                                              <div id="menu5" className="collapse">
                                                  <div className="card-body">
-                                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                     when an unknown printer took a galley of type and scrambled it
-                                                     to make a type specimen book. It has survived not only five centuries,
-                                                     but also the leap into
+                                                     When publishing / creating a post, you select whether to post to sell/buy/share/find.
                                                  </div>
                                              </div>
                                          </div>
@@ -345,17 +324,14 @@ function Home(props) {
                                                 href="#menu6"
                                                 aria-expanded="true"
                                                 aria-controls="menu6">
-                                                 <span> Menu 6</span>
+                                                 <span>  When do I use sell/buy/share/ find when posting on Agrishared platform?  </span>
                                                  <span className="collapsed"> <i className="fa fa-angle-down"></i></span>
                                                  <span className="expanded"> <i className="fa fa-angle-up"></i></span>
                                              </a>
                                              <div id="menu6" className="collapse">
                                                  <div className="card-body">
-                                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                     when an unknown printer took a galley of type and scrambled it
-                                                     to make a type specimen book. It has survived not only five centuries,
-                                                     but also the leap into
+                                                     We use sell when we want to sell something on the platform, buy when we are looking
+                                                     for something to buy, share when we want to share information and find when we want to find information.
                                                  </div>
                                              </div>
                                          </div>
@@ -367,17 +343,13 @@ function Home(props) {
                                                 href="#menu7"
                                                 aria-expanded="true"
                                                 aria-controls="menu7">
-                                                 <span> Menu 7</span>
+                                                 <span>  Is it free to join Agrishared platform?  </span>
                                                  <span className="collapsed"> <i className="fa fa-angle-down"></i></span>
                                                  <span className="expanded"> <i className="fa fa-angle-up"></i></span>
                                              </a>
                                              <div id="menu7" className="collapse">
                                                  <div className="card-body">
-                                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                     when an unknown printer took a galley of type and scrambled it
-                                                     to make a type specimen book. It has survived not only five centuries,
-                                                     but also the leap into
+                                                     Its free to join but charges may apply depending on what you want to do.
                                                  </div>
                                              </div>
                                          </div>
@@ -389,17 +361,13 @@ function Home(props) {
                                                 href="#menu8"
                                                 aria-expanded="true"
                                                 aria-controls="menu8">
-                                                 <span> Menu 8</span>
+                                                 <span>How do I contact Agrishared? </span>
                                                  <span className="collapsed"> <i className="fa fa-angle-down"></i></span>
                                                  <span className="expanded"> <i className="fa fa-angle-up"></i></span>
                                              </a>
                                              <div id="menu8" className="collapse">
                                                  <div className="card-body">
-                                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                     when an unknown printer took a galley of type and scrambled it
-                                                     to make a type specimen book. It has survived not only five centuries,
-                                                     but also the leap into
+                                                     You can contact Agrishared via email: info@agrishared.com, phone: +233 54 683 1162 / +233 54 238 6156 or via social media @agrishared.
                                                  </div>
                                              </div>
                                          </div>
@@ -425,8 +393,7 @@ function Home(props) {
                  <div className="stay-in-touch-bg-overlay" ></div>
                  <div className="heading-block">
                      <h3 className="heading">STAY IN TOUCH</h3>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br/>
-                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                     <p>Don’t miss out anything from us. Subscribe Now.</p>
                  </div>
                  <div className="container d-flex justify-content-center ">
                      <div className="col-md-5">
@@ -436,7 +403,7 @@ function Home(props) {
                          />
                      </div>
                  </div>
-                
+
              </div>
 
 

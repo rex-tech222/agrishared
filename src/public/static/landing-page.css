@@ -1,0 +1,2391 @@
+
+/***********************************************************
+*                 Landing Page
+************************************************************/
+
+.landing-page {
+    padding-top: 37px;
+}
+
+.landing-page-header {
+    position: relative;
+}
+
+.landing-page .navbar {
+    padding: 0px 20px;
+
+}
+
+.navbar-transparent .landing-page .navbar {
+
+}
+
+.landing-page .navbar-nav .nav-link {
+    color: #f8f9fa;
+    border-bottom: 2px solid transparent;
+}
+
+.landing-page .navbar-nav .nav-link:hover {
+    border-bottom: 2px solid #599b5b;
+}
+
+
+.landing-page .navbar-nav .dropdown-item {
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 5px 21px;
+    clear: both;
+    font-weight: 400;
+    color: #4D565C;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    font-family: var(--sans-serif)
+}
+
+
+.landing-page .navbar .navbar-brand {
+    width: 124px;
+    height: 33px;
+}
+
+.landing-page .navbar .mobile-logo {
+    display: none;
+}
+
+.landing-page .navbar .auth-btn {
+    margin-left: 20%;
+}
+
+.landing-page .navbar .auth-btn .btn {
+    margin-left: 5px
+}
+
+.landing-page .navbar .auth-btn .lang-btn {
+    background: transparent;
+    color: #fff;
+    padding: 1px 10px;
+    font-size: 17px;
+    line-height: 1.5;
+    border-radius: 30px;
+}
+
+.landing-page .navbar .auth-btn .lang-btn {
+
+}
+
+/*  Nav search */
+
+.landing-page .navbar .nav-search {
+    margin: 3px 0 1px 0px;
+}
+
+.landing-page .navbar .nav-search .form-group{
+    display: inline;
+
+}
+
+.landing-page .navbar .nav-search .form-group input{
+    height: 30px;
+    width: 301px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background-color: #d9d9d9;
+}
+
+.landing-page .navbar .nav-search .form-group input:focus{
+    background-color: #fff;
+    color: #000;
+}
+
+
+.landing-page .navbar .nav-search .input-group-addon{
+    background: #d9d9d9;
+    position: relative;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.landing-page .navbar .nav-search .input-group-addon:hover{
+    background: #F2B016;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.landing-page .navbar .nav-search .input-group-addon i{
+    position: absolute;
+    top: 27%;
+    left: 32%;
+}
+
+
+
+
+.landing-page .navbar .auth-btn .dropdown-toggle::after {
+    display: none;
+    content: none;
+}
+
+.landing-page .navbar .auth-btn .login-btn {
+    background: transparent;
+    color: #fff;
+    padding: 1px 10px;
+    font-size: 17px;
+    line-height: 1.5;
+    border-radius: 30px;
+}
+
+.landing-page .navbar .auth-btn .signup-btn {
+    background: #EEA90E;
+    color: #fff;
+    padding: 1px 10px;
+    font-size: 15px;
+    line-height: 1.4;
+    border-radius: 30px;
+}
+
+.landing-page .navbar.navbar-bg {
+    box-shadow: 2px 3px 3px #1e4834;
+}
+
+
+.landing-page .navbar-toggler {
+    padding: 4px 8px;
+    font-size: 20px;
+    /* line-height: 1; */
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #fff;
+}
+
+.navbar-collapse.show {
+    padding-bottom: 20px;
+}
+
+.landing-page .navbar-collapse .dropdown-toggle::after {
+    display: none;
+    content: none;
+}
+
+.product-dropdown {
+    background: #fff;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    margin-top: 0px;
+    padding: 30px;
+    overflow-y: scroll;
+}
+
+.product-dropdown-wrapper {
+    display: flex;
+    display: -moz-box;
+    display: -ms-flex;
+    justify-content: center;
+}
+
+
+.product-dropdown::-webkit-scrollbar {
+    width: 8px;
+    height: 5px
+}
+
+.product-dropdown.show {
+    display: block;
+}
+
+.product-dropdown.hide {
+    display: none;
+}
+
+.product-dropdown-close-btn {
+    position: fixed;
+    right: 22px;
+    top: 52px;
+    background: #131212;
+    padding: 5px 7px;
+    color: #fff;
+    border-radius: 4px;
+    line-height: 0.5;
+    cursor: pointer;
+}
+
+.product-overlay {
+    background: rgba(0, 0, 0, 0.45);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.product-overlay.show {
+    display: block;
+}
+
+.product-overlay.hide {
+    display: none;
+}
+
+
+.product-tab-img {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.product-tab-img .show {
+    display: block;
+}
+
+.product-tab-img.hide {
+    display: none;
+}
+
+
+.product-tab-img-overlay {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.product-tab-img-overlay.show {
+    display: block;
+}
+
+.product-tab-img-overlay.hide {
+    display: none;
+}
+
+
+.product-dropdown .product {
+    display: inline;
+    margin-bottom: 30px;
+}
+
+.product-dropdown .products {
+
+}
+
+.product-dropdown .product .img {
+    width: 160px;
+    height: 130px;
+    float: left;
+    margin-right: 10px;
+}
+
+.product-dropdown .product .name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 35px;
+
+}
+
+/* product-tabs  and product-tab-content*/
+.product-tabs-container {
+    flex-direction: column;
+    position: relative;
+}
+
+.product-tabs {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-left: 0;
+    margin-bottom: 0px;
+    list-style: none;
+    overflow-x: auto;
+    width: 100%;
+    -ms-overflow-style: none; /*// IE 10+*/
+    overflow: -moz-scrollbars-none; /*// Firefox*/
+}
+
+
+.product-tabs::-webkit-scrollbar {
+    display: none; /*Safari and Chrome*/
+}
+
+.product-tab-content .product-tabs {
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    background: #fff;
+}
+
+.product-dropdown .product-tabs {
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.product-tabs .nav-link {
+    display: inline-flex;
+    padding: 23px 60px;
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: #fff;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 3px solid transparent;
+}
+
+.product-tab-content .product-tabs .nav-tabs .nav-item {
+
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 3px solid #599B5B;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    background-color: #fff;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 3px solid #599B5B;
+}
+
+.product-tab-content .product-tabs li.active {
+    border-bottom: 3px solid #599B5B;
+}
+
+.product-tabs li a {
+    color: #afabab;
+}
+
+.product-tabs li.active a {
+    color: #599B5B;
+}
+
+.product-tab-content {
+    background: none;
+    height: 500px;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    margin-top: 39px;
+    padding: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+.product-tab-content::-webkit-scrollbar {
+    width: 0px;
+    height: 0px
+}
+
+.product-tab-content-wrapper {
+    display: flex;
+    display: -o-flex;
+    display: -moz-box;
+    display: -ms-flex;
+    justify-content: center;
+}
+
+.product-tab-content .content {
+    background: #fff;
+    width: 400px;
+    padding: 20px;
+}
+
+.product-tab-content .sign-up {
+    background: #599B5B;
+    padding: 5px 13px;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 12px;
+    float: right;
+}
+
+.product-tab-content.show {
+    display: block;
+}
+
+.product-tab-content.hide {
+    display: none;
+}
+
+
+.product-tab-content-close-btn {
+    color: #fff;
+    font-size: 33px;
+    position: absolute;
+    right: 60px;
+    top: 70px;
+    cursor: pointer;
+}
+
+/*.nw{
+    background: #fff;
+}
+
+.nav-tabs .nav-link.active {
+    font-weight: bold;
+    background-color: transparent;
+    border-bottom: 3px solid #dd0000;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+.nav {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    overflow-x: auto;
+    width: 100%;
+    -ms-overflow-style: none; !*!/ IE 10+*!
+    overflow: -moz-scrollbars-none; !*!/ Firefox*!
+}
+.nav::-webkit-scrollbar {
+    display: none; !*Safari and Chrome*!
+}*/
+
+/*  Quick Find  */
+.landing-page .quick-find {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 70px;
+    color: #fff;
+}
+
+.landing-page .quick-find .quick-find-bg {
+    object-fit: fill;
+    display: inherit !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.landing-page .quick-find .heading {
+    color: var(--color-yellow);
+    margin-bottom: 33px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 35px;
+}
+
+.landing-page .quick-find .desc{
+    text-align: justify;
+}
+
+
+.landing-page .quick-find .progressing {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.landing-page .quick-find .progressing {
+
+}
+
+.landing-page .quick-find .progressing .ant-progress-inner {
+    width: 115px !important;
+    height: 115px !important;
+    font-size: 15px !important;
+}
+
+.landing-page .quick-find .progressing .ant-progress-circle .ant-progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #fafafa;
+    line-height: 1;
+    white-space: normal;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.landing-page .quick-find .find {
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+}
+
+.landing-page .quick-find .find .find-form {
+    max-width: 400px
+}
+
+.landing-page .quick-find .find .icon {
+    width: 15%;
+    height: 100%;
+    background: #eea90e;
+    padding: 9px;
+    color: #fff;
+}
+
+.landing-page .quick-find .find .find-button {
+    color: #fff;
+    background-color: #4E5460;
+    border-color: #4E5460;
+}
+
+.landing-page .quick-find .find .user-client-slider {
+    /*width: 337px;*/
+    position: relative;
+    padding: 0 13px;
+    margin-top: 50px;
+}
+
+.landing-page .quick-find .find .user-client-slider .slick-arrow {
+    display: none !important;
+}
+
+
+.landing-page .quick-find .find .user-client-slider .user-profile {
+    width: 47px;
+    height: 52px;
+    display: inline !important;
+    position: relative;
+    margin: 0 10px;
+}
+
+.landing-page .quick-find .find .user-client-slider .user-profile img {
+    width: 47px;
+    height: 52px;
+    object-fit: fill;
+    display: inherit !important;
+}
+
+.landing-page .quick-find .find .user-client-slider .user-profile .name {
+    position: absolute;
+    left: 1px;
+    bottom: -52px;
+    line-height: 15px;
+    text-align: center;
+}
+
+
+.landing-page .quick-find .find .user-client-slider .client-profile {
+    width: 47px;
+    height: 52px;
+    display: inline;
+    position: relative;
+    margin: 0 10px;
+}
+
+.landing-page .quick-find .find .user-client-slider .client-profile img {
+    width: 56px;
+    height: 52px;
+    position: relative;
+    top: 0;
+    display: inherit !important;
+}
+
+.landing-page .quick-find .find .user-client-slider .client-profile .name {
+    position: absolute;
+    left: 1px;
+    bottom: -70px;
+    line-height: 15px;
+    text-align: center;
+}
+
+
+/*  Connect */
+.landing-page .connect {
+    width: 100%;
+    background: #fff;
+    padding: 40px 0 78px 0;
+    position: relative;
+}
+
+.landing-page .connect p{
+    text-align: justify;
+    padding-top: 10%;
+}
+
+.landing-page .connect .connect-left-img {
+    position: absolute;
+    left: -105px;
+    bottom: -32px;
+    width: 291px;
+}
+
+.landing-page .connect .explore-btn {
+    background: #163925;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    border-radius: 8px 8px 0 0;
+    padding: 3px 31px;
+}
+
+.landing-page .connect .explore-btn i {
+    margin-left: 20px;
+}
+
+.landing-page .connect .service {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    padding: 20px;
+    display: block;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.landing-page .connect .service .service-title {
+    text-align: center;
+}
+
+.landing-page .connect .service .service-title i {
+    font-size: 44px;
+    margin-bottom: 5px;
+}
+
+.landing-page .connect .service .service-title h4 {
+    font-size: 20px;
+}
+
+.landing-page .connect .service .service-desc {
+    position: relative;
+}
+
+.landing-page .connect .service .service-desc .btn {
+    background: #EDAF08;
+    position: absolute;
+    right: -5px;
+    bottom: -20px;
+    border-radius: 22px 0 0 0;
+    border: none;
+    padding: 1px 40px;
+}
+
+.landing-page .connect .heading {
+    color: #EDB000;
+    margin-bottom: 33px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/*  FAQS  */
+.landing-page .faqs {
+    background: #215A63;
+    width: 100%;
+    padding: 80px 40px;
+    position: relative
+}
+
+
+.landing-page .faqs .heading-block {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.landing-page .faqs .heading-block .heading {
+    color: #EDB000;
+    margin-bottom: 0px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 30px;
+    text-align: center;
+}
+
+.landing-page .faqs .heading-block p {
+    color: #fff;
+}
+
+.landing-page .faqs .more-btn {
+    background: var(--color-yellow);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    border-radius: 8px 8px 0 0;
+    padding: 4px 31px;
+}
+
+.landing-page .faqs .more-btn i {
+    margin-left: 20px;
+}
+
+.landing-page .faqs .card {
+    background-color: #F1A708;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    margin-bottom: 30px;
+}
+
+.landing-page .faqs .card-header,
+.landing-page .faqs .card-link:hover {
+    background: none;
+    text-align: left;
+    color: #fff;
+    padding: 7px 10px;
+    border-bottom: none;
+}
+
+.landing-page .faqs .card-body {
+    padding: 10px 10px;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+}
+
+.landing-page .faqs .card-header .expanded {
+    display: block;
+}
+
+.landing-page .faqs .card-header.collapsed .expanded {
+    display: none;
+}
+
+.landing-page .faqs .card-header .collapsed {
+    display: none;
+}
+
+.landing-page .faqs .card-header.collapsed .collapsed {
+    display: block;
+}
+
+/*   Stay In Touch*/
+.landing-page .stay-in-touch {
+    width: 100%;
+    background: #fff;
+    padding: 120px 30px;
+    position: relative;
+}
+
+.landing-page .stay-in-touch .stay-in-touch-bg {
+    position: absolute;
+    /* left: 145px; */
+    bottom: -10px;
+    width: 554px;
+
+}
+
+.landing-page .stay-in-touch .stay-in-touch-bg-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: #fafafa8a;
+}
+
+.landing-page .stay-in-touch .heading-block {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.landing-page .stay-in-touch .heading-block .heading {
+    color: var(--color-yellow);
+    margin-bottom: 0px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.landing-page .stay-in-touch .heading-block p {
+    color: #000;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.landing-page .stay-in-touch .ant-input-group-addon {
+    position: relative;
+    padding: 0 11px;
+    color: #fafafa;
+    font-weight: normal;
+    font-size: 21px;
+    text-align: center;
+    background-color: #1e4834;
+    border: 1px solid #1e4834;
+    border-radius: 0px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    line-height: 0.5;
+}
+
+.landing-page .stay-in-touch .ant-input-group-addon .anticon.anticon-edit {
+    background: #eea90e;
+    padding: 5px 13px;
+    border-radius: 14px;
+}
+
+.landing-page .stay-in-touch .ant-input {
+    width: 100%;
+    height: 38px;
+    padding: 4px 11px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: #1e4834;
+    border-color: #1e4834;
+    border-right-width: 1px !important;
+}
+
+.landing-page .stay-in-touch .ant-input:hover {
+    border-color: #1e4834;
+    border-right-width: 1px !important;
+}
+
+.landing-page .stay-in-touch .ant-input:focus {
+    border-right-width: 1px !important;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+
+
+.app .footer {
+    background: #212121;
+    width: 100%;
+    padding: 17px 30px;
+    color: #bababc;
+}
+
+.app .footer .logo {
+    width: 264px;
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.app .footer .desc {
+    padding-right: 40px;
+    text-align: justify;
+}
+
+
+.app .footer .social-links-title {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.app .footer .social-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.app .footer .social-links li {
+    display: inline;
+    padding-right: 20px;
+}
+
+.app .footer .social-links li a {
+    color: #fff;
+}
+
+
+.app .footer .quick-links-title {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.app .footer .quick-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.app .footer .quick-links li {
+    display: block;
+    padding-bottom: 10px;
+}
+
+.app .footer .quick-links li a {
+    color: #bababc;
+}
+
+.app .copyright {
+    background: #000;
+    width: 100%;
+    padding: 9px 0px;
+    color: #bababc;
+}
+
+.app .copyright .copyright-text {
+
+}
+
+
+.app .copyright .copyright-text-desktop {
+    display: block;
+}
+
+.app .copyright .copyright-text-mobile {
+    display: none;
+}
+
+
+.app .copyright a {
+    color: #bababc;
+}
+
+
+/* Landing Pages
+*/
+.landing-page .product-page {
+
+}
+
+.product-page  .ant-progress-circle .ant-progress-text{
+    color: #fff !important;
+}
+
+
+
+/*   agri spx  */
+.landing-page .product-page .agrispx-call-for-action {
+    /*background-image: url("/img/fm.jpg");*/
+    min-height: 600px;
+    max-height: 409px;
+    position: relative;
+    color: #fff;
+}
+
+.landing-page .product-page .agrispx-call-for-action .container {
+    position: absolute;
+    top: 54px;
+    /*padding: 30px 76px;*/
+}
+
+.landing-page .product-page .agrispx-call-for-action h1 {
+    color: #fff;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 82px;
+    font-family: var(--sans-serif);
+}
+
+.landing-page .product-page .agrispx-call-for-action h3 {
+    color: #EEA90E;
+    margin-top: 57px;
+    font-family: var(--segoe-UI);
+    font-size: 44px;
+}
+
+.landing-page .product-page .agrispx-call-for-action p {
+    font-size: 23px;
+    font-family: var(--segoe-UI);
+}
+
+.landing-page .product-page .agrispx-call-for-action .bg-img {
+    width: 100%;
+    object-fit: fill;
+    display: inherit !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 600px;
+    max-height: 409px;
+}
+
+.landing-page .product-page .agrispx-call-for-action .bg-overlay {
+    min-height: 600px;
+    max-height: 409px;
+}
+
+
+.landing-page .product-page .agrispx-call-for-action .sign-up {
+    background: #599B5B;
+    padding: 5px 27px;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 19px;
+    float: right;
+    font-family: var(--segoe-UI);
+    margin-top: -5px;
+}
+
+.landing-page .product-page .agrispx-sign {
+    background: #fff;
+    padding: 60px 50px;
+}
+
+.landing-page .product-page .agrispx-sign h1 {
+    color: #4D565C;
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-family: var(--segoe-UI)
+}
+
+.landing-page .product-page .agrispx-call-for-action hr {
+    margin-top: -70px;
+    border-top: 2px solid rgba(0, 0, 0, .1);
+    background: #eea90e;
+}
+
+.landing-page .product-page .agrispx-call-for-action p {
+    font-size: 23px;
+    font-family: var(--segoe-UI);
+    /*margin-top: 143px;*/
+}
+
+.landing-page .product-page .agrispx-sign .sign-up {
+    background: var(--btn-bg-green);
+    padding: 6px 27px;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.landing-page .product-page .agrispx-benefits {
+    background: #fff;
+    padding: 60px 50px;
+    position: relative;
+}
+
+.landing-page .product-page .agrispx-benefits h3 {
+    color: #4D565C;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: var(--sans-serif);
+    font-weight: 700;
+}
+
+.landing-page .product-page .agrispx-benefits .benefit {
+    margin-bottom: 40px;
+}
+
+.landing-page .product-page .agrispx-benefits .benefit i {
+    color: #EEA90E;
+    float: left;
+    font-size: 40px;
+    margin-right: 30px;
+}
+
+.landing-page .product-page .agrispx-benefits .benefit span {
+    color: #589B5B;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: var(--segoe-UI)
+}
+
+.landing-page .product-page .agrispx-benefits img {
+    position: absolute;
+    width: 700px;
+    height: 396px;
+    bottom: 0px;
+    right: 0;
+}
+
+
+.landing-page .product-page .agrispx-pricing {
+    padding: 70px 0;
+}
+
+
+.landing-page .product-page .agrispx-demo {
+    background: #fff;
+    padding: 70px 50px;
+
+}
+
+.landing-page .product-page .agrispx-demo h3 {
+    text-align: center;
+    color: #565758;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.landing-page .product-page .agrispx-demo .phone {
+
+}
+
+.landing-page .product-page .agrispx-demo .video {
+
+}
+
+
+.landing-page .product-page .agrispx-demo .video div {
+    width: 447px;
+    height: 255px;
+    position: relative;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, .1);
+}
+
+.landing-page .product-page .agrispx-demo .video div i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+
+.landing-page .product-page .agrispx-how-it-works {
+    color: #fff;
+    padding: 70px 50px;
+    position: relative
+}
+
+
+.landing-page .product-page .agrispx-how-it-works img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.landing-page .product-page .agrispx-how-it-works .info {
+    text-align: center;
+    padding: 14px 131px;
+    position: relative
+}
+
+.landing-page .product-page .agrispx-how-it-works .h1 {
+
+}
+
+.landing-page .product-page .agrispx-how-it-works .nav-tabs {
+    position: relative;
+    border-bottom: 0;
+    width: 80%;
+    margin: 40px auto;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+
+.landing-page .product-page .agrispx-how-it-works .liner {
+    height: 2px;
+    background: #ddd;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: -101px;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.landing-page .product-page .agrispx-how-it-works .nav-tabs > li.active > a,
+.landing-page .product-page .agrispx-how-it-works .nav-tabs > li.active > a:hover,
+.landing-page .product-page .agrispx-how-it-works .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    /* background-color: #ffffff; */
+    border: 0;
+    border-bottom-color: transparent;
+}
+
+.landing-page .product-page .agrispx-how-it-works span.round-tabs {
+    width: 40px;
+    height: 40px;
+    line-height: 37px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #28A745;
+    z-index: 2;
+    /* position: absolute; */
+    left: 0;
+    text-align: center;
+    font-size: 22px;
+}
+
+.landing-page .product-page .agrispx-how-it-works span.round-tabs {
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.landing-page .product-page .agrispx-how-it-works .active span.round-tabs {
+    background: #fff !important;
+    border: 2px solid #ddd;
+    color: rgb(34, 194, 34);
+}
+
+
+.landing-page .product-page .agrispx-how-it-works .nav-tabs > .active span.round-tabs {
+    background: #fafafa;
+}
+
+.landing-page .product-page .agrispx-how-it-works .nav-tabs > li {
+    width: 25%;
+    z-index: 2;
+}
+
+.landing-page .product-page .agrispx-how-it-works .nav-tabs > li a {
+    width: 70px;
+    height: 70px;
+    margin: 20px auto;
+    border-radius: 100%;
+    padding: 0;
+}
+
+.landing-page .product-page .agrispx-how-it-works .nav-tabs > li a:hover {
+    background: transparent;
+}
+
+.landing-page .product-page .agrispx-how-it-works .tab-content {
+}
+
+.landing-page .product-page .agrispx-how-it-works .tab-pane {
+    position: relative;
+    padding-top: 50px;
+}
+
+.landing-page .product-page .agrispx-how-it-works .tab-pane h3 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.landing-page .product-page .agrispx-how-it-works .tab-pane .content {
+    text-align: justify;
+}
+
+
+@media ( max-width: 585px ) {
+
+    .board {
+        width: 90%;
+        height: auto !important;
+    }
+
+    span.round-tabs {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .tab-content .head {
+        font-size: 20px;
+    }
+
+    .nav-tabs > li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .nav-tabs > li.active:after {
+        content: " ";
+        position: absolute;
+        left: 35%;
+    }
+
+    .btn-outline-rounded {
+        padding: 12px 20px;
+    }
+}
+
+
+.landing-page .product-page .agrispx-how-it-works h1 {
+    font-size: 29px;
+    color: #fff;
+}
+
+.landing-page .product-page .agrispx-how-it-works p {
+    font-size: 15px;
+}
+
+/* Company Page */
+.company-page {
+    position: relative;
+}
+
+.company-page .about-us {
+    height: auto;
+    position: relative;
+}
+
+.company-page .about-us h1 {
+    color: #fff
+}
+
+
+.company-page .our-services {
+    height: auto;
+    position: relative;
+}
+
+
+.company-page .how-it-works {
+    padding-bottom: 70px;
+    height: auto;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .company-page .how-it-works .u-nav-v4-1 .nav-link.active {
+        border-color: #579C5B #579C5B #f7f7f7 !important;;
+    }
+}
+
+
+.company-page .team {
+    height: auto;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+
+.company-page .career {
+    height: auto;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+
+.company-page .location {
+    height: auto;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+
+.company-page .contact {
+    height: auto;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+
+.company-page .sponsors-and-partners {
+    height: auto;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+
+.company-page .our-blog {
+    height: auto;
+    position: relative;
+}
+
+.company-page .our-blog .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+
+
+
+/***********************************************************
+*                 Responsiveness
+************************************************************/
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+    body {
+        /*background: blue;*/
+    }
+
+
+    /**************************************
+    *                  Landing Page
+    ****************************************/
+    /* Menu */
+    .landing-page .navbar .auth-btn {
+        position: absolute;
+        right: 16px;
+    }
+
+    .landing-page .navbar .collapse .navbar-nav {
+        margin-left: 35% !important;
+    }
+
+    .landing-page .navbar .collapse-search .navbar-nav {
+        margin-left: 24% !important;
+    }
+
+    .landing-page .navbar .nav-search {
+        margin: 3px 0px 1px 60px;
+    }
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+    body {
+        /*background: yellow;*/
+    }
+
+
+    /**************************************
+     *                  Landing Page
+     ****************************************/
+    /* Menu */
+    .landing-page .navbar .auth-btn {
+        position: absolute;
+        right: 16px;
+    }
+
+    .landing-page .navbar .collapse .navbar-nav {
+        margin-left: 30% !important;
+    }
+
+
+
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        /*background: purple;*/
+    }
+
+
+
+}
+
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    body {
+        /*background: peru;*/
+    }
+
+
+    /**************************************
+    *                  Landing Page
+    ****************************************/
+    /* Menu */
+    .landing-page .navbar .auth-btn {
+        position: absolute;
+        right: 16px;
+    }
+
+    .landing-page .navbar .collapse .navbar-nav {
+        margin-left: 20% !important;
+    }
+
+    /* ************************ */
+    .product-dropdown-wrapper {
+        display: contents;
+        justify-content: center;
+    }
+
+    .product-dropdown .product .img {
+        width: 117px;
+        height: 82px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .product-dropdown .product .name {
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 18px;
+    }
+
+    .product-dropdown {
+        background: #fff;
+        height: 500px;
+        width: 100%;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        margin-top: 40px;
+        padding: 8px;
+        padding-bottom: 70px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .product-dropdown .container {
+        width: 100%;
+        padding-right: 8px;
+        padding-left: 8px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .product-dropdown .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -25px;
+        margin-left: -25px;
+    }
+
+    .product-dropdown .product-tabs .nav-link {
+        display: inline-flex;
+        padding: 9px 23px;
+    }
+
+    .product-dropdown-close-btn {
+        position: fixed;
+        right: 22px;
+        top: 94px;
+        background: #131212;
+        padding: 5px 7px;
+        color: #fff;
+        border-radius: 4px;
+        line-height: 0.5;
+        cursor: pointer;
+        z-index: 9999999;
+    }
+
+    .product-tab-content {
+        background: none;
+        height: 500px;
+        width: 100%;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        margin-top: 44px;
+        padding: 12px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .product-tab-content .content {
+        background: #fff;
+        width: auto;
+        padding: 20px;
+    }
+
+    .product-tab-content-wrapper {
+        display: contents;
+        justify-content: center;
+    }
+
+    .product-tab-content .product-tabs .nav-link {
+        display: inline-flex;
+        padding: 9px 44px;
+        cursor: pointer;
+        white-space: nowrap;
+        background-color: #fff;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .product-tab-content .sign-up {
+        background: #599B5B;
+        padding: 5px 13px;
+        color: #fff;
+        border-radius: 30px;
+        font-size: 12px;
+        float: right;
+        margin-top: 20px;
+    }
+
+    .product-tab-content-close-btn {
+        color: #fff;
+        font-size: 33px;
+        position: absolute;
+        right: 14px;
+        top: -7px;
+        cursor: pointer;
+    }
+
+
+    /* Landing  Product Page */
+    .landing-page .product-page .agrispx-call-for-action .container {
+        position: absolute;
+        top: 54px;
+        padding: 23px 60px;
+    }
+
+    .landing-page .product-page .agrispx-call-for-action h1 {
+        color: #fff;
+        font-size: 29px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .landing-page .product-page .agrispx-call-for-action .sign-up {
+        background: #599B5B;
+        padding: 5px 27px;
+        color: #fff;
+        border-radius: 30px;
+        font-size: 12px;
+        float: right;
+        margin-top: 20px;
+    }
+
+    .landing-page .product-page .agrispx-sign {
+        background: #fff;
+        padding: 70px 0px;
+    }
+
+    .landing-page .product-page .agrispx-sign h1 {
+        color: #000000c7;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works {
+        background: #28a745;
+        color: #fff;
+        padding: 17px 0px;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .info {
+        text-align: center;
+        padding: 14px 0px;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .nav-tabs {
+        position: relative;
+        border-bottom: 0;
+        width: 100%;
+        margin: 25px auto;
+        margin-bottom: 0;
+        box-sizing: border-box;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .liner {
+        height: 2px;
+        background: #ddd;
+        position: absolute;
+        width: 80%;
+        margin: 0 auto;
+        left: -55px;
+        right: 0;
+        top: 43%;
+        z-index: 1;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .tab-pane {
+        position: relative;
+        padding-top: 23px;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .tab-pane h3 {
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .landing-page .product-page .agrispx-demo {
+        background: #fff;
+        padding: 39px 14px;
+    }
+
+    .landing-page .product-page .agrispx-demo .phone {
+        margin-bottom: 30px;
+    }
+
+    .landing-page .product-page .agrispx-demo .video div {
+        width: 233px;
+        height: 130px;
+        position: relative;
+        box-shadow: 0 0px 4px rgba(0, 0, 0, .1);
+    }
+
+    .landing-page .product-page .agrispx-benefits {
+        background: #fff;
+        padding: 21px 0px;
+        position: relative;
+    }
+
+    .landing-page .product-page .agrispx-benefits img {
+        position: absolute;
+        width: 260px;
+        height: 100px;
+        bottom: 0;
+        right: 0;
+    }
+
+    .landing-page .footer {
+        background: #599B5B;
+        width: 100%;
+        padding: 30px 0px;
+        color: #fff;
+    }
+
+    /* Home Page */
+    .landing-page .quick-find .find .user-client-slider .user-profile img {
+        width: 82px;
+        height: 130px;
+        object-fit: fill;
+        display: inherit !important;
+    }
+
+    .landing-page .quick-find .find .user-client-slider .client-profile img {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        top: 0;
+        display: inherit !important;
+    }
+
+    .landing-page .quick-find .progressing .ant-progress-inner {
+        width: 100px !important;
+        height: 100px !important;
+        font-size: 15px !important;
+    }
+
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        /*background: gray;*/
+    }
+
+
+
+    /**************************************
+    *                  Landing Page
+    ****************************************/
+    .product-dropdown-wrapper {
+        display: contents;
+        justify-content: center;
+    }
+
+    .product-dropdown .product .img {
+        width: 117px;
+        height: 82px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .product-dropdown .product .name {
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 18px;
+    }
+
+    .product-dropdown {
+        background: #fff;
+        height: 500px;
+        width: 100%;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        margin-top: 40px;
+        padding: 8px;
+        padding-bottom: 100px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .product-dropdown .product-tabs .nav-link {
+        display: inline-flex;
+        padding: 9px 23px;
+    }
+
+    .product-dropdown-close-btn {
+        position: fixed;
+        right: 22px;
+        top: 94px;
+        background: #131212;
+        padding: 5px 7px;
+        color: #fff;
+        border-radius: 4px;
+        line-height: 0.5;
+        cursor: pointer;
+        z-index: 9999999;
+    }
+
+    .product-tab-content {
+        background: none;
+        height: 500px;
+        width: 100%;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        margin-top: 44px;
+        padding: 12px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .product-tab-content .content {
+        background: #fff;
+        width: auto;
+        padding: 20px;
+    }
+
+    .product-tab-content-wrapper {
+        display: contents;
+        justify-content: center;
+    }
+
+    .product-tab-content .product-tabs .nav-link {
+        display: inline-flex;
+        padding: 9px 44px;
+        cursor: pointer;
+        white-space: nowrap;
+        background-color: #fff;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .product-tab-content .sign-up {
+        background: #599B5B;
+        padding: 5px 13px;
+        color: #fff;
+        border-radius: 30px;
+        font-size: 12px;
+        float: right;
+        margin-top: 20px;
+    }
+
+    .product-tab-content-close-btn {
+        color: #fff;
+        font-size: 33px;
+        position: absolute;
+        right: 14px;
+        top: -4px;
+        cursor: pointer;
+    }
+
+    /* Landing  Product Page */
+    .landing-page .product-page .agrispx-call-for-action .container {
+        position: absolute;
+        top: 54px;
+        padding: 23px 16px;
+    }
+
+    .landing-page .product-page .agrispx-call-for-action h1 {
+        color: #fff;
+        font-size: 29px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .landing-page .product-page .agrispx-call-for-action .sign-up {
+        background: #599B5B;
+        padding: 5px 27px;
+        color: #fff;
+        border-radius: 30px;
+        font-size: 12px;
+        float: right;
+        margin-top: 20px;
+    }
+
+    .landing-page .product-page .agrispx-sign {
+        background: #fff;
+        padding: 70px 0px;
+    }
+
+    .landing-page .product-page .agrispx-sign h1 {
+        color: #000000c7;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works {
+        background: #28a745;
+        color: #fff;
+        padding: 17px 0px;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .info {
+        text-align: center;
+        padding: 14px 0px;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .nav-tabs {
+        position: relative;
+        border-bottom: 0;
+        width: 100%;
+        margin: 25px auto;
+        margin-bottom: 0;
+        box-sizing: border-box;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .liner {
+        height: 2px;
+        background: #ddd;
+        position: absolute;
+        width: 80%;
+        margin: 0 auto;
+        left: -14px;
+        right: 0;
+        top: 43%;
+        z-index: 1;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .tab-pane {
+        position: relative;
+        padding-top: 23px;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .tab-pane h3 {
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .landing-page .product-page .agrispx-demo {
+        background: #fff;
+        padding: 39px 14px;
+    }
+
+    .landing-page .product-page .agrispx-demo .phone {
+        margin-bottom: 30px;
+    }
+
+    .landing-page .product-page .agrispx-demo .video div {
+        width: 233px;
+        height: 130px;
+        position: relative;
+        box-shadow: 0 0px 4px rgba(0, 0, 0, .1);
+    }
+
+    .landing-page .product-page .agrispx-benefits {
+        background: #fff;
+        padding: 21px 0px;
+        position: relative;
+    }
+
+    .landing-page .product-page .agrispx-benefits img {
+        position: absolute;
+        width: 260px;
+        height: 100px;
+        bottom: 0;
+        right: 0;
+    }
+
+    .landing-page .footer {
+        background: #599B5B;
+        width: 100%;
+        padding: 30px 0px;
+        color: #fff;
+    }
+
+    .landing-page .connect .explore-btn {
+        background: #163925;
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 36%;
+        border-radius: 8px 8px 0 0;
+        padding: 3px 31px;
+    }
+
+
+    /*  Footer */
+    .landing-page .copyright .copyright-links {
+        margin-top: 10px;
+    }
+
+    .landing-page .copyright .copyright-text-desktop {
+        display: none !important;
+    }
+
+    .landing-page .copyright .copyright-text-mobile {
+        display: block !important;
+        margin-top: 8px;
+    }
+
+
+
+}
+
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 200px) and (max-width: 480px) {
+
+    /**************************************
+    *                  Landing Page
+    ****************************************/
+    /* Menu */
+    .landing-page .navbar .navbar-brand {
+        width: 40px;
+        height: 48px;
+    }
+
+    .landing-page .navbar .mobile-logo {
+        display: block;
+    }
+
+    .landing-page .navbar .desktop-logo {
+        display: none;
+    }
+
+    .landing-page .navbar .auth-btn {
+        margin-left: 0%;
+    }
+
+    .landing-page .navbar-toggler {
+        padding: 0px 0px 0px 4px;
+        font-size: 20px;
+        /* line-height: 1; */
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        color: #fff;
+    }
+
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        content: "";
+        background: no-repeat center center;
+        background-size: 100% 100%;
+        padding: 5px 0px 0px 2px;
+        margin-right: -7px;
+    }
+
+
+    /*  Footer */
+    .landing-page .copyright .copyright-links {
+        margin-top: 10px;
+    }
+
+    .landing-page .copyright .copyright-text-desktop {
+        display: none !important;
+    }
+
+    .landing-page .copyright .copyright-text-mobile {
+        display: block !important;
+        margin-top: 8px;
+    }
+
+
+    /* ****************************************** */
+    .product-dropdown-wrapper {
+        display: contents;
+        justify-content: center;
+    }
+
+    .product-dropdown .product .img {
+        width: 120px;
+        height: 88px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .product-dropdown .product .name {
+        font-size: 17px;
+        font-weight: 700;
+        margin-top: 18px;
+    }
+
+    .product-dropdown {
+        background: #fff;
+        height: 500px;
+        width: 100%;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        margin-top: 40px;
+        padding: 8px;
+        padding-bottom: 100px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .product-dropdown .product-tabs .nav-link {
+        display: inline-flex;
+        padding: 9px 23px;
+    }
+
+    .product-dropdown-close-btn {
+        position: fixed;
+        right: 22px;
+        top: 94px;
+        background: #131212;
+        padding: 5px 7px;
+        color: #fff;
+        border-radius: 4px;
+        line-height: 0.5;
+        cursor: pointer;
+        z-index: 9999999;
+    }
+
+    .product-tab-content {
+        background: none;
+        height: 500px;
+        width: 100%;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        margin-top: 44px;
+        padding: 12px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .product-tab-content .content {
+        background: #fff;
+        width: auto;
+        padding: 20px;
+    }
+
+    .product-tab-content-wrapper {
+        display: contents;
+        justify-content: center;
+    }
+
+    .product-tab-content .product-tabs .nav-link {
+        display: inline-flex;
+        padding: 9px 44px;
+        cursor: pointer;
+        white-space: nowrap;
+        background-color: #fff;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .product-tab-content .sign-up {
+        background: #599B5B;
+        padding: 5px 13px;
+        color: #fff;
+        border-radius: 30px;
+        font-size: 12px;
+        float: right;
+        margin-top: 20px;
+    }
+
+    .product-tab-content-close-btn {
+        color: #fff;
+        font-size: 28px;
+        position: absolute;
+        right: 14px;
+        top: -4px;
+        cursor: pointer;
+    }
+
+
+    /* Landing  Product Page */
+
+
+
+    .landing    .landing-page .product-page .agrispx-call-for-action .container {
+        position: absolute;
+        top: 54px;
+        padding: 23px 16px;
+    }
+
+
+    .landing-page  .knowledge-library .agrispx-call-for-action  {
+        min-height: 725px !important;
+    }
+
+
+    .landing-page  .knowledge-library .agrispx-call-for-action  .bg-img {
+        min-height: 725px !important;
+    }
+
+    .landing-page  .knowledge-library .agrispx-call-for-action  .bg-overlay {
+        min-height: 725px !important;
+    }
+
+    .landing-page  .knowledge-library .agrispx-call-for-action  .action-section {
+        display: block !important;
+    }
+
+    .landing-page  .knowledge-library .agrispx-call-for-action  .action-section .sign-up{
+        margin-top: -16px !important;
+    }
+
+    .landing-page .product-page .agrispx-call-for-action h1 {
+        color: #fff;
+        font-size: 29px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .landing-page .product-page .agrispx-call-for-action .sign-up {
+        background: #599B5B;
+        padding: 5px 27px;
+        color: #fff;
+        border-radius: 30px;
+        font-size: 12px;
+        float: right;
+        margin-top: 20px;
+    }
+
+    .landing-page .product-page .agrispx-sign {
+        background: #fff;
+        padding: 70px 0px;
+    }
+
+    .landing-page .product-page .agrispx-sign h1 {
+        color: #000000c7;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works {
+        background: #28a745;
+        color: #fff;
+        padding: 17px 0px;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .info {
+        text-align: center;
+        padding: 14px 0px;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .nav-tabs {
+        position: relative;
+        border-bottom: 0;
+        width: 100%;
+        margin: 25px auto;
+        margin-bottom: 0;
+        box-sizing: border-box;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .liner {
+        height: 2px;
+        background: #ddd;
+        position: absolute;
+        width: 80%;
+        margin: 0 auto;
+        left: -14px;
+        right: 0;
+        top: 43%;
+        z-index: 1;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .tab-pane {
+        position: relative;
+        padding-top: 23px;
+    }
+
+    .landing-page .product-page .agrispx-how-it-works .tab-pane h3 {
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .landing-page .product-page .agrispx-demo {
+        background: #fff;
+        padding: 39px 14px;
+    }
+
+    .landing-page .product-page .agrispx-demo .phone {
+        margin-bottom: 30px;
+    }
+
+    .landing-page .product-page .agrispx-demo .video div {
+        width: 233px;
+        height: 130px;
+        position: relative;
+        box-shadow: 0 0px 4px rgba(0, 0, 0, .1);
+    }
+
+    .landing-page .product-page .agrispx-benefits {
+        background: #fff;
+        padding: 21px 0px;
+        position: relative;
+    }
+
+    .landing-page .product-page .agrispx-benefits img {
+        position: absolute;
+        width: 185px;
+        height: 71px;
+        bottom: 0;
+        right: 0;
+    }
+
+
+    .landing-page .footer {
+        width: 100%;
+        padding: 30px 0px;
+    }
+
+    /* home page*/
+    .landing-page .quick-find .progressing .ant-progress-inner {
+        width: 107px !important;
+        height: 107px !important;
+        font-size: 15px !important;
+    }
+
+    .landing-page .quick-find .find {
+        margin-top: 30px;
+    }
+
+    .landing-page .quick-find .heading {
+        color: #EDB000;
+        margin-bottom: 17px;
+        font-weight: 500;
+        line-height: 1.2;
+        font-size: 38px;
+        text-align: left;
+    }
+
+
+    .landing-page .connect .explore-btn {
+        background: #163925;
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 29%;
+        border-radius: 8px 8px 0 0;
+        padding: 3px 31px;
+    }
+
+}

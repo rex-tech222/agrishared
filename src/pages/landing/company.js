@@ -240,202 +240,209 @@ function Company(props) {
 
                     <section class="container g-pt-100 g-pb-70">
 
-                        <div class="row">
+                        <div className="row">
 
-                            <div class="col-lg-4 g-mb-30">
-                                <div class="media">
-                                    <div class="d-flex mr-4">
-                                      <span class="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
-                                        <i class="icon-education-087 u-line-icon-pro"></i>
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
                                      </span>
                                     </div>
-                                    <div class="media-body">
-                                        <h3 class="h5 g-color-black mb-20">AGRI SPX</h3>
-                                        <p class="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the printing
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">AGRI SPX</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/products/agri-spx">
+                                            <a  className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn More</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">AGRI B2B</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/products/agri-b2b">
+                                            <a  className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn More</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">AGRI B2C</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a class="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                        <Link href="/landing/products/agri-b2c">
+                                            <a  className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn More</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">RESOURCE SHARING</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
+                                            and typesetting industry.
+                                            Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/products/resource-sharing">
+                                            <a  className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn More</a>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
+                                     </span>
+                                    </div>
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">LEARNING TOOL</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
+                                            and typesetting industry.
+                                            Lorem Ipsum has been the industry's</p>
+                                        <Link href="/landing/products/learning-tool">
+                                            <a 
+                                               className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
                                                 More</a>
                                         </Link>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-4 g-mb-30">
-                                <div class="media">
-                                    <div class="d-flex mr-4">
-                                      <span class="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
-                                        <i class="icon-education-087 u-line-icon-pro"></i>
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
                                      </span>
                                     </div>
-                                    <div class="media-body">
-                                        <h3 class="h5 g-color-black mb-20">AGRI B2B</h3>
-                                        <p class="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the printing
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">AGRIBUSINESS INVESTMENT</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a class="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                        <Link href="/landing/products/agribusiness-investment">
+                                            <a 
+                                               className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
                                                 More</a>
                                         </Link>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-4 g-mb-30">
-                                <div class="media">
-                                    <div class="d-flex mr-4">
-                                      <span class="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
-                                        <i class="icon-education-087 u-line-icon-pro"></i>
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
                                      </span>
                                     </div>
-                                    <div class="media-body">
-                                        <h3 class="h5 g-color-black mb-20">AGRI B2C</h3>
-                                        <p class="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the printing
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">FBO MONITORING</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a class="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                        <Link href="/landing/products/fbo-monitoring">
+                                            <a 
+                                               className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
                                                 More</a>
                                         </Link>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-4 g-mb-30">
-                                <div class="media">
-                                    <div class="d-flex mr-4">
-                                      <span class="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
-                                        <i class="icon-education-087 u-line-icon-pro"></i>
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
                                      </span>
                                     </div>
-                                    <div class="media-body">
-                                        <h3 class="h5 g-color-black mb-20">RESOURCE SHARING</h3>
-                                        <p class="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the printing
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">KNOWLEDGE LIBRARY</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a class="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                        <Link href="/landing/products/knowledge-library">
+                                            <a 
+                                               className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
                                                 More</a>
                                         </Link>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-4 g-mb-30">
-                                <div class="media">
-                                    <div class="d-flex mr-4">
-                                      <span class="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
-                                        <i class="icon-education-087 u-line-icon-pro"></i>
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
                                      </span>
                                     </div>
-                                    <div class="media-body">
-                                        <h3 class="h5 g-color-black mb-20">LEARNING TOOL</h3>
-                                        <p class="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the printing
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">COLLABORATION</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a class="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                        <Link href="/landing/products/collaboration">
+                                            <a 
+                                               className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
                                                 More</a>
                                         </Link>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-4 g-mb-30">
-                                <div class="media">
-                                    <div class="d-flex mr-4">
-                                      <span class="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
-                                        <i class="icon-education-087 u-line-icon-pro"></i>
+                            <div className="col-lg-4 g-mb-30">
+                                <div className="media">
+                                    <div className="d-flex mr-4">
+                                      <span className="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
+                                        <i className="icon-education-087 u-line-icon-pro"></i>
                                      </span>
                                     </div>
-                                    <div class="media-body">
-                                        <h3 class="h5 g-color-black mb-20">AGRIBUSINESS INVESTMENT</h3>
-                                        <p class="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the printing
+                                    <div className="media-body">
+                                        <h3 className="h5 g-color-black mb-20">RESEARCH & DEVELOPMENT</h3>
+                                        <p className="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the
+                                            printing
                                             and typesetting industry.
                                             Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a class="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
-                                                More</a>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 g-mb-30">
-                                <div class="media">
-                                    <div class="d-flex mr-4">
-                                      <span class="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
-                                        <i class="icon-education-087 u-line-icon-pro"></i>
-                                     </span>
-                                    </div>
-                                    <div class="media-body">
-                                        <h3 class="h5 g-color-black mb-20">FBO MONITORING</h3>
-                                        <p class="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the printing
-                                            and typesetting industry.
-                                            Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a class="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
-                                                More</a>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 g-mb-30">
-                                <div class="media">
-                                    <div class="d-flex mr-4">
-                                      <span class="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
-                                        <i class="icon-education-087 u-line-icon-pro"></i>
-                                     </span>
-                                    </div>
-                                    <div class="media-body">
-                                        <h3 class="h5 g-color-black mb-20">KNOWLEDGE LIBRARY</h3>
-                                        <p class="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the printing
-                                            and typesetting industry.
-                                            Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a class="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
-                                                More</a>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 g-mb-30">
-                                <div class="media">
-                                    <div class="d-flex mr-4">
-                                      <span class="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
-                                        <i class="icon-education-087 u-line-icon-pro"></i>
-                                     </span>
-                                    </div>
-                                    <div class="media-body">
-                                        <h3 class="h5 g-color-black mb-20">COLLABORATION</h3>
-                                        <p class="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the printing
-                                            and typesetting industry.
-                                            Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a class="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
-                                                More</a>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 g-mb-30">
-                                <div class="media">
-                                    <div class="d-flex mr-4">
-                                      <span class="u-icon-v2 u-icon-size--sm g-color-primary rounded-circle">
-                                        <i class="icon-education-087 u-line-icon-pro"></i>
-                                     </span>
-                                    </div>
-                                    <div class="media-body">
-                                        <h3 class="h5 g-color-black mb-20">R & D</h3>
-                                        <p class="g-color-gray-dark-v4">Lorem Ipsum is simply dummy text of the printing
-                                            and typesetting industry.
-                                            Lorem Ipsum has been the industry's</p>
-                                        <Link href="/landing/agri-spx">
-                                            <a class="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
+                                        <Link href="/landing/products/research-and-development">
+                                            <a 
+                                               className="g-font-size-12 g-text-underline--none--hover text-uppercase">Learn
                                                 More</a>
                                         </Link>
                                     </div>

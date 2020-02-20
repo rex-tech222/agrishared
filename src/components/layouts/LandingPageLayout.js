@@ -1,9 +1,7 @@
 import Link from "next/link";
 import LandingPageHeader from "./../sections/headers/LandingPageHeader";
 import LandingPageFooter from "./../sections/footers/LandingPageFooter";
-import '../../public/static/slick.min.css'
-import '../../public/static/styles.css'
-import '../../public/static/antd.css'
+
 import {useEffect} from "react";
 
 
