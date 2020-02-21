@@ -77,7 +77,7 @@ function BlogPosts(props) {
                                 <div className="col-lg-4">
                                     <div className="price-box ">
                                         <h4>GH 59   </h4>
-                                        <button className="btn price-box-btn">ADD CART</button>
+                                        <a className="btn price-box-btn">ADD CART</a>
                                     </div>
                                 </div>
                             </div>
